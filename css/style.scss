@@ -315,6 +315,8 @@ body {
             p {
                 text-align: center;
                 margin: 0 auto 20px;
+                width: 300px;
+                color:orangered;
             }
 
         }
@@ -832,7 +834,6 @@ body {
     background: green;
     padding-top: 20px;
     text-align: center;
-//    display: flex;
     &__logo {
         width: 150px;
         margin: 0 auto 10px;
