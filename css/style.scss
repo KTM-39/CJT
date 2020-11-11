@@ -149,12 +149,32 @@ body {
                 display: flex;
                 justify-content: space-between;
             }
+            .hover-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 110px;
+                background: white;
+                padding-left: 1.5em;
+                opacity: 0;
+                &__item {
+                    overflow: hidden;
+//                    height: 0;
+                    opacity: 0;
+                    transition: all .3s;
+                }
+            }
             &__item {
                 &:not(:last-child) {
                     margin-right: 15px;
                     a {
-                        padding: 12px 0;
+                        padding: 0px 0;
                     }
+                }
+                &:hover .hover-menu__item  {
+                    overflow: visible;
+                    height: 40px;
+                    opacity: 1;
                 }
                 .contact-btn {
                     @include btn-custom;
@@ -318,7 +338,7 @@ body {
         height: 20%;
         top: 10%;
         left: 0;
-        -webkit-clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
         clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
         background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/bg-red.jpg);
         padding: 40px 0;
@@ -331,14 +351,28 @@ body {
         height: 20%;
         top: 40%;
         left: 0;
-        -webkit-clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
         clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
         background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/bg-red.jpg);
         padding: 40px 0;
         z-index: -1;
     }
-    &__cosmos {
+    .bg-diagonal-third {
+        position: absolute;
         background: #000;
+        width: 100%;
+        height: 20%;
+        top: 70%;
+        left: 0;
+        -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
+        clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/bg-red.jpg);
+        padding: 40px 0;
+        z-index: -1;
+    }
+
+    &__cosmos {
+//        background: #000;
 //        height: 100px;
         article {
             p {
@@ -483,7 +517,8 @@ body {
     box-shadow:  13px 13px 26px #095588,
         -13px -13px 26px #0f8de2;
     @include mq() {
-
+        max-width: 750px;
+        margin: 0 auto;
     }
     &__type-b {
         .type-b-text {
@@ -739,6 +774,9 @@ body {
             position: relative;
             margin: 0 auto;
             padding-bottom: 400px;
+            @include mq() {
+                max-width: 700px;
+            }
             @include mq(lg) {
                 padding-bottom: 320px;
             }
