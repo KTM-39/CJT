@@ -6,7 +6,7 @@ $(function() {
     const $accordionBtn = $('.accordion__btn');
     const $submitAction = $('#form');
     const $topScrollBtn = $('#scroll-top');
-    const $changeVideo = $('.end__visual');
+    var $changeVideo = $('.end__visual');
     const $submitBtn = $('#submit');
 
 
@@ -60,6 +60,8 @@ $(function() {
     });
 
     $(window).scroll(function(){
+//        var $videoWrapper = $('change-video-wrapper').innerHeight();
+
         var $top = $('.top').height();
         var $about = $('.about').innerHeight();
         var $employment = $('.employment').outerHeight(true);
@@ -92,7 +94,7 @@ $(function() {
         className: "light-shadow",
         blur: "8px",
         y: "20px",
-        x: "20px"
+        x: "10px"
     });
 
     AOS.init();
