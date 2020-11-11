@@ -22,7 +22,7 @@
                 <div class="header__nav">
                     <nav class="main-nav">
                         <ul class="main-nav__inner">
-                            <li class="main-nav__item"><a href="">コスモスについて</a></li>
+                            <li class="main-nav__item"><a href="#about">コスモスについて</a></li>
                             <li class="main-nav__item"><a href="">就労支援B型とは</a></li>
                             <li class="main-nav__item"><a href="">ニュース</a></li>
                             <li class="main-nav__item"><a href="">ブログ</a></li>
@@ -69,7 +69,9 @@
                     </div>
                 </section>
                 <!-- /.top -->
-                <section class="about">
+                <section id="about" class="about">
+<!--                   <div class="bg-black"></div>-->
+                   <!-- /.bg-black -->
                     <h2 class="chapter-title">コスモスについて</h2>
 
                     <section class="about__cosmos">
@@ -83,37 +85,43 @@
                         <h3 class="sub-title">６つの就労内容</h3>
                         <div class="flexbox-work">
 
-                            <a data-aos="fade-up"
-                               data-aos-duration="3000" class="work" href="#">
-                                <figure class="work__img-wrapper">
-                                    <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
-                                </figure>
-                                <div class="work__body">
-                                    <h4 class="work__title">
-                                        Lorem ipsum dolor sit amet.
-                                    </h4>
-                                    <p class="work__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsam maiores incidunt non odio ea suscipit exercitationem sapiente! Ex, necessitatibus.
-                                    </p>
-                                </div>
-                                <!-- /.work__body -->
-                            </a>
+                            <div class="light-shadow work-wrapper">
+                                <a data-aos="fade-up"
+                                   data-aos-duration="3000" class="work" href="#">
+                                    <figure class="work__img-wrapper">
+                                        <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                    </figure>
+                                    <div class="work__body">
+                                        <h4 class="work__title">
+                                            Lorem ipsum dolor sit amet.
+                                        </h4>
+                                        <p class="work__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsam maiores incidunt non odio ea suscipit exercitationem sapiente! Ex, necessitatibus.
+                                        </p>
+                                    </div>
+                                    <!-- /.work__body -->
+                                </a>
+                            </div>
+                            <!-- /.light-shadow work-wrapper -->
 
-                            <a data-aos="fade-up"
-                               data-aos-duration="3000" class="work" href="#">
-                                <figure class="work__img-wrapper">
-                                    <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
-                                </figure>
-                                <div class="work__body">
-                                    <h4 class="work__title">
-                                        Lorem ipsum dolor sit amet.
-                                    </h4>
-                                    <p class="work__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsam maiores incidunt non odio ea suscipit exercitationem sapiente! Ex, necessitatibus.
-                                    </p>
-                                </div>
-                                <!-- /.work__body -->
-                            </a>
+                            <div class="light-shadow work-wrapper">
+                                <a data-aos="fade-up"
+                                   data-aos-duration="3000" class="work" href="#">
+                                    <figure class="work__img-wrapper">
+                                        <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                    </figure>
+                                    <div class="work__body">
+                                        <h4 class="work__title">
+                                            Lorem ipsum dolor sit amet.
+                                        </h4>
+                                        <p class="work__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsam maiores incidunt non odio ea suscipit exercitationem sapiente! Ex, necessitatibus.
+                                        </p>
+                                    </div>
+                                    <!-- /.work__body -->
+                                </a>
+                            </div>
+                            <!-- /.light-shadow work-wrapper -->
 
                             <a data-aos="fade-up"
                                data-aos-duration="3000" class="work" href="#">
@@ -560,12 +568,23 @@
 
                             <div class="form__number">
                                 <label for="tel">電話番号</label><span class="required">必須</span><br>
-                                <input type="tel" name="tel" id="tel" />
+                                <input type="tel" name="tel" id="tel" required/>
                             </div>
                             <!-- /.form__number -->
 
+                            <div class="form__summary">
+                                <label for="summary">お問い合わせ内容</label><span class="required">必須</span><br>
+                                <select name="summary" id="summary" required>
+                                    <option value="">None</option>
+                                    <option value="example1">example1</option>
+                                    <option value="example2">example2</option>
+                                    <option value="example3">example3</option>
+                                </select>
+                            </div>
+                            <!-- /.form__summary -->
+
                             <div class="form__detail">
-                                <label for="detail">お問い合わせ内容</label><span class="required">必須</span><br>
+                                <label for="detail">お問い合わせ詳細</label>
                                 <textarea name="detail" id="detail" cols="30" rows="8"></textarea>
                             </div>
                             <!-- /.form__detail -->
@@ -595,6 +614,8 @@
             </ul>
             <small>&copy;----------</small>
         </footer>
+
+        <script src="https://unpkg.com/cosha"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>

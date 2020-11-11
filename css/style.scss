@@ -32,7 +32,7 @@ $basecolor2: #0c71b5;
 }
 
 @mixin formbox {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
     padding-right: 22px;
     @include mq(xl) {
         margin-bottom: 36px;
@@ -89,9 +89,9 @@ body {
         margin-bottom: 20px;
     }
     .center-wrapper {
-        padding: 0 20px;
+        padding: 20px;
         @include mq() {
-            padding: 0 40px;
+            padding: 100px 40px;
         }
     }
     .required {
@@ -187,38 +187,38 @@ body {
                 }
                 .bar--top {
                     transform: translateY(-8px);
-                    transition: transform 0.3s;
+                    transition: transform 0.3s ease-in-out;
                 }
                 .bar--mid1 {
                     position: absolute;
-                    transition: all 0.3s;
+                    transition: all 0.3s ease-in-out;
                 }
                 .bar--mid2 {
-                    transition: all 0.3s;
+                    transition: all 0.3s ease-in-out;
                 }
                 .bar--bot {
                     transform: translateY(8px);
-                    transition: transform 0.3s;
+                    transition: transform 0.3s ease-in-out;
                 }
             }
             &__bars--active {
                 .bar--top {
                     transform: translateY(5px) rotate(-220deg);
-                    transition: transform 0.3s;
+                    transition: transform 0.3s ease-in-out;
                 }
                 .bar--mid1 {
                     opacity: 0;
                     transform: translateX(-100%);
-                    transition: all 0.3s;
+                    transition: all 0.3s ease-in-out;
                 }
                 .bar--mid2 {
                     opacity: 0;
                     transform: translateX(100%);
-                    transition: all 0.3s;
+                    transition: all 0.3s ease-in-out;
                 }
                 .bar--bot {
                     transform: translateY(-5px) rotate(220deg);
-                    transition: transform 0.3s;
+                    transition: transform 0.3s ease-in-out;
                 }
             }
         }
@@ -307,17 +307,24 @@ body {
     }
 }
 .about {
+    position: relative;
     background: $basecolor1;
     z-index: 3;
     padding: 40px 10px;
+    .bg-black {
+        position: absolute;
+        background: #000;
+        width: 40%;
+        height: 20%;
+        top: 40%;
+        right: 0;
+        transform: translateY(-50%);
+    }
     &__cosmos {
         article {
             p {
                 text-align: center;
                 margin: 0 auto 20px;
-                width: 400px;
-                color:orangered;
-                background: gray;
             }
 
         }
@@ -325,15 +332,20 @@ body {
     &__works {
         margin-bottom: 30px;
         .flexbox-work {
+            display: flex;
+            flex-direction: column;
             @include mq() {
-                display: flex;
-                justify-content: space-between;
+                flex-direction: row;
+                justify-content: space-around;
                 flex-wrap: wrap;
                 width: 740px;
                 margin: 0 auto;
             }
             @include mq(xl) {
                 width: 1140px;
+            }
+            .work-wrapper {
+                margin-bottom: 30px;
             }
             .work {
                 display: block;
@@ -347,10 +359,12 @@ body {
                     height: 250px;
                     background: #000;
                     margin: 0;
+                    border-radius: 10px 10px 0 0;
                 }
                 &__img {
                     max-width: 100%;
                     vertical-align: middle;
+                    border-radius: 10px 10px 0 0;
                 }
                 &__body {
                     width: inherit;
@@ -364,6 +378,7 @@ body {
                     color: green;
                     background: white;
                     font-size: 14px;
+                    border-radius: 0 0 10px 10px;
                 }
             }
         }
@@ -442,12 +457,14 @@ body {
     }
 }
 .employment {
-    margin: 20px 0;
     padding: 40px 0;
     border-radius: 35px;
     background: rgba(11, 52, 224, 0.75);
     box-shadow:  13px 13px 26px #095588,
         -13px -13px 26px #0f8de2;
+    @include mq() {
+
+    }
     &__type-b {
         .type-b-text {
             width: 90%;
@@ -588,6 +605,10 @@ body {
     margin: 20px 0;
     background: orange;
     padding: 40px 0;
+    @include mq() {
+        max-width: 500px;
+        margin: 0 auto;
+    }
     .accordion {
         &__wrapper {
             width: 90%;
@@ -714,7 +735,7 @@ body {
 .end {
     padding: 20px;
     @include mq() {
-        padding: 40px;
+        padding: 80px;
     }
     &__visual {
         position: fixed;
@@ -749,6 +770,10 @@ body {
         background: rgba(85, 185, 243, 0.5);
         box-shadow:  9px 9px 18px #3e87b1,
             -9px -9px 18px #6cebff;
+        @include mq() {
+            max-width: 500px;
+            margin: 0 auto;
+        }
         .form {
             width: 90%;
             max-width: 450px;

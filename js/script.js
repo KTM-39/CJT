@@ -1,11 +1,12 @@
 $(function() {
-    var $burgerBtn = $('.burger-btn');
-    var $burgerBars = $('.burger-btn__bars')
-    var $burgerMenu = $('.burger-menu');
-    var $accordionBtn = $('.accordion__btn');
-    var $submitAction = $('#form');
-    var $topScrollBtn = $('#scroll-top');
-    var $changeVideo = $('.end__visual');
+    const $navItem = $('.main-nav__item')
+    const $burgerBtn = $('.burger-btn');
+    const $burgerBars = $('.burger-btn__bars')
+    const $burgerMenu = $('.burger-menu');
+    const $accordionBtn = $('.accordion__btn');
+    const $submitAction = $('#form');
+    const $topScrollBtn = $('#scroll-top');
+    const $changeVideo = $('.end__visual');
     const $submitBtn = $('#submit');
 
 
@@ -13,6 +14,13 @@ $(function() {
 
     $('dt button:not(.accordion__btn--active)').parent().next().css('display', 'none');
 
+    $navItem.click(function() {
+        var id = $(this).children().attr('href');
+        var position = $(id).offset().top - 80;
+        $('html, body').animate({
+            'scrollTop': position
+        },500)
+    });
 
     $burgerBtn.click(function() {
         $($burgerBars).toggleClass('burger-btn__bars--active');
@@ -25,12 +33,12 @@ $(function() {
         $accordionBody.slideToggle();
     })
 
-    $('#form input, #form textarea').on('change', function () {
+    $('#form input, #form select').on('change', function () {
         if (
             $('#form #name').val() !== "" &&
             $('#form #email').val() !== "" &&
             $('#form #tel').val() !== "" &&
-            $('#form #detail').val() !== ""
+            $('#form option:selected').val() !== ""
         ) {
             $submitBtn.prop('disabled', false);
         } else {
@@ -78,6 +86,14 @@ $(function() {
         return false;
     });
 
+    cosha();
+
+    cosha({
+        className: "light-shadow",
+        blur: "8px",
+        y: "20px",
+        x: "20px"
+    });
 
     AOS.init();
 });
