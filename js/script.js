@@ -6,7 +6,7 @@ $(function() {
     const $accordionBtn = $('.accordion__btn');
     const $submitAction = $('#form');
     const $topScrollBtn = $('#scroll-top');
-    var $changeVideo = $('.end__visual');
+    const $changeVideo = $('.end__visual');
     const $submitBtn = $('#submit');
 
 
@@ -60,18 +60,9 @@ $(function() {
     });
 
     $(window).scroll(function(){
-//        var $videoWrapper = $('change-video-wrapper').innerHeight();
+        var $videoWrapper = $('.change-video-wrapper').innerHeight();
 
-        var $top = $('.top').height();
-        var $about = $('.about').innerHeight();
-        var $employment = $('.employment').outerHeight(true);
-        var $news = $('.news').innerHeight();
-        var $blog = $('.blog').outerHeight(true);
-        var $recruitment = $('.recruitment').innerHeight();
-        var $faq = $('.faq').outerHeight(true);
-        var $contentHeights = $top + $about + $employment + $news + $blog + $recruitment + $faq;
-
-        if ($(this).scrollTop() > $contentHeights) {
+        if ($(this).scrollTop() > $videoWrapper) {
             $changeVideo.css('z-index', '-10');
         } else {
             $changeVideo.css('z-index', '-30');
