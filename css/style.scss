@@ -670,25 +670,27 @@ body {
     }
 }
 .blog {
-    margin: 20px 0;
     background: green;
-    padding: 40px 0;
+    padding: 40px;
     @include mq(lg) {
         padding: 40px;
+        width: 780px;
+        margin: 0 auto;
     }
     .flexbox-blog {
         @include mq(lg) {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
         }
-        .blog-left {
+        .blog-description {
             p {
                 width: 80%;
                 margin: 0 auto 20px;
             }
         }
-        .blog-right {
+        .blog-image {
             display: block;
             width: 80%;
             margin: 0 auto;
