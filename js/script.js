@@ -83,7 +83,7 @@ $(function() {
 
     cosha({
         className: "light-shadow",
-        blur: "8px",
+        blur: "10px",
         y: "20px",
         x: "10px"
     });
