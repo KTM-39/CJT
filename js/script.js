@@ -77,7 +77,7 @@ $(function() {
         className: "light-shadow",
         blur: "5px",
         y: "5px",
-        x: "10px"
+        x: "5px"
     });
 
 

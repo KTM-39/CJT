@@ -442,7 +442,6 @@ body {
                     &:not(:last-child) {
                         margin-bottom: 50px;
                     }
-//                    margin-bottom: 30px;
                 }
                 &__img-wrapper {
                     width: 300px;
@@ -688,6 +687,24 @@ body {
 .recruitment {
     background: $basecolor1;
     height: 600px;
+    &-table {
+        border: 1px solid #ddd;
+        &__inner {
+            width: 100%;
+        }
+        &__header {
+            width: 20%;
+            padding: 15px;
+            background-color: #efefef;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        &__text {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+    }
 }
 .faq {
     margin: 20px 0;
@@ -696,6 +713,10 @@ body {
     background: $basecolor2;
     box-shadow:  13px 13px 26px #295090,
         -13px -13px 26px #376cc2;
+    @include mq() {
+        max-width: 700px;
+        margin: 0 auto;
+    }
     .accordion {
         &__wrapper {
             width: 90%;
@@ -806,6 +827,9 @@ body {
             position: relative;
             margin: 0 auto;
             padding-bottom: 400px;
+            @include mq() {
+                max-width: 700px;
+            }
             @include mq(lg) {
                 padding-bottom: 320px;
             }
@@ -857,6 +881,10 @@ body {
         background: rgba(85, 185, 243, 0.5);
         box-shadow:  9px 9px 18px #3e87b1,
             -9px -9px 18px #6cebff;
+        @include mq() {
+            max-width: 600px;
+            margin: 0 auto;
+        }
         .form {
             width: 90%;
             max-width: 450px;
