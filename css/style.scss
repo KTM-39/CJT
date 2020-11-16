@@ -941,9 +941,6 @@ body {
                 textarea {
                     width: 100%;
                     padding: 7px 10px;
-                    &::placeholder {
-//                        line-height: 2px;
-                    }
                     @include mq() {
                         height: 167px;
                     }
