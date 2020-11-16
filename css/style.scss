@@ -976,6 +976,7 @@ body {
     width: 60px;
     height: 60px;
     cursor: pointer;
+    z-index: 4;
     @include mq() {
         bottom: 40px;
         right: 40px;
