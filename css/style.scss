@@ -46,7 +46,7 @@ $basecolor3: #f39832;
 }
 
 @mixin formbox {
-    margin-bottom: 32px;
+    margin-bottom: 22px;
     padding-right: 22px;
     @include mq(xl) {
         margin-bottom: 36px;
@@ -70,8 +70,9 @@ $basecolor3: #f39832;
     margin-left: 10px;
     padding: 3px 10px;
     font-size: 12px;
+    font-weight: bold;
     border-radius: 10px;
-    background: #525252;
+    background: $basecolor3;
     color: white;
     transform: translateY(-1px)
 }
@@ -88,6 +89,7 @@ $basecolor3: #f39832;
 }
 
 body {
+    font-family: 'M PLUS 1p', sans-serif;
     a {
         color: white;
         text-decoration: none;
@@ -167,13 +169,17 @@ body {
                 position: absolute;
                 top: 100%;
                 left: 0px;
-                width: 123px;
-                background: rgba(255, 255, 255, 0.2);
+                width: 150px;
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 10px;
                 padding-left: 1em;
+                visibility: hidden;
+                opacity: 0;
                 &__item {
-                    overflow: hidden;
-                    height: 0;
-                    transition: 0.3s;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.5s ease-in-out;
+                    padding: 10px 0;
                 }
             }
             &__item {
@@ -184,11 +190,13 @@ body {
                         margin-right: 20px;
                     }
                 }
+                &:hover .hover-menu {
+                    visibility: visible;
+                    opacity: 1;
+                }
                 &:hover .hover-menu__item  {
-                    height: 40px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
+                    opacity: 1;
+                    visibility: visible;
                 }
                 .contact-btn {
                     @include btn-custom;
@@ -302,7 +310,7 @@ body {
         bottom: 0;
         margin: auto;
         z-index: -10;
-        .video {
+        .video1 {
             position: absolute;
             min-width: 100vw;
             min-height: 100vh;
@@ -893,6 +901,7 @@ body {
             margin: 0 auto;
             &__name {
                 @include formbox;
+
             }
             &__email {
                 @include formbox;
@@ -932,6 +941,9 @@ body {
                 textarea {
                     width: 100%;
                     padding: 7px 10px;
+                    &::placeholder {
+//                        line-height: 2px;
+                    }
                     @include mq() {
                         height: 167px;
                     }
