@@ -1,5 +1,5 @@
 $(function() {
-    const $navItem = $('.main-nav__item')
+
     const $burgerBtn = $('.burger-btn');
     const $burgerBars = $('.burger-btn__bars')
     const $burgerMenu = $('.burger-menu');
@@ -14,13 +14,7 @@ $(function() {
 
     $('dt button:not(.accordion__btn--active)').parent().next().css('display', 'none');
 
-    $navItem.click(function() {
-        var id = $(this).children().attr('href');
-        var position = $(id).offset().top - 80;
-        $('html, body').animate({
-            'scrollTop': position
-        },500)
-    });
+
 
     $burgerBtn.click(function() {
         $($burgerBars).toggleClass('burger-btn__bars--active');
@@ -60,9 +54,9 @@ $(function() {
     });
 
     $(window).scroll(function(){
-        var $videoWrapper = $('.change-video-wrapper').innerHeight();
+        var $changeVideoWrapper = $('.change-video-wrapper').innerHeight();
 
-        if ($(this).scrollTop() > $videoWrapper) {
+        if ($(this).scrollTop() > $changeVideoWrapper) {
             $changeVideo.css('z-index', '-10');
         } else {
             $changeVideo.css('z-index', '-30');
@@ -83,10 +77,11 @@ $(function() {
 
     cosha({
         className: "light-shadow",
-        blur: "10px",
-        y: "20px",
-        x: "10px"
+        blur: "5px",
+        y: "5px",
+        x: "5px"
     });
+
 
     AOS.init();
 });

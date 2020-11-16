@@ -23,13 +23,19 @@
                     <nav class="main-nav">
                         <ul class="main-nav__inner">
                             <li class="main-nav__item"><a href="#about">コスモスについて</a>
-                            <ul class="hover-menu">
-                                <li class="hover-menu__item">a</li>
-                                <li class="hover-menu__item">b</li>
-                                <li class="hover-menu__item">c</li>
-                            </ul>
+                                <ul class="hover-menu">
+                                    <li class="hover-menu__item">コスモスとは</li>
+                                    <li class="hover-menu__item">6つの就労内容</li>
+                                    <li class="hover-menu__item">1日の流れ</li>
+                                    <li class="hover-menu__item">工賃</li>
+                                </ul>
                             </li>
-                            <li class="main-nav__item"><a href="">就労支援B型とは</a></li>
+                            <li class="main-nav__item"><a href="">就労支援B型について</a>
+                                <ul class="hover-menu">
+                                    <li class="hover-menu__item">就労支援B型とは</li>
+                                    <li class="hover-menu__item">利用までの流れ</li>
+                                </ul>
+                            </li>
                             <li class="main-nav__item"><a href="">ニュース</a></li>
                             <li class="main-nav__item"><a href="">ブログ</a></li>
                             <li class="main-nav__item"><a href="">利用者募集</a></li>
@@ -66,18 +72,17 @@
                 <div class="change-video-wrapper">
                     <section class="top">
                         <div class="top__visual">
-                           <video src="./video/Space-start.mp4" autoplay playinline loop muted class="video1"></video>
+                            <video src="./video/Space-start.mp4" autoplay playinline loop muted class="video"></video>
                         </div>
                         <div class="copy">
                             <h1 class="copy__main">夢と希望の想像へ<br>
                                 〜 地域社会に調和と秩序と平等を 〜<br><br>
-                            <span>職業訓練コスモス</span>
+                                <span>職業訓練コスモス</span>
                             </h1>
                         </div>
-                        <!-- /.copy -->
                     </section>
                     <!-- /.top -->
-                    <section id="about" class="about">
+                    <section class="about" id="about">
                         <div class="bg-diagonal-first"></div>
                         <!-- /.bg-diagonal-first -->
                         <div class="bg-diagonal-second"></div>
@@ -97,6 +102,7 @@
                             <!-- /.cosmos-image -->
                         </section>
                         <!-- /.about__cosmos -->
+
                         <section class="about__works">
                             <h3 class="sub-title">６つの就労内容</h3>
                             <div class="flexbox-work">
@@ -138,8 +144,7 @@
                                 <!-- /.light-shadow work-wrapper -->
 
                                 <div class="light-shadow work-wrapper">
-                                    <a data-aos="fade-up"
-                                       data-aos-duration="3000" class="work" href="#">
+                                    <a data-aos="fade-up" data-aos-duration="1000" class="work" href="#">
                                         <figure class="work__img-wrapper">
                                             <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                                         </figure>
@@ -157,8 +162,7 @@
                                 <!-- /.light-shadow work-wrapper -->
 
                                 <div class="light-shadow work-wrapper">
-                                    <a data-aos="fade-up"
-                                       data-aos-duration="3000" class="work" href="#">
+                                    <a data-aos="fade-up" data-aos-duration="1000" class="work" href="#">
                                         <figure class="work__img-wrapper">
                                             <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                                         </figure>
@@ -176,8 +180,7 @@
                                 <!-- /.light-shadow work-wrapper -->
 
                                 <div class="light-shadow work-wrapper">
-                                    <a data-aos="fade-up"
-                                       data-aos-duration="3000" class="work" href="#">
+                                    <a data-aos="fade-up" data-aos-duration="1000" class="work" href="#">
                                         <figure class="work__img-wrapper">
                                             <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                                         </figure>
@@ -195,8 +198,7 @@
                                 <!-- /.light-shadow work-wrapper -->
 
                                 <div class="light-shadow work-wrapper">
-                                    <a data-aos="fade-up"
-                                       data-aos-duration="3000" class="work" href="#">
+                                    <a data-aos="fade-up" data-aos-duration="1000" class="work" href="#">
                                         <figure class="work__img-wrapper">
                                             <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                                         </figure>
@@ -218,10 +220,7 @@
 
                         <section class="about__daily-schedule">
                             <h3 class="sub-title">一日の流れ</h3>
-                            <section data-aos="fade-left"
-                                     data-aos-anchor="#example-anchor"
-                                     data-aos-offset="500"
-                                     data-aos-duration="500" class="schedule">
+                            <section class="schedule">
                                 <ul class="schedule-list">
                                     <li class="schedule-list__item">
                                         午前<br>09:30
@@ -456,14 +455,14 @@
                     <div class="center-wrapper">
                         <section class="blog">
                             <div class="flexbox-blog">
-                                <div class="blog-description">
+                                <div class="blog-left">
                                     <h3 class="chapter-title">ブログ</h3>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis magnam dolore voluptas, fugiat maxime nam quod error impedit delectus blanditiis.
                                     </p>
                                 </div>
-                                <!-- /.blog-description -->
-                                <a href="#" class="blog-image">
+                                <!-- /.blog-left -->
+                                <a href="#" class="blog-right">
                                     <img src="./img/blog-img.jpg" alt="">
                                 </a>
                             </div>
@@ -474,6 +473,29 @@
 
                     <section class="recruitment">
                         <h2 class="chapter-title">利用者募集</h2>
+                        <div class="recruitment-table">
+                            <table class="recruitment-table__inner">
+                                <tbody class="recruitment-table__body">
+                                    <tr class="recruitment-table__row">
+                                        <th class="recruitment-table__header">名前</th>
+                                        <td class="recruitment-table__text">半田 惇志</td>
+                                    </tr>
+                                    <tr class="recruitment-table__row">
+                                        <th class="recruitment-table__header">所属</th>
+                                        <td class="recruitment-table__text">株式会社24-7／株式会社パンセ</td>
+                                    </tr>
+                                    <tr class="recruitment-table__row">
+                                        <th class="recruitment-table__header">職種</th>
+                                        <td class="recruitment-table__text">テクニカルディレクター／シニアエンジニア</td>
+                                    </tr>
+                                    <tr class="recruitment-table__row">
+                                        <th class="recruitment-table__header">得意分野</th>
+                                        <td class="recruitment-table__text">CSS設計、HubSpot CMS</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.horizontal-table -->
                     </section>
                     <!-- /.recruitment -->
                     <div class="center-wrapper">
@@ -528,44 +550,44 @@
                         </section>
                         <!-- /.faq -->
                     </div>
-                    <!-- /.center-wrapper -->
+
                 </div>
-                <!-- /.change-video-wrapper -->
+                <!-- /.center-wrapper -->
                 <section class="access">
                     <h2 class="chapter-title">アクセス</h2>
                     <div class="flexbox-access">
-                            <div class="access-table">
-                                <table class="access-table__inner">
-                                    <tbody class="access-table__body">
-                                        <tr class="access-table__row">
-                                            <th class="access-table__header">テキスト</th>
-                                            <td class="access-table__text">テキスト</td>
-                                        </tr>
-                                        <tr class="access-table__row">
-                                            <th class="access-table__header">テキスト</th>
-                                            <td class="access-table__text">テキスト</td>
-                                        </tr>
-                                        <tr class="access-table__row">
-                                            <th class="access-table__header">テキスト</th>
-                                            <td class="access-table__text">テキスト</td>
-                                        </tr>
-                                        <tr class="access-table__row">
-                                            <th class="access-table__header">テキスト</th>
-                                            <td class="access-table__text">テキスト</td>
-                                        </tr>
-                                        <tr class="access-table__row">
-                                            <th class="access-table__header">テキスト</th>
-                                            <td class="access-table__text">テキスト</td>
-                                        </tr>
-                                        <tr class="access-table__row">
-                                            <th class="access-table__header">テキスト</th>
-                                            <td class="access-table__text">テキスト</td>
-                                        </tr>
+                        <div class="access-table">
+                            <table class="access-table__inner">
+                                <tbody class="access-table__body">
+                                    <tr class="access-table__row">
+                                        <th class="access-table__header">テキスト</th>
+                                        <td class="access-table__text">テキスト</td>
+                                    </tr>
+                                    <tr class="access-table__row">
+                                        <th class="access-table__header">テキスト</th>
+                                        <td class="access-table__text">テキスト</td>
+                                    </tr>
+                                    <tr class="access-table__row">
+                                        <th class="access-table__header">テキスト</th>
+                                        <td class="access-table__text">テキスト</td>
+                                    </tr>
+                                    <tr class="access-table__row">
+                                        <th class="access-table__header">テキスト</th>
+                                        <td class="access-table__text">テキスト</td>
+                                    </tr>
+                                    <tr class="access-table__row">
+                                        <th class="access-table__header">テキスト</th>
+                                        <td class="access-table__text">テキスト</td>
+                                    </tr>
+                                    <tr class="access-table__row">
+                                        <th class="access-table__header">テキスト</th>
+                                        <td class="access-table__text">テキスト</td>
+                                    </tr>
 
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.access-table -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.access-table -->
                         <div class="google-map">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.8639767116949!2d143.88568182919283!3d43.80490196657154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f6d571d2c119443%3A0x35bd1b996fd450e8!2z5YyX44Gu44OA44Kk44OL44Oz44KwIOOBguOBmeOBquOCjQ!5e0!3m2!1sja!2sjp!4v1604543436490!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
@@ -579,9 +601,9 @@
                         <video src="./video/Space-end.mp4" autoplay playinline loop muted class="video2">
                         </video>
                     </div>
-                    <!-- /.end__visual -->
+
                     <section class="contact">
-                       <h2 class="chapter-title">お問い合わせ</h2>
+                        <h2 class="chapter-title">お問い合わせ</h2>
                         <form action="" method="post" class="form" id="form">
                             <div class="form__name">
                                 <label for="name">お名前</label><span class="required">必須</span><br>
@@ -597,23 +619,23 @@
 
                             <div class="form__number">
                                 <label for="tel">電話番号</label><span class="required">必須</span><br>
-                                <input type="tel" name="tel" id="tel" required/>
+                                <input type="tel" name="tel" id="tel" />
                             </div>
                             <!-- /.form__number -->
 
                             <div class="form__summary">
                                 <label for="summary">お問い合わせ内容</label><span class="required">必須</span><br>
-                                <select name="summary" id="summary" required>
-                                    <option value="">None</option>
+                                <select name="summary-select" id="summary">
+                                    <option value="">選択してください</option>
                                     <option value="example1">example1</option>
                                     <option value="example2">example2</option>
                                     <option value="example3">example3</option>
                                 </select>
                             </div>
-                            <!-- /.form__summary -->
+                            <!-- /.form__sumary -->
 
                             <div class="form__detail">
-                                <label for="detail">お問い合わせ詳細</label>
+                                <label for="detail">お問い合わせ詳細</label><br>
                                 <textarea name="detail" id="detail" cols="30" rows="8"></textarea>
                             </div>
                             <!-- /.form__detail -->
@@ -630,6 +652,7 @@
                 </div>
                 <!-- /.end -->
                 <div id="scroll-top"></div>
+                <!-- /#scroll-top -->
             </article>
         </main>
         <footer class="footer">
@@ -641,7 +664,7 @@
                 <li class="sub-nav__item"><a href="">会社概要</a></li>
                 <li class="sub-nav__item"><a href="">プライバシーポリシー</a></li>
             </ul>
-            <small>&copy;----------</small>
+            <small>&copy;copyright Cosmos</small>
         </footer>
 
         <script src="https://unpkg.com/cosha"></script>

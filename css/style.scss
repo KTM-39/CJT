@@ -1,5 +1,5 @@
 /*****************
-    SP FIRST
+SP FIRST
 *****************/
 
 /*レスポンシブ対応*/
@@ -16,8 +16,9 @@ $keepscreens: (
     "pr": "(max-aspect-ratio: 16/9)"/* Portrait */
 ) !default;
 
-$basecolor1: #4cabd0;
-$basecolor2: #0c71b5;
+$basecolor1: #5cbfd8;
+$basecolor2: rgba(48, 94, 169, 0.5);
+$basecolor3: #f39832;
 
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -31,8 +32,21 @@ $basecolor2: #0c71b5;
     }
 }
 
+@mixin diagonal {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 20%;
+    left: 0;
+    -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
+    clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/bg-red.jpg);
+    padding: 40px 0;
+    z-index: -1;
+}
+
 @mixin formbox {
-    margin-bottom: 15px;
+    margin-bottom: 32px;
     padding-right: 22px;
     @include mq(xl) {
         margin-bottom: 36px;
@@ -81,7 +95,7 @@ body {
     .chapter-title {
         text-align: center;
         font-size: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .sub-title {
         text-align: center;
@@ -89,9 +103,9 @@ body {
         margin-bottom: 20px;
     }
     .center-wrapper {
-        padding: 20px;
+        padding: 0 20px;
         @include mq() {
-            padding: 100px 40px;
+            padding: 0 40px;
         }
     }
     .required {
@@ -152,22 +166,22 @@ body {
             .hover-menu {
                 position: absolute;
                 top: 100%;
-                left: 0;
-                width: 110px;
+                left: 0px;
+                width: 123px;
                 background: rgba(255, 255, 255, 0.2);
-                padding-left: 1.5em;
-                color: white;
+                padding-left: 1em;
                 &__item {
                     overflow: hidden;
                     height: 0;
-                    transition: .3s;
+                    transition: 0.3s;
                 }
             }
             &__item {
+                position: relative;
                 &:not(:last-child) {
-                    margin-right: 15px;
-                    a {
-                        padding: 0px 0;
+                    margin-right: 10px;
+                    @include mq(xl) {
+                        margin-right: 20px;
                     }
                 }
                 &:hover .hover-menu__item  {
@@ -288,7 +302,7 @@ body {
         bottom: 0;
         margin: auto;
         z-index: -10;
-        .video1 {
+        .video {
             position: absolute;
             min-width: 100vw;
             min-height: 100vh;
@@ -312,7 +326,7 @@ body {
         text-align: center;
         color: white;
         &__main {
-            font-size: 18px;
+            font-size: 20px;
             span {
                 color: #FF8C00;
                 background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
@@ -332,45 +346,17 @@ body {
     z-index: 3;
     padding: 40px 10px;
     .bg-diagonal-first {
-        position: absolute;
-        background: #000;
-        width: 100%;
-        height: 20%;
+        @include diagonal;
         top: 10%;
-        left: 0;
-        -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-        clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-        background: salmon;
-        padding: 40px 0;
-        z-index: -1;
     }
     .bg-diagonal-second {
-        position: absolute;
-        background: #000;
-        width: 100%;
-        height: 20%;
+        @include diagonal;
         top: 40%;
-        left: 0;
-        -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-        clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-        background: salmon;
-        padding: 40px 0;
-        z-index: -1;
     }
     .bg-diagonal-third {
-        position: absolute;
-        background: #000;
-        width: 100%;
-        height: 20%;
+        @include diagonal;
         top: 70%;
-        left: 0;
-        -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-        clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-        background: salmon;
-        padding: 40px 0;
-        z-index: -1;
     }
-
     &__cosmos {
         position: relative;
         margin-bottom: 50px;
@@ -417,7 +403,7 @@ body {
 
         }
         .cosmos-image {
-            background: url(../img/cosmea-nature.jpg) no-repeat center / cover;
+            background: url(../img/cosmos-concept.jpg) no-repeat center / cover;
             margin: 0 calc(50% - 50vw);
             width: 100vw;
             height: 310px;
@@ -434,6 +420,7 @@ body {
             }
         }
     }
+
     &__works {
         margin-bottom: 30px;
         .flexbox-work {
@@ -449,28 +436,25 @@ body {
             @include mq(xl) {
                 width: 1140px;
             }
-            .work-wrapper {
-                margin-bottom: 30px;
-
-            }
             .work {
                 display: block;
                 width: 300px;
                 margin: 0 auto;
-                &:not(:last-child) {
-                    margin-bottom: 30px;
+
+                &-wrapper {
+                    &:not(:last-child) {
+                        margin-bottom: 50px;
+                    }
                 }
                 &__img-wrapper {
                     width: 300px;
                     height: 250px;
                     background: #000;
                     margin: 0;
-                    border-radius: 10px 10px 0 0;
                 }
                 &__img {
                     max-width: 100%;
                     vertical-align: middle;
-                    border-radius: 10px 10px 0 0;
                 }
                 &__body {
                     width: inherit;
@@ -484,7 +468,6 @@ body {
                     color: green;
                     background: white;
                     font-size: 14px;
-                    border-radius: 0 0 10px 10px;
                 }
             }
         }
@@ -563,15 +546,12 @@ body {
     }
 }
 .employment {
+    margin: 20px 0;
     padding: 40px 0;
     border-radius: 35px;
-    background: rgba(11, 52, 224, 0.75);
-    box-shadow:  13px 13px 26px #095588,
-        -13px -13px 26px #0f8de2;
-    @include mq() {
-        max-width: 750px;
-        margin: 0 auto;
-    }
+    background: $basecolor2;
+    box-shadow:  13px 13px 26px #295090,
+        -13px -13px 26px #376cc2;
     &__type-b {
         .type-b-text {
             width: 90%;
@@ -670,27 +650,28 @@ body {
     }
 }
 .blog {
-    background: green;
-    padding: 40px;
+    margin: 20px 0;
+    padding: 40px 0;
+    border-radius: 35px;
+    background: $basecolor2;
+    box-shadow:  13px 13px 26px #295090,
+        -13px -13px 26px #376cc2;
     @include mq(lg) {
         padding: 40px;
-        width: 780px;
-        margin: 0 auto;
     }
     .flexbox-blog {
         @include mq(lg) {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
         }
-        .blog-description {
+        .blog-left {
             p {
                 width: 80%;
                 margin: 0 auto 20px;
             }
         }
-        .blog-image {
+        .blog-right {
             display: block;
             width: 80%;
             margin: 0 auto;
@@ -707,15 +688,36 @@ body {
     }
 }
 .recruitment {
-    background: gray;
+    background: $basecolor1;
     height: 600px;
+    &-table {
+        border: 1px solid #ddd;
+        &__inner {
+            width: 100%;
+        }
+        &__header {
+            width: 20%;
+            padding: 15px;
+            background-color: #efefef;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        &__text {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+    }
 }
 .faq {
     margin: 20px 0;
-    background: orange;
     padding: 40px 0;
+    border-radius: 35px;
+    background: $basecolor2;
+    box-shadow:  13px 13px 26px #295090,
+        -13px -13px 26px #376cc2;
     @include mq() {
-        max-width: 500px;
+        max-width: 700px;
         margin: 0 auto;
     }
     .accordion {
@@ -731,8 +733,8 @@ body {
             display: block;
             width: inherit;
             padding: 10px 40px 10px 15px;
-            background-color: #e25c00;
-            border: 2px solid #e25c00;
+            background-color: $basecolor3;
+            border: 2px solid $basecolor3;
             border-radius: 10px;
             color: #fff;
             font-size: 1.125rem;
@@ -770,7 +772,7 @@ body {
             &--active::after {
                 content: none;
                 transition: 0.5s;
-            }
+                }
         }
         &__body {
             padding: 15px;
@@ -782,7 +784,7 @@ body {
 }
 .access {
     padding: 50px 0;
-    background: blue;
+    background: $basecolor1;
     @include mq(lg) {
         height: 100vh;
     }
@@ -847,7 +849,7 @@ body {
 .end {
     padding: 20px;
     @include mq() {
-        padding: 80px;
+        padding: 40px;
     }
     &__visual {
         position: fixed;
@@ -878,12 +880,12 @@ body {
         width: 100%;
         height: 100%;
         padding: 50px 0;
-        border-radius: 51px;
+        border-radius: 35px;
         background: rgba(85, 185, 243, 0.5);
         box-shadow:  9px 9px 18px #3e87b1,
             -9px -9px 18px #6cebff;
         @include mq() {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
         }
         .form {
@@ -898,6 +900,24 @@ body {
             }
             &__number {
                 @include formbox;
+            }
+            &__summary {
+                margin-bottom: 32px;
+                @include mq(xl) {
+                    margin-bottom: 36px;
+                }
+                label {
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 35px;
+                }
+                select {
+                    width: 100%;
+                    padding: 10px 10px;
+                    @include mq(xl) {
+                        height: 18px;
+                    }
+                }
             }
             &__detail {
                 margin-bottom: 31px;
@@ -950,13 +970,13 @@ body {
 }
 #scroll-top {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: url(../img/chevron-up-white.png) no-repeat center / cover;
+    bottom: 90px;
+    right: 20px;
+    background: url(../img/chevron-up.png) no-repeat center / cover;
     width: 60px;
     height: 60px;
     cursor: pointer;
-    z-index: 5;
+    z-index: 4;
     @include mq() {
         bottom: 40px;
         right: 40px;
@@ -970,7 +990,7 @@ body {
 .footer {
     width: 100%;
     height: 150px;
-    background: green;
+    background: #6992d3;
     padding-top: 20px;
     text-align: center;
     &__logo {
