@@ -448,20 +448,23 @@ body {
                 display: block;
                 width: 300px;
                 margin: 0 auto;
+                border-radius: 10px 10px 0 0;
                 &-wrapper {
+//                    border-radius: 10px;
                     &:not(:last-child) {
                         margin-bottom: 50px;
                     }
                 }
                 &__img-wrapper {
                     width: 300px;
-                    height: 250px;
                     background: #000;
                     margin: 0;
+//                    border-radius: 10px;
                 }
                 &__img {
                     max-width: 100%;
                     vertical-align: middle;
+                    border-radius: 10px;
                 }
                 &__body {
                     width: inherit;
@@ -937,12 +940,6 @@ body {
                 textarea {
                     width: 100%;
                     padding: 7px 10px;
-                    @include mq() {
-                        height: 167px;
-                    }
-                    @include mq(xl) {
-                        height: 200px;
-                    }
                 }
             }
             .submit-btn {

@@ -1,5 +1,6 @@
 $(function() {
     const $navItem = $('.main-nav__item')
+    const $navItem2 = $('.main-nav__item2')
     const $burgerBtn = $('.burger-btn');
     const $burgerBars = $('.burger-btn__bars')
     const $burgerMenu = $('.burger-menu');
@@ -9,12 +10,22 @@ $(function() {
     const $changeVideo = $('.end__visual');
     const $submitBtn = $('#submit');
 
-
-
-
-
-
-
+//　　スムーススクロール
+    $navItem.click(function() {
+        var id = $(this).children().attr('href');
+        var position = $(id).offset().top - 50;
+        $('html,body').animate({
+            "scrollTop": position
+        },500)
+    });
+    $navItem2.click(function() {
+        console.log($navItem2);
+        var id = $(this).children().attr('href');
+        var position = $(id).offset().top - 50;
+        $('html,body').animate({
+            "scrollTop": position
+        },500)
+    });
 
 //    バーガーボタン
     $burgerBtn.click(function() {
@@ -28,7 +39,7 @@ $(function() {
         var $accordionBody = $(this).parent().next();
         $(this).toggleClass('accordion__btn--active');
         $accordionBody.slideToggle();
-    })
+    });
 
 //    入力制御
     $('#form input, #form select').on('change', function () {
