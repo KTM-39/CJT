@@ -4,6 +4,7 @@ $(function() {
     const $burgerBtn = $('.burger-btn');
     const $burgerBars = $('.burger-btn__bars');
     const $burgerMenu = $('.burger-menu');
+    const $burgerMenuItem = $('.burger-menu__item')
     const $accordionBtn = $('.accordion__btn');
     const $submitAction = $('#form');
     const $topScrollBtn = $('#scroll-top');
@@ -11,32 +12,48 @@ $(function() {
     const $submitBtn = $('#submit');
 
 //    スムーススクロール
+    $burgerMenu.css('display', 'none');
     $navItem.click(function() {
         var id = $(this).children().attr('href');
         var position = $(id).offset().top - 50;
         $('html,body').animate({
             "scrollTop": position
         },{
-            "duration": 500,
+            "duration": 800,
             "easing": "linear"
         })
+        return false;
     });
     $hoverMenuItem.click(function() {
+        var id = $(this).children().attr('href');
+        var position = $(id).offset().top - 25;
+        $('html,body').animate({
+            "scrollTop": position
+        },{
+            "duration": 800,
+            "easing": "linear"
+        })
+        return false;
+    });
+    $burgerMenuItem.click(function(){
         var id = $(this).children().attr('href');
         var position = $(id).offset().top;
         $('html,body').animate({
             "scrollTop": position
         },{
-            "duration": 500,
+            "duration": 800,
             "easing": "linear"
         })
+        $burgerBars.toggleClass('burger-btn__bars--active');
+        $burgerMenu.fadeOut();
         return false;
     });
 
 //    バーガーボタン
     $burgerBtn.click(function() {
-        $($burgerBars).toggleClass('burger-btn__bars--active');
-        $($burgerMenu).fadeToggle();
+        $burgerBars.toggleClass('burger-btn__bars--active');
+        $burgerMenu.fadeToggle();
+
     });
 
 //    アコーディオンボタン
