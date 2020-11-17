@@ -1,8 +1,8 @@
 $(function() {
-    const $navItem = $('.main-nav__item')
-    const $hoverMenuItem = $('.hover-menu__item')
+    const $navItem = $('.main-nav__item');
+    const $hoverMenuItem = $('.hover-menu__item');
     const $burgerBtn = $('.burger-btn');
-    const $burgerBars = $('.burger-btn__bars')
+    const $burgerBars = $('.burger-btn__bars');
     const $burgerMenu = $('.burger-menu');
     const $accordionBtn = $('.accordion__btn');
     const $submitAction = $('#form');
@@ -10,21 +10,27 @@ $(function() {
     const $changeVideo = $('.end__visual');
     const $submitBtn = $('#submit');
 
-//　　スムーススクロール
+//    スムーススクロール
     $navItem.click(function() {
         var id = $(this).children().attr('href');
         var position = $(id).offset().top - 50;
         $('html,body').animate({
             "scrollTop": position
-        },500)
+        },{
+            "duration": 500,
+            "easing": "linear"
+        })
     });
     $hoverMenuItem.click(function() {
         var id = $(this).children().attr('href');
-        var position = $(id).offset().top - 50;
+        var position = $(id).offset().top;
         $('html,body').animate({
             "scrollTop": position
-        },500)
-        return false
+        },{
+            "duration": 500,
+            "easing": "linear"
+        })
+        return false;
     });
 
 //    バーガーボタン
@@ -58,7 +64,7 @@ $(function() {
 //    送信挙動
     $submitAction.submit(function(){
         $('.thanks-message').slideToggle().delay(3000).slideToggle();
-        return false
+        return false;
     });
 
 //    スクロールボタン
@@ -83,7 +89,6 @@ $(function() {
 //    パララックスビデオチェンジ
     $(window).scroll(function(){
         var $changeVideoWrapper = $('.change-video-wrapper').innerHeight();
-
         if ($(this).scrollTop() > $changeVideoWrapper) {
             $changeVideo.css('z-index', '-10');
         } else {
