@@ -105,9 +105,9 @@ body {
         margin-bottom: 20px;
     }
     .center-wrapper {
-        padding: 0 20px;
+        padding: 20px;
         @include mq() {
-            padding: 0 40px;
+            padding: 40px;
         }
     }
     .required {
@@ -553,7 +553,6 @@ body {
     }
 }
 .employment {
-    margin: 20px 0;
     padding: 40px 0;
     border-radius: 35px;
     background: $basecolor2;
@@ -657,8 +656,7 @@ body {
     }
 }
 .blog {
-    margin: 20px 0;
-    padding: 40px 0;
+    padding: 40px 0px;
     border-radius: 35px;
     background: $basecolor2;
     box-shadow:  13px 13px 26px #295090,
@@ -717,7 +715,6 @@ body {
     }
 }
 .faq {
-    margin: 20px 0;
     padding: 40px 0;
     border-radius: 35px;
     background: $basecolor2;
@@ -901,7 +898,6 @@ body {
             margin: 0 auto;
             &__name {
                 @include formbox;
-
             }
             &__email {
                 @include formbox;
@@ -910,7 +906,7 @@ body {
                 @include formbox;
             }
             &__summary {
-                margin-bottom: 32px;
+                margin-bottom: 22px;
                 @include mq(xl) {
                     margin-bottom: 36px;
                 }
@@ -928,7 +924,7 @@ body {
                 }
             }
             &__detail {
-                margin-bottom: 31px;
+                margin-bottom: 22px;
                 padding-right: 22px;
                 @include mq() {
                     margin-bottom: 26px;
@@ -970,7 +966,8 @@ body {
                     font-size: 16px;
                     font-weight: bold;
                     background: white;
-                    padding: 9px 0;
+                    padding: 12px 0;
+                    border-radius: 40px;
                 }
             }
         }
@@ -980,7 +977,7 @@ body {
     position: fixed;
     bottom: 90px;
     right: 20px;
-    background: url(../img/chevron-up.png) no-repeat center / cover;
+    background: url(../img/chevron-up2.png) no-repeat center / cover;
     width: 60px;
     height: 60px;
     cursor: pointer;

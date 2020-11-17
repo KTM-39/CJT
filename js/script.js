@@ -1,5 +1,5 @@
 $(function() {
-
+    const $navItem = $('.main-nav__item')
     const $burgerBtn = $('.burger-btn');
     const $burgerBars = $('.burger-btn__bars')
     const $burgerMenu = $('.burger-menu');
@@ -10,23 +10,27 @@ $(function() {
     const $submitBtn = $('#submit');
 
 
-    $topScrollBtn.hide();
-
-    $('dt button:not(.accordion__btn--active)').parent().next().css('display', 'none');
 
 
 
+
+
+
+//    バーガーボタン
     $burgerBtn.click(function() {
         $($burgerBars).toggleClass('burger-btn__bars--active');
         $($burgerMenu).fadeToggle();
     });
 
+//    アコーディオンボタン
+    $('dt button:not(.accordion__btn--active)').parent().next().css('display', 'none');
     $accordionBtn.click(function() {
         var $accordionBody = $(this).parent().next();
         $(this).toggleClass('accordion__btn--active');
         $accordionBody.slideToggle();
     })
 
+//    入力制御
     $('#form input, #form select').on('change', function () {
         if (
             $('#form #name').val() !== "" &&
@@ -40,11 +44,14 @@ $(function() {
         }
     });
 
+//    送信挙動
     $submitAction.submit(function(){
         $('.thanks-message').slideToggle().delay(3000).slideToggle();
         return false
     });
 
+//    スクロールボタン
+    $topScrollBtn.hide();
     $(window).scroll(function () {
         if ($(this).scrollTop() > 800) {
             $topScrollBtn.fadeIn();
@@ -52,17 +59,6 @@ $(function() {
             $topScrollBtn.fadeOut();
         }
     });
-
-    $(window).scroll(function(){
-        var $changeVideoWrapper = $('.change-video-wrapper').innerHeight();
-
-        if ($(this).scrollTop() > $changeVideoWrapper) {
-            $changeVideo.css('z-index', '-10');
-        } else {
-            $changeVideo.css('z-index', '-30');
-        }
-    });
-
     $topScrollBtn.click(function () {
         $('body,html').animate({
             "scrollTop": 0
@@ -73,8 +69,19 @@ $(function() {
         return false;
     });
 
-    cosha();
+//    パララックスビデオチェンジ
+    $(window).scroll(function(){
+        var $changeVideoWrapper = $('.change-video-wrapper').innerHeight();
 
+        if ($(this).scrollTop() > $changeVideoWrapper) {
+            $changeVideo.css('z-index', '-10');
+        } else {
+            $changeVideo.css('z-index', '-30');
+        }
+    });
+
+//    コーシャ
+    cosha();
     cosha({
         className: "light-shadow",
         blur: "5px",
@@ -82,6 +89,6 @@ $(function() {
         x: "5px"
     });
 
-
+//    スクロールアニメーション
     AOS.init();
 });
