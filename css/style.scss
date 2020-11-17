@@ -293,7 +293,7 @@ body {
                 overflow: scroll;
             }
             &__item {
-                font-size: 23px;
+                font-size: 22px;
                 a {
                     color: #333;
                 }
@@ -429,8 +429,8 @@ body {
         }
         .cosmos-image {
             background: url(../img/cosmos-concept.jpg) no-repeat center / cover;
-            margin: 0 calc(50% - 50vw);
             width: 100vw;
+            margin: 0 calc(50% - 50vw);
             height: 310px;
             @include mq() {
                 position: absolute;
