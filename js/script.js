@@ -1,6 +1,6 @@
 $(function() {
     const $navItem = $('.main-nav__item')
-    const $navItem2 = $('.main-nav__item2')
+    const $hoverMenuItem = $('.hover-menu__item')
     const $burgerBtn = $('.burger-btn');
     const $burgerBars = $('.burger-btn__bars')
     const $burgerMenu = $('.burger-menu');
@@ -18,13 +18,13 @@ $(function() {
             "scrollTop": position
         },500)
     });
-    $navItem2.click(function() {
-        console.log($navItem2);
+    $hoverMenuItem.click(function() {
         var id = $(this).children().attr('href');
         var position = $(id).offset().top - 50;
         $('html,body').animate({
             "scrollTop": position
         },500)
+        return false
     });
 
 //    バーガーボタン
