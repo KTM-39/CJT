@@ -53,6 +53,11 @@ $(function() {
     $burgerBtn.click(function() {
         $burgerBars.toggleClass('burger-btn__bars--active');
         $burgerMenu.fadeToggle();
+//        if($burgerBars.hasClass('burger-btn__bars--active')) {
+//            $burgerBtn.css('filter', 'invert(100%)')
+//        } else {
+//            $burgerBtn.css('filter', 'invert(0%)')
+//        }
 
     });
 
@@ -114,13 +119,13 @@ $(function() {
     });
 
 //    コーシャ
-    cosha();
-    cosha({
-        className: "light-shadow",
-        blur: "5px",
-        y: "5px",
-        x: "5px"
-    });
+//    cosha();
+//    cosha({
+//        className: "light-shadow",
+//        blur: "5px",
+//        y: "5px",
+//        x: "5px"
+//    });
 
 //    スクロールアニメーション
     AOS.init();
