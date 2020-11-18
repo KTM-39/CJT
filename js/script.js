@@ -53,7 +53,7 @@ $(function() {
         return false;
     });
 
-//    バーガーボタン
+//    バーガーメニュー
     $burgerBtn.click(function() {
         $burgerBars.toggleClass('burger-btn__bars--active');
         $burgerMenu.fadeToggle();
@@ -64,12 +64,12 @@ $(function() {
         }
     });
 
-//    アコーディオンボタン
+//    アコーディオン
     $('dt button:not(.accordion__btn--active)').parent().next().css('display', 'none');
     $accordionBtn.click(function() {
         var $accordionBody = $(this).parent().next();
         $(this).toggleClass('accordion__btn--active');
-        $accordionBody.slideToggle();
+        $accordionBody.slideToggle(200);
     });
 
 //    入力制御
