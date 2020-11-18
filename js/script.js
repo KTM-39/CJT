@@ -1,6 +1,6 @@
 $(function() {
     const $navItem = $('.main-nav__item');
-    const $hoverMenuItem = $('.hover-menu__item a');
+    const $hoverMenuItem = $('.hover-menu__item');
     const $burgerBtn = $('.burger-btn');
     const $burgerBars = $('.burger-btn__bars');
     const $bar = $('.bar');
