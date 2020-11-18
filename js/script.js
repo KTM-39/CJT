@@ -1,15 +1,18 @@
 $(function() {
     const $navItem = $('.main-nav__item');
-    const $hoverMenuItem = $('.hover-menu__item');
+    const $hoverMenuItem = $('.hover-menu__item a');
     const $burgerBtn = $('.burger-btn');
     const $burgerBars = $('.burger-btn__bars');
+    const $bar = $('.bar');
     const $burgerMenu = $('.burger-menu');
     const $burgerMenuItem = $('.burger-menu__item')
     const $accordionBtn = $('.accordion__btn');
     const $submitAction = $('#form');
     const $topScrollBtn = $('#scroll-top');
-    const $changeVideo = $('.end__visual');
     const $submitBtn = $('#submit');
+    const $switchingVideo = $('.end__visual');
+    const $video1 = $('.video1');
+    const $video2 = $('.video2');
 
 //    スムーススクロール
     $burgerMenu.css('display', 'none');
@@ -46,6 +49,7 @@ $(function() {
         })
         $burgerBars.toggleClass('burger-btn__bars--active');
         $burgerMenu.fadeOut();
+        $bar.css('background', '#ffffff');
         return false;
     });
 
@@ -53,12 +57,11 @@ $(function() {
     $burgerBtn.click(function() {
         $burgerBars.toggleClass('burger-btn__bars--active');
         $burgerMenu.fadeToggle();
-//        if($burgerBars.hasClass('burger-btn__bars--active')) {
-//            $burgerBtn.css('filter', 'invert(100%)')
-//        } else {
-//            $burgerBtn.css('filter', 'invert(0%)')
-//        }
-
+        if($burgerBars.hasClass('burger-btn__bars--active')) {
+            $bar.css('background', '#333333')
+        } else {
+            $bar.css('background', '#ffffff')
+        }
     });
 
 //    アコーディオンボタン
@@ -108,24 +111,20 @@ $(function() {
         return false;
     });
 
-//    パララックスビデオチェンジ
+//    パララックスビデオスィッチング
+    $video2.get(0).pause();
     $(window).scroll(function(){
-        var $changeVideoWrapper = $('.change-video-wrapper').innerHeight();
-        if ($(this).scrollTop() > $changeVideoWrapper) {
-            $changeVideo.css('z-index', '-10');
+        var $switchingVideoWrapper = $('.switching-video-wrapper').innerHeight();
+        if ($(this).scrollTop() > $switchingVideoWrapper) {
+            $switchingVideo.css('z-index', '-10');
+            $video1.get(0).pause();
+            $video2.get(0).play();
         } else {
-            $changeVideo.css('z-index', '-30');
+            $switchingVideo.css('z-index', '-30');
+            $video1.get(0).play();
+            $video2.get(0).pause();
         }
     });
-
-//    コーシャ
-//    cosha();
-//    cosha({
-//        className: "light-shadow",
-//        blur: "5px",
-//        y: "5px",
-//        x: "5px"
-//    });
 
 //    スクロールアニメーション
     AOS.init();
