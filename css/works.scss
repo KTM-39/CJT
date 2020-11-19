@@ -319,11 +319,79 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 370px;
     .work-title {
         color: white;
         font-size: 26px;
     }
+}
+.copy {
+    text-align: center;
+    padding: 40px 0;
+}
+.media-wrapper {
+    padding: 0 40px;
+    @include mq() {
+//        height: 500px;
+    }
+    .media {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto 50px;
+        @include mq() {
+            height: 240px;
+            flex-direction: row-reverse;
+            &:nth-child(odd) .media__body {
+                left: 0;
+            }
+            &:nth-child(even) {
+                flex-direction: row
+            }
+            &:nth-child(even) .media__body {
+                right: 0;
+            }
+        }
+        &__img-wrapper {
+            max-width: inherit;
+            width: inherit;
+            height: inherit;
+            margin: 0;
+            @include mq() {
+                position: absolute;
+                max-width: 360px;
+                z-index: -1;
+            }
+        }
+        &__img {
+            max-width: inherit;
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        &__body {
+            width: inherit;
+            @include mq() {
+                position: absolute;
+                width: 370px;
+                height: inherit;
+            }
+        }
+        &__title {
+            font-size: 20px;
+            text-align: center;
+            background: gray;
+        }
+        &__text {
+            color: green;
+            background: gray;
+            font-size: 14px;
+        }
+    }
+
 }
 
 #scroll-top {
