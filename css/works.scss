@@ -330,10 +330,9 @@ body {
     padding: 40px 0;
 }
 .media-wrapper {
+    position: relative;
     padding: 0 40px;
-    @include mq() {
-//        height: 500px;
-    }
+    height: 880px;
     .media {
         position: relative;
         display: flex;
@@ -342,16 +341,32 @@ body {
         max-width: 768px;
         margin: 0 auto 50px;
         @include mq() {
-            height: 240px;
+            max-width: 100%;
             flex-direction: row-reverse;
+            margin-bottom: 20%;
+//            max-height: 300px;
+            &:nth-child(odd) .media__img-wrapper {
+                right: -16%;
+                width: 80%;
+            }
             &:nth-child(odd) .media__body {
                 left: 0;
+                right: 0;
+//                transform: translateY(40%);
+                margin-right: auto;
+
             }
             &:nth-child(even) {
                 flex-direction: row
             }
+            &:nth-child(even) .media__img-wrapper {
+                width: 80%;
+            }
+
             &:nth-child(even) .media__body {
                 right: 0;
+                left: 0;
+                margin-left: auto;
             }
         }
         &__img-wrapper {
@@ -361,7 +376,10 @@ body {
             margin: 0;
             @include mq() {
                 position: absolute;
-                max-width: 400px;
+//                width: 80%;
+//                max-width: 400px;
+//                max-height: 500px;
+//                height: 90%;
                 z-index: -1;
             }
         }
@@ -375,12 +393,19 @@ body {
         &__body {
             width: inherit;
             @include mq() {
-                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 width: 370px;
-                height: inherit;
+                transform: translateY(0%);
+            }
+            &-inner {
+                background: #000;
+                padding: 53px 0;
             }
         }
         &__title {
+            width: inherit;
             font-size: 20px;
             text-align: center;
             background: gray;
@@ -389,7 +414,6 @@ body {
             color: green;
             background: gray;
             font-size: 14px;
-            height: 100%;
         }
     }
 
