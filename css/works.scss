@@ -344,7 +344,6 @@ body {
             max-width: 100%;
             flex-direction: row-reverse;
             margin-bottom: 20%;
-//            max-height: 300px;
             &:nth-child(odd) .media__img-wrapper {
                 right: -16%;
                 width: 80%;
@@ -352,9 +351,7 @@ body {
             &:nth-child(odd) .media__body {
                 left: 0;
                 right: 0;
-//                transform: translateY(40%);
                 margin-right: auto;
-
             }
             &:nth-child(even) {
                 flex-direction: row
@@ -376,10 +373,11 @@ body {
             margin: 0;
             @include mq() {
                 position: absolute;
+                height: auto;
 //                width: 80%;
 //                max-width: 400px;
 //                max-height: 500px;
-//                height: 90%;
+//                height: 100%;
                 z-index: -1;
             }
         }
@@ -401,7 +399,7 @@ body {
             }
             &-inner {
                 background: #000;
-                padding: 53px 0;
+                padding: 50px 0;
             }
         }
         &__title {
