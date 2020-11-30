@@ -316,7 +316,7 @@ body {
 .jumbotron {
     background: url(../img/appliance.jpg) no-repeat center / cover;
     position: relative;
-    padding-top: 95%;
+    padding-top: 90%;
     @include mq() {
         padding-top: 42%;
     }
