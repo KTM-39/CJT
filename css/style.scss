@@ -377,7 +377,6 @@ body {
     }
     .vertical-line {
         position: absolute;
-        margin: 0 calc(50% - 50vw);
         width: 100vw;
         height: 100%;
         top: 0;
@@ -395,8 +394,6 @@ body {
         }
         .concept {
             background: #000;
-//            margin: 0 calc(50% - 50vw);
-//            width: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -459,8 +456,9 @@ body {
             background: $basecolor1;
             height: 50px;
             padding: 100px 0;
-            margin: 0 calc(50% - 50vw);
-            width: 100vw;
+            @include mq(xl) {
+                padding: 190px 0 110px;
+            }
         }
         .flexbox-work {
             position: relative;
@@ -476,6 +474,7 @@ body {
             }
             @include mq(xl) {
                 width: 1140px;
+                transform: translateY(-9%);
             }
             .work {
                 display: block;
@@ -954,6 +953,7 @@ body {
                 select {
                     width: 100%;
                     padding: 10px 10px;
+                    color: #333;
                 }
             }
             &__detail {
