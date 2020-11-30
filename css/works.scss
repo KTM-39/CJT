@@ -316,7 +316,10 @@ body {
 .jumbotron {
     background: url(../img/appliance.jpg) no-repeat center / cover;
     position: relative;
-    padding-top: 90%;
+    padding-top: 95%;
+    @include mq() {
+        padding-top: 42%;
+    }
     .work-title {
         color: white;
         font-size: 26px;
@@ -399,11 +402,14 @@ body {
         &__text {
             color: green;
             background: white;
-//            background: #000;
             font-size: 14px;
             padding: 20px 0;
+            line-height: 30px;
+            word-break: break-all;
             @include mq() {
-                padding: 90px 50px 90px 40px;
+                padding: 95px 50px 95px 40px;
+                font-size: 14.5px;
+                letter-spacing: -0.9px;
             }
         }
     }
