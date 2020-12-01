@@ -105,7 +105,7 @@ $(function() {
         $('body,html').animate({
             "scrollTop": 0
         }, {
-            "duration": 500,
+            "duration": 800,
             "easing": "linear"
         });
         return false;
