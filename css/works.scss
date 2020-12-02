@@ -32,19 +32,6 @@ $basecolor3: #f39832;
     }
 }
 
-@mixin diagonal {
-    position: absolute;
-    background: #000;
-    width: 100%;
-    height: 20%;
-    left: 0;
-    -webkit-clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-    clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/bg-red.jpg);
-    padding: 40px 0;
-    z-index: -1;
-}
-
 @mixin formbox {
     margin-bottom: 22px;
     padding-right: 22px;
