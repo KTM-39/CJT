@@ -324,12 +324,16 @@ body {
 }
 .media-wrapper {
     position: relative;
-    padding: 0 40px;
+    padding: 0 20px;
     .media {
+        padding-top: 80%;
         position: relative;
         width: 100%;
         max-width: 768px;
-        margin: 0 auto 150px;
+        margin: 0 auto 250px;
+        &:nth-child(odd) .media__img-wrapper {
+
+        }
         @include mq() {
             max-width: 100%;
             &:nth-child(odd) .media__img-wrapper {
@@ -361,10 +365,14 @@ body {
             max-width: 1120px;
         }
         &__img-wrapper {
+            position: absolute;
+            top: 0;
+//            right: -4.8%;
             max-width: inherit;
-            width: inherit;
+            width: 95%;
             height: inherit;
             margin: 0;
+//            margin-left: auto;
             @include mq() {
                 height: auto;
                 z-index: -1;
@@ -381,14 +389,23 @@ body {
             vertical-align: middle;
         }
         &__body {
-            width: inherit;
+            position: absolute;
+            top: 69%;
+            right: 0;
+            width: 72%;
+            padding: 60px 40px;
+            margin-left: auto;
+            background: gray;
+            z-index: -1;
             @include mq() {
                 width: 42%;
             }
         }
+        &__title {
+            color: white;
+        }
         &__text {
-            color: green;
-            background: white;
+            color: black;
             font-size: 14px;
             padding: 20px 0;
             line-height: 30px;
