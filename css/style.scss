@@ -433,12 +433,11 @@ body {
             height: 50px;
             padding: 100px 0;
             @include mq(xl) {
-                padding: 190px 0 110px;
+                padding: 190px 0 50px;
             }
         }
         .flexbox-work {
             position: relative;
-            transform: translateY(-2%);
             padding: 0 30px;
             @include mq() {
                 display: flex;
@@ -447,8 +446,7 @@ body {
                 flex-wrap: wrap;
                 width: 85%;
                 margin: 0 auto;
-                transform: translateY(-4%);
-            }
+        }
             @include mq(xl) {
                 max-width: 1400px;
             }
@@ -462,21 +460,22 @@ body {
                     margin-bottom: 50px;
                 }
                 &:hover {
-                    .work__border {
-                        width: 92%;
-                        transition: 0.3s ease-in-out;
-                        @include mq() {
-                            width: 270px;
-                        }
-                        @include mq(xl) {
-                            width: 302px;
-                        }
-                    }
-                    .work__pop-up {
+                    .work__view-more {
                         visibility: visible;
                         opacity: 1;
                         transform: translateY(0%);
                         transition: all 0.3s ease-in-out;
+                    }
+                    .work__arrow-right {
+                        transform: translateX(60%);
+                        transition: all 0.3s ease-in-out;
+                    }
+                    .work__border {
+                        width: 92%;
+                        transition: all 0.2s ease-in-out;
+                        @include mq() {
+                            width: 87%;
+                        }
                     }
                 }
                 @include mq() {
@@ -515,23 +514,32 @@ body {
                         width: 270px;
                     }
                     @include mq(xl) {
-                        width: 313px;
+                        width: 320px;
                     }
                 }
-                &__title {
+                &__left {
                     font-size: 18px;
                     color: black;
                     @include mq(xl) {
                         font-size: 24px;
                     }
                 }
-                &__pop-up {
+                &__right {
+                    display: flex;
+                }
+                &__view-more {
                     font-size: 12px;
                     font-weight: bold;
                     color: black;
                     visibility: hidden;
                     opacity: 0;
                     transform: translateY(40%);
+                    transition: all 0.3s ease-in-out;
+                }
+                &__arrow-right {
+                    background: url(../img/arrow-right.png) no-repeat center / cover;
+                    width: 20px;
+                    height: 20px;
                     transition: all 0.3s ease-in-out;
                 }
                 &__border {
@@ -543,7 +551,7 @@ body {
                     width: 12px;
                     height: 2px;
                     border-radius: 5px;
-                    transition: 0.3s ease-in-out;
+                    transition: all 0.2s ease-in-out;
                 }
             }
         }
