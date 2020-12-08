@@ -346,14 +346,14 @@ body {
                 width: 83%;
             }
             &:nth-child(odd) .media__body {
-                top: 62%;
+                top: 65%;
             }
             &:nth-child(even) .media__img-wrapper {
                 width: 83%;
                 right: -14.1%;
             }
             &:nth-child(even) .media__body {
-                top: 62%;
+                top: 65%;
             }
         }
         @include mq(xl) {
