@@ -77,7 +77,7 @@ $basecolor3: #f39832;
 }
 
 body {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     a {
         color: white;
         text-decoration: none;
@@ -85,6 +85,7 @@ body {
     .chapter-title {
         text-align: center;
         font-size: 30px;
+        padding: 30px 0;
     }
     .sub-title {
         text-align: center;
@@ -125,7 +126,7 @@ body {
     width: 100%;
     height: 80px;
     &__inner {
-        width: 90%;
+        width: 91%;
         height: inherit;
         margin: 0 auto;
         display: flex;
@@ -156,7 +157,7 @@ body {
                 position: absolute;
                 top: 100%;
                 left: 0px;
-                width: 150px;
+                width: 170px;
                 background: rgba(255, 255, 255, 0.4);
                 border-radius: 10px;
                 padding-left: 1em;
@@ -172,9 +173,9 @@ body {
             &__item {
                 position: relative;
                 &:not(:last-child) {
-                    margin-right: 10px;
+                    margin-right: 9px;
                     @include mq(xl) {
-                        margin-right: 20px;
+                        margin-right: 24px;
                     }
                 }
                 &:hover .hover-menu {
@@ -339,13 +340,13 @@ body {
         text-align: center;
         color: white;
         &__main {
-            font-size: 20px;
+            font-size: 21px;
             span {
-                color: #FF8C00;
-                background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-size: 38px;
+                color: $basecolor3;
+//                background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+//                -webkit-background-clip: text;
+//                -webkit-text-fill-color: transparent;
+                font-size: 29px;
             }
             @include mq() {
                 font-size: 30px;
@@ -431,7 +432,7 @@ body {
         margin-bottom: 30px;
         .works-center-line {
             height: 50px;
-            padding: 100px 0;
+            padding: 100px 0 50px;
             @include mq(xl) {
                 padding: 190px 0 50px;
             }
@@ -471,7 +472,7 @@ body {
                         transition: all 0.3s ease-in-out;
                     }
                     .work__border {
-                        width: 92%;
+                        width: 90%;
                         transition: all 0.2s ease-in-out;
                         @include mq() {
                             width: 87%;
@@ -528,8 +529,7 @@ body {
                     display: flex;
                 }
                 &__view-more {
-                    font-size: 12px;
-                    font-weight: bold;
+                    font-size: 14px;
                     color: black;
                     visibility: hidden;
                     opacity: 0;
@@ -639,6 +639,7 @@ body {
         .type-b-text {
             width: 90%;
             margin: 0 auto 30px;
+            word-break: break-all;
         }
     }
     &__flow-of-use {
@@ -765,6 +766,7 @@ body {
                 height: 250px;
                 vertical-align: middle;
                 object-fit: cover;
+                border-radius: 10px;
             }
         }
     }
