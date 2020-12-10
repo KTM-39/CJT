@@ -676,6 +676,11 @@ body {
                         margin-bottom: 20px;
                     }
                 }
+                &:last-of-type {
+                    .step__img-wrapper {
+                        justify-content: center;
+                    }
+                }
                 &__img-wrapper {
                     margin: 0px;
                     display: flex;
