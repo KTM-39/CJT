@@ -687,9 +687,9 @@ body {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
-                    margin-right: 10px;
+                    margin-right: 15px;
                     @include mq() {
-                        margin-right: 30px;
+                        margin-right: 20px;
                     }
                 }
                 .icon-round {
