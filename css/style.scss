@@ -698,7 +698,6 @@ body {
                 &__icon {
                     width: 32px;
                     vertical-align: middle;
-                    padding: 0px;
                     @include mq() {
                         width: 64px;
                     }
@@ -782,6 +781,7 @@ body {
         padding: 40px;
     }
     .flexbox-blog {
+        padding: 0 50px;
         @include mq(lg) {
             display: flex;
             justify-content: space-between;
@@ -789,13 +789,14 @@ body {
         }
         .blog-description {
             p {
-                width: 80%;
-                margin: 0 auto 20px;
+                padding: 20px;
+                margin: 0 auto 40px;
+                background: $basecolor5;
+                border-radius: 10px;
             }
         }
         .blog-image {
             display: block;
-            width: 80%;
             margin: 0 auto;
             @include mq(lg) {
                 width: 100%;
