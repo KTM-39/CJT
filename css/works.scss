@@ -17,8 +17,11 @@ $keepscreens: (
 ) !default;
 
 $basecolor1: #5cbfd8;
-$basecolor2: rgba(48, 94, 169, 0.5);
+$basecolor2: rgba(48, 94, 169, 0.85);
 $basecolor3: #f39832;
+$basecolor4: rgba(85, 185, 243, 0.8);
+$basecolor5: rgba(234, 240, 251, 1);
+$fontcolor: #333;
 
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -77,6 +80,7 @@ $basecolor3: #f39832;
 
 body {
     font-family: 'M PLUS 1p', sans-serif;
+    color: $fontcolor;
     a {
         color: white;
         text-decoration: none;
@@ -387,17 +391,16 @@ body {
             width: 72%;
             padding: 60px 40px;
             margin-left: auto;
-            background: gray;
+            background: $basecolor5;
             z-index: -1;
             @include mq() {
                 width: 42%;
             }
         }
         &__title {
-            color: white;
+            color: $basecolor3;
         }
         &__text {
-            color: black;
             font-size: 14px;
             padding: 20px 0;
             line-height: 30px;

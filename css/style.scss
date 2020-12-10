@@ -620,7 +620,7 @@ body {
                 white-space: nowrap;
                 color: white;
                 &-row {
-                    background-color: #1B234C;
+                    background-color: #1a3259;
                 }
             }
             &__text {
@@ -643,11 +643,9 @@ body {
 .employment {
     padding: 40px 0;
     background: $basecolor4;
-//    box-shadow:  13px 13px 26px #295090,
-//        -13px -13px 26px #376cc2;
     &__type-b {
         .type-b-text {
-            background: rgba(255, 255, 255, 0.8);
+            background: $basecolor5;
             padding: 20px;
             border-radius: 10px;
             margin: 0 20px 30px;
@@ -667,7 +665,7 @@ body {
             }
             .step {
                 margin: 0 auto;
-                background: rgba(255, 255, 255, 0.8);
+                background: $basecolor5;
                 border-radius: 10px;
                 padding: 20px;
                 display: flex;
@@ -684,6 +682,7 @@ body {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
+                    margin-right: 10px;
                     @include mq() {
                         margin-right: 30px;
                     }
@@ -778,9 +777,7 @@ body {
 }
 .blog {
     padding: 40px 0px;
-    background: $basecolor2;
-//    box-shadow:  13px 13px 26px #295090,
-//        -13px -13px 26px #376cc2;
+    background: $basecolor4;
     @include mq(lg) {
         padding: 40px;
     }
@@ -837,9 +834,7 @@ body {
 }
 .faq {
     padding: 40px 0;
-    background: $basecolor2;
-//    box-shadow:  13px 13px 26px #295090,
-//        -13px -13px 26px #376cc2;
+    background: $basecolor4;
     @include mq() {
         max-width: 700px;
         margin: 0 auto;
