@@ -69,7 +69,7 @@ $(function() {
     $accordionBtn.click(function() {
         var $accordionBody = $(this).parent().next();
         $(this).toggleClass('accordion__btn--active');
-        $accordionBody.slideToggle(200);
+        $accordionBody.slideToggle(300);
     });
 
 //    入力制御
