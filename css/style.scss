@@ -641,28 +641,20 @@ body {
     }
 }
 .employment {
-    padding-bottom: 40px;
+    padding: 0 50px 40px;
     background: $basecolor4;
     &__type-b {
         .type-b-text {
             background: $basecolor5;
             padding: 20px;
             border-radius: 10px;
-            margin: 0 20px 30px;
+            margin: 0 auto 30px;
             word-break: break-all;
-            @include mq() {
-                margin: 0 40px 30px;
-            }
         }
     }
     &__flow-of-use {
         .flow-wrapper {
-            max-width: 600px;
-            margin: 0 20px;
-            @include mq() {
-                max-width: 920px;
-                margin: 0 40px;
-            }
+            margin: 0 auto;
             .step {
                 margin: 0 auto;
                 background: $basecolor5;
@@ -703,15 +695,9 @@ body {
                 &__icon {
                     width: 32px;
                     vertical-align: middle;
-                    @include mq() {
-                        width: 64px;
-                    }
                 }
                 &__next {
                     width: 16px;
-                    @include mq() {
-                        width: 32px;
-                    }
                 }
                 &__body {
                     width: 85%;
@@ -779,13 +765,9 @@ body {
     }
 }
 .blog {
-    padding: 40px 0px;
+    padding: 40px 50px;
     background: $basecolor4;
-    @include mq(lg) {
-        padding: 40px;
-    }
     .flexbox-blog {
-        padding: 0 50px;
         @include mq(lg) {
             display: flex;
             justify-content: space-between;
@@ -872,15 +854,14 @@ body {
     }
 }
 .faq {
-    padding-bottom: 40px;
+    padding: 0 50px 40px;
     background: $basecolor4;
+    margin: 0 auto;
     @include mq() {
         max-width: 700px;
-        margin: 0 auto;
     }
     .accordion {
         &__wrapper {
-            width: 90%;
             margin: 0 auto 20px;
         }
         &__title {
@@ -946,61 +927,43 @@ body {
     @include mq(lg) {
         height: 100vh;
     }
-    .flexbox-access {
+    .address {
+        text-align: center;
+        margin-bottom: 10px;
+        line-height: 40px;
+        span {
+            background: #001A7B;
+            color: white;
+            padding: 2px 15px 3px;
+            border-radius: 5px;
+
+        }
+        .location {
+            letter-spacing: 2px;
+            @include mq() {
+                font-size: 18px;
+            }
+        }
+    }
+    .google-map {
+        width: 90%;
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 400px;
+        @include mq() {
+            max-width: 700px;
+        }
         @include mq(lg) {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 0 30px;
+            padding-bottom: 420px;
         }
-        .access-table {
-            width: 90%;
-            margin: 0 auto 30px;
-            border: 1px solid #ddd;
-            @include mq() {
-                max-width: 700px;
-            }
-            @include mq(lg) {
-                width: 85%;
-                margin-right: 30px;
-                margin-bottom: 0;
-            }
-            &__inner {
-                width: 100%;
-            }
-            &__header {
-                width: 40%;
-                padding: 15px;
-                background-color: #efefef;
-                border-bottom: 1px solid #ddd;
-                font-weight: bold;
-                vertical-align: middle;
-            }
-            &__text {
-                padding: 15px;
-                border-bottom: 1px solid #ddd;
-            }
-        }
-        .google-map {
-            width: 90%;
-            height: 0;
-            overflow: hidden;
-            position: relative;
-            margin: 0 auto;
-            padding-bottom: 400px;
-            @include mq() {
-                max-width: 700px;
-            }
-            @include mq(lg) {
-                padding-bottom: 332px;
-            }
-            iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-            }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
         }
     }
 }
