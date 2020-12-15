@@ -79,7 +79,7 @@ $fontcolor: #333;
 }
 
 body {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     color: $fontcolor;
     a {
         color: white;
@@ -359,6 +359,9 @@ body {
             &:nth-child(even) .media__body {
                 top: 65%;
             }
+        }
+        @include mq(lg) {
+            padding-top: 630px;
         }
         @include mq(xl) {
             max-width: 1120px;
