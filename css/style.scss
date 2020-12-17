@@ -643,6 +643,10 @@ body {
 .employment {
     padding: 0 50px 40px;
     background: $basecolor4;
+    @include mq(lg) {
+        max-width: 592px;
+        margin: 0 auto;
+    }
     &__type-b {
         .type-b-text {
             background: $basecolor5;
