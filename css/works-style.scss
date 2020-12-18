@@ -367,7 +367,7 @@ body {
             padding-top: 630px;
         }
         @include mq(xl) {
-            max-width: 1120px;
+            max-width: 1160px;
         }
         &__img-wrapper {
             position: absolute;
@@ -401,6 +401,7 @@ body {
             z-index: -1;
             @include mq() {
                 width: 42%;
+                padding: 50px 60px;
             }
         }
         &__title {
