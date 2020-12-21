@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <title>ブログ一覧</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/blog-style.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="./img/logo.png" alt="" class="logo"></a>
+                </div>
+                <div class="header__nav">
+                    <nav class="main-nav">
+                        <ul class="main-nav__inner">
+                            <li class="main-nav__item">
+                                <a href="./index.html#about">コスモスについて</a>
+                                <ul class="hover-menu">
+                                    <li class="hover-menu__item">
+                                        <a href="./index.html#about__cosmos">コスモスとは</a>
+                                    </li>
+                                    <li class="hover-menu__item">
+                                        <a href="./index.html#about__works">就労支援</a>
+                                    </li>
+                                    <li class="hover-menu__item">
+                                        <a href="./index.html#about__daily-schedule">1日の流れ</a>
+                                    </li>
+                                    <li class="hover-menu__item">
+                                        <a href="./index.html#about__wage">工賃規定</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="#employment">就労継続支援B型について</a>
+                                <ul class="hover-menu">
+                                    <li class="hover-menu__item">
+                                        <a href="./index.html#employment__type-b">就労継続支援B型とは</a>
+                                    </li>
+                                    <li class="hover-menu__item">
+                                        <a href="./index.html#employment__flow-of-use">利用までの流れ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="./index.html#news">ニュース</a></li>
+                            <li class="main-nav__item"><a href="./index.html#blog">ブログ</a></li>
+                            <li class="main-nav__item"><a href="./index.html#recruitment">利用者募集</a></li>
+                            <li class="main-nav__item"><a href="./index.html#faq">Q&amp;A</a></li>
+                            <li class="main-nav__item"><a href="./index.html#access">アクセス</a></li>
+                            <li class="main-nav__item"><a href="./index.html#contact" class="contact-btn">お問い合わせ</a></li>
+                        </ul>
+                    </nav>
+                    <button class="burger-btn">
+                        <span class="burger-btn__bars">
+                            <span class="bar bar--top"></span>
+                            <span class="bar bar--mid1"></span>
+                            <span class="bar bar--mid2"></span>
+                            <span class="bar bar--bot"></span>
+                        </span>
+                    </button>
+                    <div class="burger-menu">
+                        <ul class="burger-menu__inner">
+                            <li class="burger-menu__item layout-item1"><a href="./index.html#about">コスモスについて</a>
+                                <ul>
+                                    <li class="burger-menu__item layout-item2">
+                                        <a href="./index.html#about__cosmos">コスモスとは</a>
+                                    </li>
+                                    <li class="burger-menu__item layout-item2">
+                                        <a href="./index.html#about__works">就労支援</a>
+                                    </li>
+                                    <li class="burger-menu__item layout-item2">
+                                        <a href="./index.html#about__daily-schedule">1日の流れ</a>
+                                    </li>
+                                    <li class="burger-menu__item layout-item2">
+                                        <a href="./index.html#about__wage">工賃規定</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="burger-menu__item layout-item1"><a href="#employment">就労継続支援B型について</a>
+                                <ul>
+                                    <li class="burger-menu__item layout-item2">
+                                        <a href="./index.html#employment__type-b">就労継続支援B型とは</a>
+                                    </li>
+                                    <li class="burger-menu__item layout-item2">
+                                        <a href="./index.html#employment__flow-of-use">利用までの流れ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="burger-menu__item layout-item1"><a href="./index.html#news">ニュース</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="./index.html#blog">ブログ</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="./index.html#recruitment">利用者募集</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="./index.html#faq">Q&amp;A</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="./index.html#access">アクセス</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="./index.html#contact">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="jumbotron">
+                    <h1 class="blog-title">ブログ一覧</h1>
+                </div>
+                <!-- /.jumbotron -->
+                <section>
+                    <h2 class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quia.</h2>
+
+                    <div class="media-wrapper">
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                               <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                                <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                                <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                                <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                                <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                                <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                                <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+                        <a class="media" href="">
+                            <figure class="media__img-wrapper">
+                                <img class="media__img" alt="" src="./img/sample-image.jpg">
+                            </figure>
+                            <div class="media__body">
+                                <h3 class="media__title">Lorem ipsum dolor sit</h3>
+                                <p class="media__text">
+                                    多岐にわたる事業を展開するBAYCREW’S GROUPですが、その主軸とベースはファッションに置かれています。
+                                </p>
+                            </div>
+                            <!-- /.media__body -->
+                        </a>
+                        <!-- /.media -->
+
+
+                    </div>
+                    <!-- /.media-wrapper -->
+                </section>
+                <div id="scroll-top"></div>
+                <!-- /#scroll-top -->
+            </article>
+        </main>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img src="./img/logo.png" alt="" class="logo">
+            </div>
+            <!-- /.footer__logo -->
+            <ul class="sub-nav">
+                <li class="sub-nav__item"><a href="">会社概要</a></li>
+                <li class="sub-nav__item"><a href="">プライバシーポリシー</a></li>
+            </ul>
+            <small>&copy;copyright Cosmos</small>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
