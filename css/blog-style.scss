@@ -85,6 +85,13 @@ body {
         color: $fontcolor;
         text-decoration: none;
     }
+    figure {
+        margin: 0;
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+    }
     .chapter-title {
         text-align: center;
         font-size: 30px;
@@ -331,7 +338,7 @@ body {
 }
 
 
-// ブログ一覧
+// ブログ一覧ページ
 .media-wrapper {
     position: relative;
     padding: 0 20px;
@@ -382,7 +389,51 @@ body {
 }
 
 
-// ブログ詳細
+// ブログ詳細ページ
+.layout-wrapper {
+    padding: 80px 15px;
+}
+.flexbox-single {
+    @include mq() {
+        display: flex;
+        justify-content: space-between;
+        main {
+            width: 50%;
+        }
+        aside {
+            width: 35%;
+        }
+    }
+}
+.category {
+    padding: 10px;
+    color: orange;
+}
+.blog-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.share-button {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    ul {
+        display: flex;
+        li {
+            background: blue;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.recommend {
+
+}
+
 .blog-hd2 {
 
 }
