@@ -39,6 +39,25 @@ $fontcolor: #333;
     --myw: 720px; /* 標準幅 */
 }
 
+h1 {
+    font-size: var(--f1);
+}
+h2 {
+    font-size: var(--f2);
+}
+h3 {
+    font-size: var(--f3);
+}
+h4 {
+    font-size: var(--f4);
+}
+h5 {
+    font-size: var(--f5);
+}
+h6 {
+    font-size: var(--f6);
+}
+
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
@@ -462,13 +481,28 @@ body {
 }
 .blog-hd3 {
     font-size: var(--f3);
-    border-left: 5px solid green;
+    border-left: 10px solid green;
     padding-left: 5px;
 }
+.blog-text {
+    padding: 40px;
+}
 .recommend {
-
+    padding: 0 20px;
+    margin-bottom: 20px;
+    h4 {
+        text-align: center;
+    }
+    figure {
+        margin: 0;
+    }
 }
 
+.related {
+    figure {
+        margin: 20px 20px 0;
+    }
+}
 #scroll-top {
     position: fixed;
     bottom: 90px;
