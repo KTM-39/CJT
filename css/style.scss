@@ -1,8 +1,11 @@
-/*****************
-SP FIRST
-*****************/
+@charset "UTF-8";
+/*
+Theme Name: Cosmos Theme
+Author: B-Cocmos
+Description: コスモスオリジナルテーマ
+Version: 1.0
+*/
 
-/*レスポンシブ対応*/
 $breakpoints: (
     "sm": "screen and (min-width: 400px)",
     "md": "screen and (min-width: 768px)",
@@ -10,7 +13,6 @@ $breakpoints: (
     "xl": "screen and (min-width: 1200px)"
 ) !default;
 
-/*画面サイズが変わっても常に動画の中央が表示されるようにする*/
 $keepscreens: (
     "ls": "(aspect-ratio: 16/9), (min-aspect-ratio: 16/9)",/* Landscape */
     "pr": "(max-aspect-ratio: 16/9)"/* Portrait */
@@ -115,7 +117,6 @@ body {
     .required {
         @include required;
     }
-    /* iOSでのデフォルトスタイルをリセット */
     input[type="submit"],
     input[type="button"] {
         border-radius: 0;
