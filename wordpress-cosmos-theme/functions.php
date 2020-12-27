@@ -68,11 +68,10 @@ function theme_enqueue() {
 
     // スクリプトJS読み込み
     wp_enqueue_script(
-        'jQuery',
+        'javascript',
         get_theme_file_uri('/js/script.js'),
         array('jquery'),
-        filemtime(get_theme_file_path('/js/script.js')),
-        true
+        filemtime(get_theme_file_path('/js/script.js'))
     );
 }
 

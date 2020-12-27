@@ -5,7 +5,7 @@
         <div class="switching-video-wrapper">
             <section class="top">
                 <div class="top__visual">
-                    <video src="./video/Space-start.mp4"  playinline loop muted autoplay class="video1"></video>
+                    <video src="<?php echo get_template_directory_uri(); ?>/video/Space-start.mp4"  playinline loop muted autoplay class="video1"></video>
                 </div>
                 <!-- /.top__visual -->
                 <div class="copy">
@@ -42,7 +42,7 @@
 
                         <a data-aos="fade-up" data-aos-duration="500" class="work" href="./appliance.html">
                             <figure class="work__img-wrapper">
-                                <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
@@ -59,7 +59,7 @@
 
                         <a data-aos="fade-up" data-aos-duration="500" class="work" href="./accessory.html">
                             <figure class="work__img-wrapper">
-                                <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
@@ -76,7 +76,7 @@
 
                         <a data-aos="fade-up" data-aos-duration="500" class="work" href="./office.html">
                             <figure class="work__img-wrapper">
-                                <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
@@ -93,7 +93,7 @@
 
                         <a data-aos="fade-up" data-aos-duration="500" class="work" href="./pc.html">
                             <figure class="work__img-wrapper">
-                                <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
@@ -110,7 +110,7 @@
 
                         <a data-aos="fade-up" data-aos-duration="500" class="work" href="./restaurant.html">
                             <figure class="work__img-wrapper">
-                                <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
@@ -127,7 +127,7 @@
 
                         <a data-aos="fade-up" data-aos-duration="500" class="work" href="./outside-the-facility.html">
                             <figure class="work__img-wrapper">
-                                <img class="work__img" alt="" src="./img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
@@ -268,7 +268,7 @@
                             <div class="step">
                                 <figure class="step__img-wrapper">
                                     <div class="icon-round">
-                                        <img class="step__icon" alt="" src="./img/phone.png">
+                                        <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/phone.png">
                                     </div>
                                     <img src="./img/step-next.png" alt="" class="step__next">
                                 </figure>
@@ -288,7 +288,7 @@
                             <div class="step">
                                 <figure class="step__img-wrapper">
                                     <div class="icon-round">
-                                        <img class="step__icon" alt="" src="./img/Consultation.png">
+                                        <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Consultation.png">
                                     </div>
                                     <img src="./img/step-next.png" alt="" class="step__next">
                                 </figure>
@@ -308,7 +308,7 @@
                             <div class="step">
                                 <figure class="step__img-wrapper">
                                     <div class="icon-round">
-                                        <img class="step__icon" alt="" src="./img/building.png">
+                                        <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/building.png">
                                     </div>
                                     <img src="./img/step-next.png" alt="" class="step__next">
                                 </figure>
@@ -328,7 +328,7 @@
                             <div class="step">
                                 <figure class="step__img-wrapper">
                                     <div class="icon-round">
-                                        <img class="step__icon" alt="" src="./img/Contract.png">
+                                        <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Contract.png">
                                     </div>
                                     <img src="./img/step-next.png" alt="" class="step__next">
                                 </figure>
@@ -348,7 +348,7 @@
                             <div class="step">
                                 <figure class="step__img-wrapper">
                                     <div class="icon-round">
-                                        <img class="step__icon" alt="" src="./img/start.png">
+                                        <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/start.png">
                                     </div>
                                 </figure>
                                 <div class="step__body">
@@ -408,7 +408,7 @@
                         </div>
                         <!-- /.blog-description -->
                         <a href="/blog-list.html" class="blog-image">
-                            <img src="./img/blog-img.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/blog-img.jpg" alt="">
                         </a>
                     </div>
                     <!-- /.flexbox-blog -->
@@ -513,7 +513,7 @@
             </div>
 
         </div>
-        <!-- /.center-wrapper -->
+        <!-- /.switching-video-wrapper -->
         <section class="access" id="access">
             <h2 class="chapter-title">アクセス</h2>
             <div class="address">
@@ -529,7 +529,7 @@
         <!-- /.access -->
         <div class="end">
             <div class="end__visual">
-                <video src="./video/Space-end.mp4" autoplay playinline loop muted class="video2">
+                <video src="<?php echo get_template_directory_uri(); ?>/video/Space-end.mp4" autoplay playinline loop muted class="video2">
                 </video>
             </div>
 

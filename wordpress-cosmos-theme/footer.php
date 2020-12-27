@@ -1,6 +1,6 @@
         <footer class="footer">
             <div class="footer__logo">
-                <img src="./img/logo.png" alt="" class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" class="logo">
             </div>
             <!-- /.footer__logo -->
             <ul class="sub-nav">

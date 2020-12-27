@@ -31,7 +31,7 @@
         <header class="header">
             <div class="header__inner">
                 <div class="header__logo">
-                    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="./img/logo.png" alt="" class="logo"></a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" class="logo"></a>
                 </div>
                 <div class="header__nav">
                     <nav class="main-nav">
@@ -64,7 +64,7 @@
                                 </ul>
                             </li>
                             <li class="main-nav__item"><a href="#news">ニュース</a></li>
-                            <li class="main-nav__item"><a href="#blog">ブログ</a></li>
+                            <li class="main-nav__item"><a href="#cosmos-blog">ブログ</a></li>
                             <li class="main-nav__item"><a href="#recruitment">利用者募集</a></li>
                             <li class="main-nav__item"><a href="#faq">Q&amp;A</a></li>
                             <li class="main-nav__item"><a href="#access">アクセス</a></li>

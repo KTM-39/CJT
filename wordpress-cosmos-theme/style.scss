@@ -67,9 +67,6 @@ $fontcolor: #333;
         padding: 10px 10px;
         border-radius: 10px;
         border: 1px solid gray;
-        @include mq(xl) {
-            height: 18px;
-        }
     }
 }
 
@@ -273,7 +270,7 @@ body {
                 position: absolute;
                 top: 100%;
                 left: 0px;
-                width: 170px;
+                width: 190px;
                 background: rgba(255, 255, 255, 0.4);
                 border-radius: 10px;
                 padding-left: 1em;
@@ -519,7 +516,7 @@ body {
 
         }
         .cosmos-image {
-            background: url(../img/cosmos-concept.jpg) no-repeat center / cover;
+            background: url(img/cosmos-concept.jpg) no-repeat center / cover;
             width: 100vw;
             height: 310px;
             @include mq() {
@@ -557,7 +554,7 @@ body {
                 flex-wrap: wrap;
                 width: 85%;
                 margin: 0 auto;
-        }
+            }
             @include mq(xl) {
                 max-width: 1400px;
             }
@@ -652,7 +649,7 @@ body {
                     transition: all 0.3s ease-in-out;
                 }
                 &__arrow-right {
-                    background: url(../img/arrow-right.png) no-repeat center / cover;
+                    background: url(img/arrow-right.png) no-repeat center / cover;
                     width: 20px;
                     height: 20px;
                     transition: all 0.3s ease-in-out;
@@ -1127,6 +1124,7 @@ body {
             }
             &__summary {
                 margin-bottom: 22px;
+                padding-right: 22px;
                 @include mq(xl) {
                     margin-bottom: 36px;
                 }
@@ -1191,7 +1189,7 @@ body {
     position: fixed;
     bottom: 90px;
     right: 20px;
-    background: url(../img/chevron-up2.png) no-repeat center / cover;
+    background: url(img/chevron-up2.png) no-repeat center / cover;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -1208,7 +1206,7 @@ body {
 }
 .footer {
     width: 100%;
-    height: 150px;
+    height: 170px;
     background: #6992d3;
     padding-top: 20px;
     text-align: center;
@@ -1230,8 +1228,6 @@ body {
 }
 
 // フロント・エディター統合スタイル
-
-
 
 /* 記事に関する情報 */
 .myposthead {
