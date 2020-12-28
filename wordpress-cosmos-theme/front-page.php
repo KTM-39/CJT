@@ -407,7 +407,7 @@
                             </p>
                         </div>
                         <!-- /.blog-description -->
-                        <a href="/blog-list.html" class="blog-image">
+                        <a href="<?php echo esc_url(home_url('/cosmos-blog')); ?>" class="blog-image">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/blog-img.jpg" alt="">
                         </a>
                     </div>

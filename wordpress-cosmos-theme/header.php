@@ -37,38 +37,66 @@
                     <nav class="main-nav">
                         <ul class="main-nav__inner">
                             <li class="main-nav__item">
-                                <a href="#about">コスモスについて</a>
+                                <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about">コスモスについて</a>
                                 <ul class="hover-menu">
                                     <li class="hover-menu__item">
-                                        <a href="#about__cosmos">コスモスとは</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__cosmos">コスモスとは</a>
                                     </li>
                                     <li class="hover-menu__item">
-                                        <a href="#about__works">就労支援</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__works">就労支援</a>
                                     </li>
                                     <li class="hover-menu__item">
-                                        <a href="#about__daily-schedule">1日の流れ</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__daily-schedule">1日の流れ</a>
                                     </li>
                                     <li class="hover-menu__item">
-                                        <a href="#about__wage">工賃規定</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__wage">工賃規定</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="main-nav__item"><a href="#employment">就労継続支援B型について</a>
+                            <li class="main-nav__item"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#employment">就労継続支援B型について</a>
                                 <ul class="hover-menu">
                                     <li class="hover-menu__item">
-                                        <a href="#employment__type-b">就労継続支援B型とは</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#employment__type-b">就労継続支援B型とは</a>
                                     </li>
                                     <li class="hover-menu__item">
-                                        <a href="#employment__flow-of-use">利用までの流れ</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#employment__flow-of-use">利用までの流れ</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="main-nav__item"><a href="#news">ニュース</a></li>
-                            <li class="main-nav__item"><a href="#cosmos-blog">ブログ</a></li>
-                            <li class="main-nav__item"><a href="#recruitment">利用者募集</a></li>
-                            <li class="main-nav__item"><a href="#faq">Q&amp;A</a></li>
-                            <li class="main-nav__item"><a href="#access">アクセス</a></li>
-                            <li class="main-nav__item"><a href="#contact" class="contact-btn">お問い合わせ</a></li>
+                            <li class="main-nav__item"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#news">ニュース</a></li>
+                            <li class="main-nav__item"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#cosmos-blog">ブログ</a></li>
+                            <li class="main-nav__item"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#recruitment">利用者募集</a></li>
+                            <li class="main-nav__item"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#faq">Q&amp;A</a></li>
+                            <li class="main-nav__item"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#access">アクセス</a></li>
+                            <li class="main-nav__item"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#contact" class="contact-btn">お問い合わせ</a></li>
                         </ul>
                     </nav>
                     <button class="burger-btn">
@@ -81,38 +109,66 @@
                     </button>
                     <div class="burger-menu">
                         <ul class="burger-menu__inner">
-                            <li class="burger-menu__item layout-item1"><a href="#about">コスモスについて</a>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about">コスモスについて</a>
                                 <ul>
                                     <li class="burger-menu__item layout-item2">
-                                        <a href="#about__cosmos">コスモスとは</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__cosmos">コスモスとは</a>
                                     </li>
                                     <li class="burger-menu__item layout-item2">
-                                        <a href="#about__works">就労支援</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__works">就労支援</a>
                                     </li>
                                     <li class="burger-menu__item layout-item2">
-                                        <a href="#about__daily-schedule">1日の流れ</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__daily-schedule">1日の流れ</a>
                                     </li>
                                     <li class="burger-menu__item layout-item2">
-                                        <a href="#about__wage">工賃規定</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#about__wage">工賃規定</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="burger-menu__item layout-item1"><a href="#employment">就労継続支援B型について</a>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#employment">就労継続支援B型について</a>
                                 <ul>
                                     <li class="burger-menu__item layout-item2">
-                                        <a href="#employment__type-b">就労継続支援B型とは</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#employment__type-b">就労継続支援B型とは</a>
                                     </li>
                                     <li class="burger-menu__item layout-item2">
-                                        <a href="#employment__flow-of-use">利用までの流れ</a>
+                                        <a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#employment__flow-of-use">利用までの流れ</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="burger-menu__item layout-item1"><a href="#news">ニュース</a></li>
-                            <li class="burger-menu__item layout-item1"><a href="#blog">ブログ</a></li>
-                            <li class="burger-menu__item layout-item1"><a href="#recruitment">利用者募集</a></li>
-                            <li class="burger-menu__item layout-item1"><a href="#faq">Q&amp;A</a></li>
-                            <li class="burger-menu__item layout-item1"><a href="#access">アクセス</a></li>
-                            <li class="burger-menu__item layout-item1"><a href="#contact">お問い合わせ</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#news">ニュース</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#blog">ブログ</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#recruitment">利用者募集</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#faq">Q&amp;A</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#access">アクセス</a></li>
+                            <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
+                                            <?php echo esc_url(home_url('/')); ?>
+                                        <?php endif; ?>#contact">お問い合わせ</a></li>
                         </ul>
                     </div>
                 </div>

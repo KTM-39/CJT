@@ -26,19 +26,18 @@ $keepscreens: (
 	--f5: 1em;    /* 16px */
 	--f6: 0.8em;  /* 12.8px */
 
-	--basecolor: #63a211; /* 基本色 */
+    --basecolor1: #5cbfd8;
+    --basecolor2: rgba(48, 94, 169, 0.85);
+    --basecolor3: #f39832;
+    --basecolor4: rgba(85, 185, 243, 0.8);
+    --basecolor5: rgba(234, 240, 251, 1);
+
 	--gradient: linear-gradient( 79.7deg,  rgba(34,126,34,1) 8.2%, rgba(99,162,17,1) 84.9% );
+	--basefont: 'Noto Sans JP', sans-serif;
+    --fontcolor: #333;
 
-	--myfont: 'Josefin Sans', sans-serif;
-
-	--myw: 720px; /* 標準幅 */
+	--alignAdjustment: 720px;
 }
-$basecolor1: #5cbfd8;
-$basecolor2: rgba(48, 94, 169, 0.85);
-$basecolor3: #f39832;
-$basecolor4: rgba(85, 185, 243, 0.8);
-$basecolor5: rgba(234, 240, 251, 1);
-$fontcolor: #333;
 
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -77,7 +76,7 @@ $fontcolor: #333;
     font-size: 12px;
     font-weight: bold;
     border-radius: 10px;
-    background: $basecolor3;
+    background: var(--basecolor3);
     color: white;
     transform: translateY(-1px)
 }
@@ -98,13 +97,14 @@ body *::after {
 	box-sizing: inherit;
 }
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: $fontcolor;
+    font-family: var(--basefont);
+    color: var(--fontcolor);
     box-sizing: border-box;
     margin: 0;
     img {
         max-width: 100%;
         height: auto;
+        vertical-align: middle;
     }
     .alignleft {
         float: left;
@@ -160,10 +160,6 @@ body {
     h6 {
         font-size: var(--f6);
     }
-    // h2 {
-    //     border-left: solid 14px var(--basecolor);
-    //     padding-left: 14px;
-    // }
     a {
         color: white;
         text-decoration: none;
@@ -214,12 +210,12 @@ body {
     }
     @include mq() {
         .alignfull {
-            margin-left: calc( ( 100vw - var(--myw) ) / 2 * -1 );
-            margin-right: calc( ( 100vw - var(--myw) ) / 2 * -1 );
+            margin-left: calc( ( 100vw - var(--alignAdjustment) ) / 2 * -1 );
+            margin-right: calc( ( 100vw - var(--alignAdjustment) ) / 2 * -1 );
         }
         .alignwide {
-            margin-left: calc( ( 100vw - var(--myw) ) / 4 * -1 );
-            margin-right: calc( ( 100vw - var(--myw) ) / 4 * -1 );
+            margin-left: calc( ( 100vw - var(--alignAdjustment) ) / 4 * -1 );
+            margin-right: calc( ( 100vw - var(--alignAdjustment) ) / 4 * -1 );
             max-width: none;
             width: auto;
         }
@@ -460,10 +456,7 @@ body {
         &__main {
             font-size: 21px;
             span {
-                color: $basecolor3;
-//                background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
-//                -webkit-background-clip: text;
-//                -webkit-text-fill-color: transparent;
+                color: var(--basecolor3);
                 font-size: 29px;
             }
             @include mq() {
@@ -476,7 +469,7 @@ body {
 .about {
     position: relative;
     z-index: 3;
-    background: $basecolor1;
+    background: var(--basecolor1);
     padding-bottom: 40px;
     &__cosmos {
         position: relative;
@@ -543,8 +536,11 @@ body {
         position: relative;
         margin-bottom: 30px;
         .works-center-line {
-            height: 50px;
-            padding: 100px 0 50px;
+            // height: 50px;
+            padding: 40px 0 20px;
+            @include mq() {
+                padding: 100px 0 30px;
+            }
             @include mq(xl) {
                 padding: 190px 0 50px;
             }
@@ -637,7 +633,7 @@ body {
                 }
                 &__left {
                     font-size: 18px;
-                    color: $fontcolor;
+                    color: var(--fontcolor);
                     @include mq(xl) {
                         font-size: 24px;
                     }
@@ -647,7 +643,7 @@ body {
                 }
                 &__view-more {
                     font-size: 14px;
-                    color: $fontcolor;
+                    color: var(--fontcolor);
                     visibility: hidden;
                     opacity: 0;
                     transform: translateY(40%);
@@ -663,7 +659,7 @@ body {
                     position: absolute;
                     left: 20px;
                     bottom: 15px;
-                    background: $fontcolor;
+                    background: var(--fontcolor);
                     display: block;
                     width: 12px;
                     height: 2px;
@@ -751,14 +747,14 @@ body {
 }
 .employment {
     padding: 0 50px 40px;
-    background: $basecolor4;
+    background: var(--basecolor4);
     @include mq(lg) {
         max-width: 592px;
         margin: 0 auto;
     }
     &__type-b {
         .type-b-text {
-            background: $basecolor5;
+            background: var(--basecolor5);
             padding: 20px;
             border-radius: 10px;
             margin: 0 auto 30px;
@@ -770,7 +766,7 @@ body {
             margin: 0 auto;
             .step {
                 margin: 0 auto;
-                background: $basecolor5;
+                background: var(--basecolor5);
                 border-radius: 10px;
                 padding: 20px;
                 display: flex;
@@ -841,7 +837,7 @@ body {
     }
 }
 .news {
-    background: $basecolor1;
+    background: var(--basecolor1);
     padding-bottom: 50px;
     &-posts {
         width: 90%;
@@ -879,7 +875,7 @@ body {
 }
 .cosmos-blog {
     padding: 40px 50px;
-    background: $basecolor4;
+    background: var(--basecolor4);
     .flexbox-blog {
         @include mq(lg) {
             display: flex;
@@ -894,7 +890,7 @@ body {
             p {
                 padding: 20px;
                 margin: 0 auto 40px;
-                background: $basecolor5;
+                background: var(--basecolor5);
                 border-radius: 10px;
                 @include mq(lg) {
                     width: 360px;
@@ -927,7 +923,7 @@ body {
 }
 .recruitment {
     padding: 0 15px 40px;
-    background: $basecolor1;
+    background: var(--basecolor1);
     line-height: 28px;
     &-table {
         max-width: 520px;
@@ -968,7 +964,7 @@ body {
 }
 .faq {
     padding: 0 50px 40px;
-    background: $basecolor4;
+    background: var(--basecolor4);
     margin: 0 auto;
     @include mq() {
         max-width: 700px;
@@ -985,8 +981,8 @@ body {
             display: block;
             width: inherit;
             padding: 10px 40px 10px 15px;
-            background-color: $basecolor3;
-            border: 2px solid $basecolor3;
+            background-color: var(--basecolor3);
+            border: 2px solid var(--basecolor3);
             border-radius: 10px;
             color: #fff;
             font-size: 1.125rem;
@@ -1030,13 +1026,13 @@ body {
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 0 0 10px 10px;
-            background: $basecolor5;
+            background: var(--basecolor5);
         }
     }
 }
 .access {
     padding-bottom: 40px;
-    background: $basecolor1;
+    background: var(--basecolor1);
     @include mq(lg) {
         height: 680px;
     }
@@ -1237,8 +1233,84 @@ body {
     }
 }
 
-// フロント・エディター統合スタイル
+// ブログ一覧
+.blog-wrapper {
+    background: #F4F4F4;
+    padding-bottom: 10px;
+}
+.jumbotron {
+    background: url(img/appliance.jpg) no-repeat center / cover;
+    position: relative;
+    padding-top: 90%;
+    @include mq() {
+        padding-top: 42%;
+    }
+    .blog-title {
+        color: white;
+        font-size: 26px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%)
+    }
+}
 
+.blog-copy {
+    text-align: center;
+    padding: 40px 0;
+    @include mq() {
+        padding: 80px 0;
+    }
+}
+
+.media-wrapper {
+    position: relative;
+    padding: 0 20px;
+    margin: 0 auto;
+    @include mq() {
+        max-width: 600px;
+    }
+    @include mq(xl) {
+        max-width: 900px;
+    }
+    .media {
+        display: flex;
+        align-items: center;
+        color: var(--fontcolor);
+        padding-bottom: 30px;
+        &__img-wrapper {
+            flex: 0 1 27.58333%;
+            margin: 0 3.33333% 0 0;
+        }
+        &__body {
+            flex: 1;
+        }
+        &__title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: var(--basecolor3);
+            @include mq() {
+                font-size: 1.4rem;
+            }
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 25px;
+            height: 48px;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            @include mq() {
+                font-size: 16px;
+                letter-spacing: -0.9px;
+            }
+        }
+    }
+}
 /* 記事に関する情報 */
 .myposthead {
 	padding-top: 20px;
@@ -1248,7 +1320,7 @@ body {
 
 .myposthead p {
 	color: var(--basecolor);
-	font-family: var(--myfont);
+	font-family: var(--basefont);
 	font-weight: bold;
 }
 
@@ -1370,7 +1442,7 @@ body {
 .myrelated h2 {
 	border-width: 5px;
 	color: var(--basecolor);
-	font-family: var(--myfont);
+	font-family: var(--basefont);
 	font-size: var(--f5);
 }
 
@@ -1420,7 +1492,7 @@ body {
 	padding: 0;
 	border: none;
 	color: var(--basecolor);
-	font-family: var(--myfont);
+	font-family: var(--basefont);
 	font-size: var(--f5);
 	text-align: center;
 	line-height: 1.2;
