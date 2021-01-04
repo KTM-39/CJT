@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-    <div class="blog-wrapper">
+    <div class="blog-list-wrapper">
         <div class="jumbotron">
             <h1 class="blog-title">コスモスブログ</h1>
         </div>
