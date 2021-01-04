@@ -457,7 +457,7 @@ body {
             font-size: 21px;
             span {
                 color: var(--basecolor3);
-                font-size: 29px;
+                font-size: 28px;
             }
             @include mq() {
                 font-size: 30px;
@@ -469,6 +469,7 @@ body {
 .about {
     position: relative;
     z-index: 3;
+    // background: white;
     background: var(--basecolor1);
     padding-bottom: 40px;
     &__cosmos {
@@ -1291,6 +1292,7 @@ body {
             margin-bottom: 10px;
             font-weight: bold;
             color: var(--basecolor3);
+            font-size: 1.125rem;
             @include mq() {
                 font-size: 1.4rem;
             }
@@ -1311,46 +1313,56 @@ body {
         }
     }
 }
-/* 記事に関する情報 */
-.myposthead {
-	padding-top: 20px;
-	padding-bottom: 10px;
-	text-align: center;
-}
 
-.myposthead p {
-	color: var(--basecolor);
-	font-family: var(--basefont);
-	font-weight: bold;
+.layout-wrapper {
+    padding: 80px 15px;
+    @include mq() {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+.flexbox-single {
+    @include mq() {
+        display: flex;
+        justify-content: space-between;
+        .main-content {
+            width: 60%;
+        }
+        .sub-content {
+            width: 35%;
+        }
+    }
 }
 
 /* 記事が属するカテゴリー */
-.post-categories {
-	display: flex;
-	justify-content: center;
-	padding: 0;
-	list-style-type: none;
-}
-
-.post-categories li:not(:last-child) {
-	margin-right: 10px;
-}
-
-.post-categories a {
-	padding: 3px 10px;
-	border: solid 1px currentColor;
-	border-radius: 10px;
-	color: var(--basecolor);
-	font-size: var(--f6);
-}
-
-.post-categories::before {
-	content: "\f318";
-	font-family: "dashicons";
-	color: var(--basecolor);
-	font-size: var(--f2);
-	line-height: 1;
-	margin-right: 5px;
+.posthead {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    .post-categories {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style-type: none;
+        &::before {
+            content: "\f318";
+            font-family: "dashicons";
+            color: var(--basecolor);
+            font-size: var(--f2);
+            line-height: 1;
+            margin-right: 5px;
+        }
+        li:not(:last-child) {
+            margin-right: 10px;
+        }
+        a {
+            padding: 3px 10px;
+            border: solid 1px currentColor;
+            border-radius: 10px;
+            color: var(--basecolor);
+            font-size: var(--f6);
+        }
+    }
 }
 
 /* スクリーンリーダー用のテキスト */
@@ -1372,36 +1384,37 @@ body {
 	display: flex;
 	margin: 30px 0;
 	font-size: var(--f6);
-}
-
-.nav-previous {
-	flex: 1;
-	display: flex;
-	align-items: center;
-}
-
-.nav-next {
-	flex: 1;
-	margin-left: 10px;
-	text-align: right;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-.nav-previous::before {
-	content: "\f141";
-}
-
-.nav-next::after {
-	content: "\f139";
-}
-
-.nav-previous::before, .nav-next::after {
-	font-family: "dashicons";
-	color: var(--basecolor);
-	font-size: var(--f2);
-	line-height: 1;
+    .nav-previous {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: "\f141";
+        }
+        a {
+            color: #000;
+        }
+    }
+    .nav-next {
+        flex: 1;
+        margin-left: 10px;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &::after {
+            content: "\f139";
+        }
+        a {
+            color: #000;
+        }
+    }
+    .nav-previous::before, .nav-next::after {
+        font-family: "dashicons";
+        color: var(--basecolor);
+        font-size: var(--f2);
+        line-height: 1;
+    }
 }
 
 /* 記事一覧 */
@@ -1465,21 +1478,20 @@ body {
 }
 
 /* ページネーション */
-.pagination .nav-links {
-	margin-bottom: 50px;
-	justify-content: center;
-}
-
-.pagination .page-numbers:not(:last-child) {
-	margin-right: 15px;
-}
-
-.pagination a {
-	color: var(--basecolor);
-}
-
-.pagination .current {
-	color: #aaaaaa;
+.pagination {
+    .nav-links {
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .page-numbers:not(:last-child) {
+        margin-right: 15px;
+    }
+    a {
+        color: var(--basecolor);
+    }
+    .current {
+        color: #aaaaaa;
+    }
 }
 
 /* シェアボタン */

@@ -156,7 +156,7 @@
                                         <?php endif; ?>#news">ニュース</a></li>
                             <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
                                             <?php echo esc_url(home_url('/')); ?>
-                                        <?php endif; ?>#blog">ブログ</a></li>
+                                        <?php endif; ?>#cosmos-blog">ブログ</a></li>
                             <li class="burger-menu__item layout-item1"><a href="<?php if( !is_front_page() ): ?>
                                             <?php echo esc_url(home_url('/')); ?>
                                         <?php endif; ?>#recruitment">利用者募集</a></li>

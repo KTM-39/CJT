@@ -7,7 +7,7 @@
         </div>
         <!-- /.jumbotron -->
         <section>
-            <h2 class="blog-copy">Lorem, ipsum dolor.</h2>
+            <h2 class="blog-copy">新着記事</h2>
             <div class="media-wrapper">
                 <?php if(have_posts()): while(have_posts()): the_post(); ?>
                 <article <?php post_class(); ?>>
