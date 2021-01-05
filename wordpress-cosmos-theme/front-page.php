@@ -522,7 +522,7 @@
             </div>
             <!-- /.address-->
             <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.8639767116949!2d143.88568182919283!3d43.80490196657154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f6d571d2c119443%3A0x35bd1b996fd450e8!2z5YyX44Gu44OA44Kk44OL44Oz44KwIOOBguOBmeOBquOCjQ!5e0!3m2!1sja!2sjp!4v1604543436490!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.457698349733!2d143.88620150000006!3d43.804864800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f6d5788622c5b71%3A0x398a6769ac0235d5!2z5oyH5a6a5bCx5Yq057aZ57aa5pSv5o-077yi5Z6L5LqL5qWt5omAIOiBt-alreiok-e3tOOCt-OCueODhuODoCDjgrPjgrnjg6Ljgrk!5e0!3m2!1sja!2sjp!4v1609812846061!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
             <!-- /.google-map -->
         </section>

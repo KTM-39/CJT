@@ -1273,7 +1273,7 @@ body {
         }
         .blog-title {
             color: white;
-            font-size: 26px;
+            font-size: var(--f2);
             position: absolute;
             text-align: center;
             top: 50%;
@@ -1285,6 +1285,7 @@ body {
     .blog-copy {
         text-align: center;
         padding: 40px 0;
+        font-size: var(--f3);
         @include mq() {
             padding: 80px 0;
         }
@@ -1413,7 +1414,7 @@ body {
             font-size: var(--f6);
         }
         h2 {
-            border-left: solid 14px var(--basecolor2);
+            border-left: solid 14px var(--basecolor1);
             padding-left: 14px;
         }
     }
@@ -1422,34 +1423,46 @@ body {
             border: solid 2px var(--basecolor1);
             padding: 10px;
             h2 {
-                border-left: solid 5px var(--basecolor2);
+                border-left: solid 5px var(--basecolor1);
                 padding-left: 14px;
                 color: var(--basecolor1);
                 font-family: var(--basefont);
                 font-size: var(--f5);
+                margin-bottom: 10px;
             }
-            img {
-                height: 120px;
-            }
-            a {
-                color: #000;
-            }
-            @include mq() {
+            .postlist {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                a {
+                    color: #000;
+                }
                 article {
-                    width: 24%;
+                    margin-bottom: 20px;
                 }
-                .postlist {
-                    justify-content: flex-start;
+                figure {
+                    margin: 0;
                 }
-                article:not(:last-child) {
-                    margin-right: calc( 4% / 3 );
+                img {
+                    height: 120px;
+                    max-width: 100%;
+                    object-fit: cover;
+                    @include mq() {
+                        height: 180px;
+                    }
+                }
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    font-size: var(--f6);
                 }
             }
         }
     }
 }
 .flexbox-single {
-    padding: 80px 15px;
+    padding: 70px 15px 30px;
     @include mq() {
         display: flex;
         justify-content: space-between;
@@ -1462,33 +1475,4 @@ body {
             width: 35%;
         }
     }
-}
-
-/* 記事一覧 */
-.postlist {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.postlist article {
-	width: 48%;
-	margin-bottom: 20px;
-}
-
-.postlist figure {
-	margin: 0;
-}
-
-.postlist img {
-	height: 180px;
-	object-fit: cover;
-}
-
-.postlist h2,
-.postlist h3 {
-	margin: 0;
-	padding: 0;
-	border: none;
-	font-size: var(--f6);
 }
