@@ -28,7 +28,9 @@
 
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
-        <header class="header">
+        <header class="header <?php if( !is_front_page() ): ?>
+            blog-header
+            <?php endif; ?>">
             <div class="header__inner">
                 <div class="header__logo">
                     <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" class="logo"></a>

@@ -9,7 +9,7 @@
                 <?php the_category(); ?>
                 <h1><?php the_title(); ?></h1>
 
-                <time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
+                <time class="single-date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
                     <?php echo esc_html( get_the_date() ); ?>
                 </time>
             </div>

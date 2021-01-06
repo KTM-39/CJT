@@ -17,6 +17,9 @@
                                 <?php the_post_thumbnail(); ?>
                             </figure>
                             <div class="media__body">
+                                <time class="media__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
+                                    <?php echo esc_html( get_the_date() ); ?>
+                                </time>
                                 <h3 class="media__title"><?php the_title(); ?></h3>
                                 <p class="media__text"><?php echo wp_strip_all_tags(get_the_content(), true); ?></p>
                             </div>

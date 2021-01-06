@@ -31,6 +31,9 @@ $keepscreens: (
     --basecolor3: #f39832;
     --basecolor4: rgba(85, 185, 243, 0.8);
     --basecolor5: rgba(234, 240, 251, 1);
+    --basecolor6: #1a3259;
+    --basecolor7: #305ea9;
+    --basecolor8: #eaf0fb;
 
 	--gradient: linear-gradient( 79.7deg,  rgba(34,126,34,1) 8.2%, rgba(99,162,17,1) 84.9% );
 	--basefont: 'Noto Sans JP', sans-serif;
@@ -149,6 +152,9 @@ body {
             &::before {
                 content: "\f141";
             }
+            a {
+                color: var(--fontcolor);
+            }
         }
         .nav-next {
             flex: 1;
@@ -159,6 +165,9 @@ body {
             justify-content: flex-end;
             &::after {
                 content: "\f139";
+            }
+            a {
+                color: var(--fontcolor);
             }
         }
         .nav-previous::before, .nav-next::after {
@@ -247,11 +256,12 @@ body {
         }
     }
 }
-
+.blog-header {
+    background: var(--basecolor1);
+}
 .header {
     position: fixed;
     top: 0;
-    // background: rgba(255, 255, 255, 0.5);
     z-index: 9999;
     width: 100%;
     height: 80px;
@@ -288,7 +298,7 @@ body {
                 top: 100%;
                 left: 0px;
                 width: 190px;
-                background: rgba(255, 255, 255, 0.4);
+                background: rgba(255, 255, 255, 0.8);
                 border-radius: 10px;
                 padding-left: 1em;
                 visibility: hidden;
@@ -298,6 +308,9 @@ body {
                     opacity: 0;
                     transition: 0.5s ease-in-out;
                     padding: 10px 0;
+                    a {
+                        color: rgb(110, 131, 223);
+                    }
                 }
             }
             &__item {
@@ -439,10 +452,17 @@ body {
     &__breadcrumbs {
         z-index: 9999;
         width: 100%;
-        background: rgba(255, 255, 255, 0.75);
+        background: var(--basecolor7);
+        padding: 10px 0;
         .breadcrumbs {
             width: 91%;
             margin: 0 auto;
+            span:not(:last-of-type) {
+                text-decoration: underline;
+            }
+            .current-item {
+                color: #aaa;
+            }
         }
     }
 }
@@ -707,7 +727,8 @@ body {
             max-width: 400px;
             margin: 0 auto;
             text-align: center;
-            background: rgba(234, 240, 251, 0.5);
+            background: #eaf0fb;
+            border-radius: 10px;
             @include mq() {
                 display: flex;
                 width: 88%;
@@ -1266,7 +1287,7 @@ body {
 
 // ブログ一覧
 .blog-list-wrapper {
-    background: #F4F4F4;
+    background: var(--basecolor8);
     padding-bottom: 1px;
     .jumbotron {
         background: url(img/appliance.jpg) no-repeat center / cover;
@@ -1316,6 +1337,9 @@ body {
             &__body {
                 flex: 1;
             }
+            &__date {
+                font-size: var(--f6);
+            }
             &__title {
                 margin-bottom: 10px;
                 font-weight: bold;
@@ -1360,38 +1384,42 @@ body {
 
 // ブログ詳細
 .single-wrapper {
-    background: #f4f4f4;
+    background: var(--basecolor8);
     .main-content {
         .posthead {
             padding-top: 20px;
             padding-bottom: 20px;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
             .post-categories {
                 display: flex;
-                justify-content: center;
                 padding: 0;
+                margin-bottom: 20px;
                 list-style-type: none;
-                &::before {
-                    content: "\f318";
-                    font-family: "dashicons";
-                    color: var(--basecolor1);
-                    font-size: var(--f2);
-                    line-height: 1;
-                    margin-right: 5px;
-                }
                 li:not(:last-child) {
                     margin-right: 10px;
                 }
                 a {
-                    padding: 3px 10px;
+                    padding: 10px 25px;
                     border: solid 1px currentColor;
                     border-radius: 10px;
-                    color: var(--basecolor1);
+                    color: whitesmoke;
+                    background: var(--basecolor6);
                     font-size: var(--f6);
                 }
             }
+            .single-date {
+                align-self: flex-end;
+                transform: translateY(212%);
+            }
         }
         .content-space {
+            .wp_social_bookmarking_light {
+                transform: translateX(-10px);
+                .wsbl_facebook_like span {
+                    margin-right: -10px;
+                }
+            }
             p, h1, h2, h3, h4, h5, h6, ul {
                 margin: 30px 0;
             }
@@ -1429,17 +1457,17 @@ body {
     }
     .sub-content {
         .related {
-            // border: solid 2px var(--basecolor1);
-            // padding: 10px;
             h2 {
-                // border-left: solid 5px var(--basecolor1);
-                // padding-left: 14px;
                 padding: 10px;
-                background: var(--basecolor4);
+                background: var(--basecolor3);
                 color: white;
                 font-family: var(--basefont);
                 font-size: var(--f5);
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+                @include mq() {
+                    text-align: center;
+                    font-size: var(--f4);
+                }
             }
             .postlist {
                 display: flex;
@@ -1475,6 +1503,7 @@ body {
 .flexbox-single {
     padding: 120px 15px 30px;
     @include mq() {
+        padding-top: 150px;
         display: flex;
         justify-content: space-between;
         max-width: 800px;
