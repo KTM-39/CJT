@@ -519,7 +519,6 @@ body {
 .about {
     position: relative;
     z-index: 3;
-    // background: white;
     background: var(--basecolor1);
     padding-bottom: 40px;
     &__cosmos {
@@ -528,7 +527,7 @@ body {
             height: 410px;
         }
         .concept {
-            background: #000;
+            background: var(--basecolor6);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -539,6 +538,7 @@ body {
                 right: 0;
                 width: 90vw;
                 height: 410px;
+                border-radius: 1.5rem 0 0 1.5rem;
             }
             &__inner {
                 margin: 0 auto;
@@ -575,6 +575,7 @@ body {
                 width: 45vw;
                 height: 410px;
                 z-index: 1;
+                border-radius: 0 1.5rem 1.5rem 0;
             }
             @include mq(xl) {
                 top: 90px;
@@ -728,7 +729,7 @@ body {
             margin: 0 auto;
             text-align: center;
             background: #eaf0fb;
-            border-radius: 10px;
+            border-radius: 1.5rem;
             @include mq() {
                 display: flex;
                 width: 88%;
@@ -767,6 +768,7 @@ body {
                 min-width: 100%;
                 border-collapse: separate;
                 border-spacing: 15px 0px;
+                border-radius: 1.5rem;
             }
             &__header {
                 text-align: center;
@@ -807,8 +809,8 @@ body {
     &__type-b {
         .type-b-text {
             background: var(--basecolor5);
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 1.5rem;
             margin: 0 auto 30px;
             word-break: break-all;
         }
@@ -819,8 +821,8 @@ body {
             .step {
                 margin: 0 auto;
                 background: var(--basecolor5);
-                border-radius: 10px;
-                padding: 20px;
+                border-radius: 1.5rem;
+                padding: 30px;
                 display: flex;
                 justify-content: space-around;
                 &:not(:last-of-type) {
@@ -940,10 +942,10 @@ body {
                 padding-top: 0;
             }
             p {
-                padding: 20px;
+                padding: 30px;
                 margin: 0 auto 40px;
                 background: var(--basecolor5);
-                border-radius: 10px;
+                border-radius: 1.5rem;
                 @include mq(lg) {
                     width: 360px;
                     margin-left: 0;
@@ -968,7 +970,7 @@ body {
                 height: 250px;
                 vertical-align: middle;
                 object-fit: cover;
-                border-radius: 10px;
+                border-radius: 1.5rem;
             }
         }
     }
@@ -1032,10 +1034,10 @@ body {
             position: relative;
             display: block;
             width: inherit;
-            padding: 10px 40px 10px 15px;
+            padding: 20px 45px 20px 20px;
             background-color: var(--basecolor3);
             border: 2px solid var(--basecolor3);
-            border-radius: 10px;
+            border-radius: 1.5rem;
             color: #fff;
             font-size: 1.125rem;
             text-align: left;
@@ -1067,7 +1069,7 @@ body {
                 outline: none;
             }
             &--active {
-                border-radius: 10px 10px 0 0;
+                border-radius: 1.5rem 1.5rem 0 0;
             }
             &--active::after {
                 content: none;
@@ -1075,9 +1077,9 @@ body {
                 }
         }
         &__body {
-            padding: 15px;
+            padding: 20px;
             border: 1px solid #ddd;
-            border-radius: 0 0 10px 10px;
+            border-radius: 0 0 1.5rem 1.5rem;
             background: var(--basecolor5);
         }
     }
@@ -1307,7 +1309,7 @@ body {
             transform: translateY(-50%)
         }
     }
-    .blog-copy {
+    .new-articles {
         text-align: center;
         padding: 40px 0;
         font-size: var(--f3);
@@ -1386,7 +1388,7 @@ body {
 .single-wrapper {
     background: var(--basecolor8);
     .main-content {
-        .posthead {
+        .post-header {
             padding-top: 20px;
             padding-bottom: 20px;
             display: flex;
@@ -1408,7 +1410,7 @@ body {
                     font-size: var(--f6);
                 }
             }
-            .single-date {
+            .post-date {
                 align-self: flex-end;
                 transform: translateY(212%);
             }
@@ -1457,7 +1459,8 @@ body {
     }
     .sub-content {
         .related {
-            h2 {
+            margin-top: 10px;
+            &__hedding {
                 padding: 10px;
                 background: var(--basecolor3);
                 color: white;
@@ -1470,14 +1473,11 @@ body {
                 }
             }
             .postlist {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                a {
-                    color: #000;
-                }
                 article {
                     margin-bottom: 20px;
+                }
+                a {
+                    color: #000;
                 }
                 figure {
                     margin: 0;
