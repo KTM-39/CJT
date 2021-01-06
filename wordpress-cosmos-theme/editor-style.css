@@ -8,14 +8,13 @@
 	--f5: 1em;    /* 16px */
 	--f6: 0.8em;  /* 12.8px */
 
-	--basecolor: #63a211; /* 基本色 */
+	--basecolor1: #5cbfd8; /* 基本色 */
 }
-
 
 /* フォント */
 body,
 .editor-post-title__input {
-	font-family: sans-serif;
+	font-family: 'Noto Sans JP';
 }
 
 p {
@@ -43,7 +42,7 @@ h6 {
 }
 
 h2 {
-	border-left: solid 14px var(--basecolor);
+	border-left: solid 14px var(--basecolor1);
 	padding-left: 14px;
 }
 

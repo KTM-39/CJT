@@ -173,4 +173,14 @@
                     </div>
                 </div>
             </div>
+            <?php if( !is_front_page() ): ?>
+                <div class="header__breadcrumbs">
+                    <div class="breadcrumbs">
+                        <?php if(function_exists('bcn_display'))
+                    {
+                        bcn_display();
+                    }?>
+                    </div>
+                </div>
+            <?php endif; ?>
         </header>

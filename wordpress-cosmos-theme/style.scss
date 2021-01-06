@@ -149,9 +149,6 @@ body {
             &::before {
                 content: "\f141";
             }
-            a {
-                color: #000;
-            }
         }
         .nav-next {
             flex: 1;
@@ -162,9 +159,6 @@ body {
             justify-content: flex-end;
             &::after {
                 content: "\f139";
-            }
-            a {
-                color: #000;
             }
         }
         .nav-previous::before, .nav-next::after {
@@ -257,11 +251,12 @@ body {
 .header {
     position: fixed;
     top: 0;
+    // background: rgba(255, 255, 255, 0.5);
     z-index: 9999;
     width: 100%;
     height: 80px;
     &__inner {
-        width: 91%;
+        width: 92%;
         height: inherit;
         margin: 0 auto;
         display: flex;
@@ -308,7 +303,7 @@ body {
             &__item {
                 position: relative;
                 &:not(:last-child) {
-                    margin-right: 9px;
+                    margin-right: 8px;
                     @include mq(xl) {
                         margin-right: 24px;
                     }
@@ -438,6 +433,19 @@ body {
                     padding-top: 15px;
                 }
                 padding-bottom: 10px;
+            }
+        }
+    }
+    &__breadcrumbs {
+        padding: 0 15px;
+        background: rgba(255, 255, 255, 0.75);
+        .breadcrumbs {
+            margin: 0 auto;
+            @include mq() {
+                max-width: 770px;
+            }
+            @include mq(xl) {
+                max-width: 970px;
             }
         }
     }
@@ -1263,7 +1271,7 @@ body {
 // ブログ一覧
 .blog-list-wrapper {
     background: #F4F4F4;
-    padding-bottom: 10px;
+    padding-bottom: 1px;
     .jumbotron {
         background: url(img/appliance.jpg) no-repeat center / cover;
         position: relative;
@@ -1316,13 +1324,13 @@ body {
                 margin-bottom: 10px;
                 font-weight: bold;
                 color: var(--basecolor3);
-                font-size: 1.125rem;
+                font-size: var(--f5);
                 @include mq() {
-                    font-size: 1.4rem;
+                    font-size: var(--f4);
                 }
             }
             &__text {
-                font-size: 14px;
+                font-size: var(--f6);
                 line-height: 25px;
                 height: 48px;
                 word-break: break-all;
@@ -1331,7 +1339,7 @@ body {
                 -webkit-line-clamp: 2;
                 overflow: hidden;
                 @include mq() {
-                    font-size: 16px;
+                    font-size: var(--f5);
                     letter-spacing: -0.9px;
                 }
             }
@@ -1343,10 +1351,10 @@ body {
             justify-content: center;
         }
         .page-numbers:not(:last-child) {
-            margin-right: 15px;
+            margin-right: 20px;
         }
         a {
-            color: var(--basecolor);
+            color: var(--basecolor1);
         }
         .current {
             color: #aaaaaa;
@@ -1354,6 +1362,7 @@ body {
     }
 }
 
+// ブログ詳細
 .single-wrapper {
     background: #f4f4f4;
     .main-content {
@@ -1369,7 +1378,7 @@ body {
                 &::before {
                     content: "\f318";
                     font-family: "dashicons";
-                    color: var(--basecolor);
+                    color: var(--basecolor1);
                     font-size: var(--f2);
                     line-height: 1;
                     margin-right: 5px;
@@ -1381,7 +1390,7 @@ body {
                     padding: 3px 10px;
                     border: solid 1px currentColor;
                     border-radius: 10px;
-                    color: var(--basecolor);
+                    color: var(--basecolor1);
                     font-size: var(--f6);
                 }
             }
@@ -1424,12 +1433,14 @@ body {
     }
     .sub-content {
         .related {
-            border: solid 2px var(--basecolor1);
-            padding: 10px;
+            // border: solid 2px var(--basecolor1);
+            // padding: 10px;
             h2 {
-                border-left: solid 5px var(--basecolor1);
-                padding-left: 14px;
-                color: var(--basecolor1);
+                // border-left: solid 5px var(--basecolor1);
+                // padding-left: 14px;
+                padding: 10px;
+                background: var(--basecolor4);
+                color: white;
                 font-family: var(--basefont);
                 font-size: var(--f5);
                 margin-bottom: 10px;
@@ -1466,11 +1477,11 @@ body {
     }
 }
 .flexbox-single {
-    padding: 70px 15px 30px;
+    padding: 120px 15px 30px;
     @include mq() {
         display: flex;
         justify-content: space-between;
-        max-width: 700px;
+        max-width: 800px;
         margin: 0 auto;
         .main-content {
             width: 60%;
@@ -1478,5 +1489,8 @@ body {
         .sub-content {
             width: 35%;
         }
+    }
+    @include mq(xl) {
+        max-width: 1000px;
     }
 }
