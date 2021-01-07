@@ -19,6 +19,29 @@
             </div>
 
             <?php the_post_navigation(); ?>
+            <dl>
+                <?php
+                    $temp = $wp_query;
+                    $wp_query = null;
+                    $wp_query = new WP_Query();
+                    $wp_query->query(
+                        'post_type=post',
+                        'posts_per_page=5',
+                        'tag=Recommended',
+                        'paged=1',
+                        $paged
+                    );
+                ?>
+                <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+                <!-- ループさせたい内容 -->
+                    <dt class="date"><?php the_time('Y.m.d'); ?></dt>
+                    <dd>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </dd>
+                <!-- ループさせたい内容 end -->
+                <?php endwhile; ?>
+                <?php $wp_query = null; $wp_query = $temp; ?>
+            </dl>
         </main>
 
         <div class="sub-content">
@@ -52,6 +75,9 @@
                         endif; ?>
                 </div>
             </aside>
+            <?php if ( is_active_sidebar( 'sidebar-1' ) ): ?>
+                <?php dynamic_sidebar( 'sidebar-1' ); ?>
+            <?php endif; ?>
         </div>
     </article>
 </div>

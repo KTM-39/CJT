@@ -79,10 +79,17 @@ add_action('wp_enqueue_scripts', 'theme_enqueue');
 
 function theme_widgets() {
 
-    // ウィジェットエリアを登録
+    // サイドバーメニュー登録
 	register_sidebar( array(
 		'id' => 'sidebar-1',
-        'name' => 'フッターメニュー',
+        'name' => 'サイドバーメニュー',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>'
+    ) );
+    // おすすめ記事登録
+	register_sidebar( array(
+		'id' => 'sidebar-2',
+        'name' => 'おすすめ記事',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>'
 	) );
