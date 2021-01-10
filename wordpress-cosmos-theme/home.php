@@ -34,6 +34,8 @@
             'next_text' => '<span class="dashicons dashicons-arrow-right-alt2"></span><span class="screen-reader-text">次へ</span>'
         )); ?>
     </div>
+    <div id="scroll-top"></div>
+    <!-- /#scroll-top -->
 </main>
 
 <?php get_footer(); ?>

@@ -11,7 +11,7 @@
                 <div class="copy">
                     <h1 class="copy__main">夢と希望の想像へ<br>
                         〜 地域社会に調和と秩序と平等を 〜<br><br>
-                        <span>職業訓練システムコスモス</span>
+                        <span><?php bloginfo('name'); ?></span>
                     </h1>
                 </div>
                 <!-- /.copy -->
@@ -40,7 +40,7 @@
                     <!-- /.works-center-line -->
                     <div class="flexbox-work">
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="./appliance.html">
+                        <a data-aos="fade-right" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -57,7 +57,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="./accessory.html">
+                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -74,7 +74,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="./office.html">
+                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('office')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -91,7 +91,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="./pc.html">
+                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -108,7 +108,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="./restaurant.html">
+                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -125,7 +125,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="./outside-the-facility.html">
+                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -410,6 +410,7 @@
                         <a href="<?php echo esc_url(home_url('/cosmos-blog')); ?>" class="blog-image">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/blog-img.jpg" alt="">
                         </a>
+                        <!-- /.blog-image -->
                     </div>
                     <!-- /.flexbox-blog -->
                 </section>

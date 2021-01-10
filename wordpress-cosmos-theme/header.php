@@ -5,7 +5,7 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <?php wp_head(); ?>
-        <meta name="description" content="" />
+        <meta name="description" content="<?php bloginfo("description"); ?>" />
 
         <?php if( is_single() ): ?>
         <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
@@ -29,7 +29,7 @@
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
         <header class="header <?php if( !is_front_page() ): ?>
-            blog-header
+            header-underlayer
             <?php endif; ?>">
             <div class="header__inner">
                 <div class="header__logo">

@@ -66,12 +66,30 @@ function theme_enqueue() {
         filemtime(get_theme_file_path('style.css'))
     );
 
+    // AOS.css読み込み
+    wp_enqueue_style(
+        'AOS.css',
+        '//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css',
+        array(),
+        '2.1.1',
+        null
+    );
+
     // スクリプトJS読み込み
     wp_enqueue_script(
         'javascript',
         get_theme_file_uri('/js/script.js'),
         array('jquery'),
         filemtime(get_theme_file_path('/js/script.js'))
+    );
+
+    // AOS.js読み込み
+    wp_enqueue_script(
+        'AOS.js',
+        '//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js',
+        array(),
+        '2.1.1',
+        true
     );
 }
 
@@ -86,13 +104,6 @@ function theme_widgets() {
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>'
     ) );
-    // おすすめ記事登録
-	register_sidebar( array(
-		'id' => 'sidebar-2',
-        'name' => 'おすすめ記事',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>'
-	) );
 }
 
 add_action( 'widgets_init', 'theme_widgets' );
