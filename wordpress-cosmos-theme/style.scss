@@ -1348,31 +1348,6 @@ body {
     .main-content {
         max-width: 720px;
         margin: 30px auto;
-        .jumbotron {
-            background: url(img/appliance.jpg) no-repeat center / cover;
-            position: relative;
-            padding-top: 90%;
-            margin-top: 124px;
-            @include mq() {
-                padding-top: 300px;
-            }
-            .page-title {
-                color: white;
-                font-size: var(--f2);
-                position: absolute;
-                text-align: center;
-                top: 50%;
-                left: 0;
-                right: 0;
-                transform: translateY(-50%)
-            }
-        }
-        .wp_social_bookmarking_light {
-            transform: translateX(-10px);
-            .wsbl_facebook_like span {
-                margin-right: -10px;
-            }
-        }
         .post-header {
             padding-top: 20px;
             display: flex;
@@ -1559,7 +1534,7 @@ body {
         }
     }
     .sub-content {
-        margin-top: 10px;
+        margin-top: 20px;
         .related-title {
             padding: 10px;
             background: var(--basecolor6);
@@ -1896,4 +1871,72 @@ body {
 }
 
 // アーカイブページarchive.php
-
+.archive-wrapper {
+    background: var(--basecolor8);
+    padding: 124px 20px 1px;
+    .jumbotron {
+        background: url(img/appliance.jpg) no-repeat center / cover;
+        position: relative;
+        padding-top: 90%;
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+        @include mq() {
+            padding-top: 300px;
+        }
+        .archive-title {
+            color: white;
+            font-size: var(--f2);
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        p {
+            color: white;
+            font-size: var(--f6);
+            position: absolute;
+            text-align: center;
+            top: 55%;
+            left: 0;
+            right: 0;
+            @include mq() {
+                top: 58%;
+            }
+        }
+    }
+    .archive-list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include mq() {
+            max-width: 720px;
+            margin: 40px auto;
+        }
+        .archive {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            a {
+                color: #000;
+                figure {
+                    margin: 0;
+                    img {
+                        height: 120px;
+                        max-width: 100%;
+                        object-fit: cover;
+                        @include mq() {
+                            height: 180px;
+                        }
+                    }
+                }
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    font-size: var(--f6);
+                }
+            }
+        }
+    }
+}

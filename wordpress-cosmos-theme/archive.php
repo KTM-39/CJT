@@ -2,20 +2,19 @@
 
 <main>
 	<div class="archive-wrapper">
-
-		<div class="posthead">
-			<h1><?php the_archive_title(); ?></h1>
-
+		<div class="jumbotron">
+			<h1 class="archive-title"><?php the_archive_title(); ?></h1>
 			<?php if( is_category() ): ?>
 				<p>CATEGORY ARCHIVE</p>
 			<?php endif; ?>
-		</div>
+        </div>
+        <!-- /.jumbotron -->
 
-		<div class="mypostlist">
+		<div class="archive-list">
 			<?php if(have_posts()): while(have_posts()):
 			the_post(); ?>
 
-			<article <?php post_class(); ?>>
+			<article <?php post_class("archive"); ?>>
 				<a href="<?php the_permalink(); ?>">
 					<?php if( has_post_thumbnail() ): ?>
 					<figure>
@@ -37,7 +36,5 @@
 
 	</div>
 </main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
