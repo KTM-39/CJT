@@ -1422,8 +1422,10 @@ body {
                 margin-right: 0;
             }
             .alignfull {
-                margin: 0 calc(50% - 50vw);
-                width: 100vw;
+                margin-left: -15px;
+                margin-right: -15px;
+                max-width: none;
+                width: auto;
             }
             .aligncenter {
                 margin-left: auto;
@@ -1613,11 +1615,11 @@ body {
             margin-bottom: 20px;
             a {
                 padding: 10px 25px;
-                    border: solid 1px currentColor;
-                    border-radius: 10px;
-                    color: white;
-                    background: var(--basecolor6);
-                    font-size: var(--f6);
+                border: solid 1px currentColor;
+                border-radius: 10px;
+                color: white;
+                background: var(--basecolor6);
+                font-size: var(--f6);
             }
         }
     }

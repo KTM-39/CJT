@@ -40,7 +40,7 @@
                     <!-- /.works-center-line -->
                     <div class="flexbox-work">
 
-                        <a data-aos="fade-right" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
+                        <a data-aos="fade-right" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -57,7 +57,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
+                        <a data-aos="fade-left" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -74,7 +74,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('office')); ?>">
+                        <a data-aos="fade-right" class="work" href="<?php echo esc_url(home_url('office')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -91,7 +91,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
+                        <a data-aos="fade-left" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -108,7 +108,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
+                        <a data-aos="fade-right" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -125,7 +125,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-up" data-aos-duration="500" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
+                        <a data-aos="fade-left" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -148,7 +148,7 @@
 
                 <section class="about__daily-schedule" id="about__daily-schedule">
                     <h3 class="sub-title">一日の流れ</h3>
-                    <section class="schedule">
+                    <section data-aos="zoom-in" class="schedule">
                         <ul class="schedule-list">
                             <li class="schedule-list__item">
                                 午前<br>09:30
@@ -204,7 +204,7 @@
 
                 <section class="about__wage" id="about__wage">
                     <h3 class="sub-title">工賃規定</h3>
-                    <div class="wage-table">
+                    <div data-aos="fade-up" class="wage-table">
                         <table class="wage-table__inner">
                             <thead class="wage-table__headers">
                                 <tr class="wage-table__header-row">
@@ -249,7 +249,7 @@
 
             </section>
             <div class="center-wrapper">
-                <section class="employment" id="employment">
+                <section data-aos="fade-down" class="employment" id="employment">
                     <h2 class="chapter-title">就労継続支援B型について</h2>
 
                     <section class="employment__type-b" id="employment__type-b">
@@ -373,7 +373,7 @@
 
             <section class="news" id="news">
                 <h2 class="chapter-title">ニュース</h2>
-                <ul class="news-posts">
+                <ul data-aos="zoom-in" class="news-posts">
                     <li class="news-posts__item">
                         <div class="news-posts__header">
                             <time class="news-posts__date" datetime="2019-03-29">2019/03/29</time>
@@ -398,7 +398,7 @@
                 </ul>
             </section>
             <div class="center-wrapper">
-                <section class="cosmos-blog" id="cosmos-blog">
+                <section data-aos="fade-down" class="cosmos-blog" id="cosmos-blog">
                     <div class="flexbox-blog">
                         <div class="blog-description">
                             <h3 class="chapter-title">ブログ</h3>
@@ -419,49 +419,52 @@
 
             <section class="recruitment" id="recruitment">
                 <h2 class="chapter-title">利用者募集</h2>
-                <div class="recruitment-table">
-                    <table class="recruitment-table__inner">
-                        <tbody>
-                            <tr class="recruitment-table__row">
-                                <th class="recruitment-table__header">対象者
-                                </th>
-                                <td class="recruitment-table__text">北見市・訓子府・置戸・美幌に在住の18歳以上の知的・精神・身体に障害をお持ちの方</td>
-                            </tr>
-                            <tr class="recruitment-table__row">
-                                <th class="recruitment-table__header">定員
-                                </th>
-                                <td class="recruitment-table__text">就労継続支援B型／20名</td>
-                            </tr>
-                            <tr class="recruitment-table__row">
-                                <th class="recruitment-table__header">営業日
-                                </th>
-                                <td class="recruitment-table__text">月曜日 〜 金曜日（祝日含む）</td>
-                            </tr>
-                            <tr class="recruitment-table__row">
-                                <th class="recruitment-table__header">時間
-                                </th>
-                                <td class="recruitment-table__text">午前 9:30 から 午後 4:00</td>
-                            </tr>
-                            <tr class="recruitment-table__row">
-                                <th class="recruitment-table__header">お食事</th>
-                                <td class="recruitment-table__text">昼食代　200円／1食<br>
-                                    ※食事希望の方のみ</td>
-                            </tr>
-                            <tr class="recruitment-table__row">
-                                <th class="recruitment-table__header">送迎</th>
-                                <td class="recruitment-table__text">ご自宅から施設への送迎対応は行なっておりません。<br>
-                                    利用者様用の駐車場はございません。</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div data-aos="zoom-in">
+                    <div class="recruitment-table">
+                        <table class="recruitment-table__inner">
+                            <tbody>
+                                <tr class="recruitment-table__row">
+                                    <th class="recruitment-table__header">対象者
+                                    </th>
+                                    <td class="recruitment-table__text">北見市・訓子府・置戸・美幌に在住の18歳以上の知的・精神・身体に障害をお持ちの方</td>
+                                </tr>
+                                <tr class="recruitment-table__row">
+                                    <th class="recruitment-table__header">定員
+                                    </th>
+                                    <td class="recruitment-table__text">就労継続支援B型／20名</td>
+                                </tr>
+                                <tr class="recruitment-table__row">
+                                    <th class="recruitment-table__header">営業日
+                                    </th>
+                                    <td class="recruitment-table__text">月曜日 〜 金曜日（祝日含む）</td>
+                                </tr>
+                                <tr class="recruitment-table__row">
+                                    <th class="recruitment-table__header">時間
+                                    </th>
+                                    <td class="recruitment-table__text">午前 9:30 から 午後 4:00</td>
+                                </tr>
+                                <tr class="recruitment-table__row">
+                                    <th class="recruitment-table__header">お食事</th>
+                                    <td class="recruitment-table__text">昼食代　200円／1食<br>
+                                        ※食事希望の方のみ</td>
+                                </tr>
+                                <tr class="recruitment-table__row">
+                                    <th class="recruitment-table__header">送迎</th>
+                                    <td class="recruitment-table__text">ご自宅から施設への送迎対応は行なっておりません。<br>
+                                        利用者様用の駐車場はございません。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.recruitment-table -->
+                    <p class="personal-information"><span>※個人情報の取り扱いについて</span><br>
+                        サービスの提供にあたり知り得た個人情報の取り扱いについては、関係者以外に決して漏れることのないよう細心の注意を払い適切に使用させて頂きます。
+                    </p>
                 </div>
-                <!-- /.recruitment-table -->
-                <p class="personal-information"><span>※個人情報の取り扱いについて</span><br>
-                    サービスの提供にあたり知り得た個人情報の取り扱いについては、関係者以外に決して漏れることのないよう細心の注意を払い適切に使用させて頂きます。</p>
             </section>
             <!-- /.recruitment -->
             <div class="center-wrapper">
-                <section class="faq" id="faq">
+                <section data-aos="fade-down" class="faq" id="faq">
                     <h2 class="chapter-title">Q&amp;A</h2>
                     <dl class="accordion">
                         <div class="accordion__wrapper">
@@ -517,15 +520,17 @@
         <!-- /.switching-video-wrapper -->
         <section class="access" id="access">
             <h2 class="chapter-title">アクセス</h2>
-            <div class="address">
-                <span>所　在　地</span>
-                <p class="location">〒090-0037 北海道北見市山下町3丁目2-22</p>
+            <div data-aos="zoom-in">
+                <div class="address">
+                    <span>所　在　地</span>
+                    <p class="location">〒090-0037 北海道北見市山下町3丁目2-22</p>
+                </div>
+                <!-- /.address-->
+                <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.457698349733!2d143.88620150000006!3d43.804864800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f6d5788622c5b71%3A0x398a6769ac0235d5!2z5oyH5a6a5bCx5Yq057aZ57aa5pSv5o-077yi5Z6L5LqL5qWt5omAIOiBt-alreiok-e3tOOCt-OCueODhuODoCDjgrPjgrnjg6Ljgrk!5e0!3m2!1sja!2sjp!4v1609812846061!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <!-- /.google-map -->
             </div>
-            <!-- /.address-->
-            <div class="google-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.457698349733!2d143.88620150000006!3d43.804864800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f6d5788622c5b71%3A0x398a6769ac0235d5!2z5oyH5a6a5bCx5Yq057aZ57aa5pSv5o-077yi5Z6L5LqL5qWt5omAIOiBt-alreiok-e3tOOCt-OCueODhuODoCDjgrPjgrnjg6Ljgrk!5e0!3m2!1sja!2sjp!4v1609812846061!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-            <!-- /.google-map -->
         </section>
         <!-- /.access -->
         <div class="end">
@@ -534,7 +539,7 @@
                 </video>
             </div>
 
-            <section class="contact" id="contact">
+            <section data-aos="fade-down" class="contact" id="contact">
                 <h2 class="chapter-title">お問い合わせ</h2>
                 <form action="" method="post" class="form" id="form">
                     <div class="form__name">
