@@ -4,6 +4,7 @@
     <div class="blog-list-wrapper">
         <div class="jumbotron">
             <h1 class="blog-title">コスモスブログ</h1>
+            <p>COSMOS BLOG</p>
         </div>
         <!-- /.jumbotron -->
         <section>

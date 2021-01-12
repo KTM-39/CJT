@@ -40,7 +40,7 @@
                     <!-- /.works-center-line -->
                     <div class="flexbox-work">
 
-                        <a data-aos="fade-right" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
+                        <a data-aos="fade-right" class="work" href="!<?php echo esc_url(home_url('/appliance')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>

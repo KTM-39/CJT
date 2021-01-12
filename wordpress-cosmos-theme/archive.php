@@ -4,9 +4,7 @@
 	<div class="archive-wrapper">
 		<div class="jumbotron">
 			<h1 class="archive-title"><?php the_archive_title(); ?></h1>
-			<?php if( is_category() ): ?>
-				<p>CATEGORY ARCHIVE</p>
-			<?php endif; ?>
+			<p>CATEGORY ARCHIVE</p>
         </div>
         <!-- /.jumbotron -->
 

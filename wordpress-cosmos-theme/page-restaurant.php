@@ -4,6 +4,7 @@
     <article class="work-detail">
         <div class="jumbotron">
             <h1 class="work-detail-title"><?php the_title(); ?></h1>
+            <p>RESTAURANT</p>
         </div>
         <!-- /.jumbotron -->
         <section>
