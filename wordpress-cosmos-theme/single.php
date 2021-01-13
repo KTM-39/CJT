@@ -9,6 +9,7 @@
                 <?php the_category(); ?>
                 <h1><?php the_title(); ?></h1>
 
+
                 <time class="post-date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
                     <?php echo esc_html( get_the_date() ); ?>
                 </time>

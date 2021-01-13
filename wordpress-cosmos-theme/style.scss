@@ -1361,7 +1361,7 @@ body {
             }
             .post-date {
                 align-self: flex-end;
-                transform: translateY(125%);
+                transform: translateY(185%);
             }
         }
         .content-layout {
@@ -1992,21 +1992,27 @@ body {
                 margin-top: 0;
             }
             .twitter {
-                background: url(img/twitter.png) no-repeat center / cover;
+                background: url(img/Twitter_Logo_WhiteOnBlue.png) no-repeat center / cover;
                 height: 40px;
                 width: 40px;
+                border-radius: 10px;
                 margin-right: 20px;
+                &:hover {
+                    cursor: pointer;
+                    opacity: .5;
+                }
             }
             .facebook {
-                background: url(img/facebook.png) no-repeat center / cover;
+                background: url(img/f_logo_RGB-Blue_72.png) no-repeat center / cover;
                 height: 40px;
                 width: 40px;
                 margin-right: 20px;
             }
             .instagram {
-                background: url(img/instagram.png) no-repeat center / cover;
+                background: url() no-repeat center / cover;
                 height: 40px;
                 width: 40px;
+                border-radius: 10px;
             }
         }
     }

@@ -10,7 +10,7 @@
                 </ul>
                 <!-- ./sub-nav -->
                 <ul class="sns-nav">
-                    <li class="twitter"><a href=""></a></li>
+                    <li class="twitter"><a href="https://twitter.com/b_cosmos2/"></a></li>
                     <li class="facebook"><a href=""></a></li>
                     <li class="instagram"><a href=""></a></li>
                 </ul>

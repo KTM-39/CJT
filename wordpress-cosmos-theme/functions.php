@@ -104,6 +104,13 @@ function theme_widgets() {
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>'
     ) );
+    // SNSメニュー登録
+	register_sidebar( array(
+		'id' => 'sidebar-2',
+        'name' => 'SNSメニュー',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>'
+    ) );
 }
 
 add_action( 'widgets_init', 'theme_widgets' );
