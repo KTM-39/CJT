@@ -373,6 +373,20 @@
 
             <section class="news" id="news">
                 <h2 class="chapter-title">ニュース</h2>
+                <?php $news = get_posts( array(
+    'posts_per_page' => '3',
+    'orderby' => 'rand',
+    'tag' => 'pickup'
+    )); ?>
+<?php if($news):
+    foreach($news as $post):
+    setup_postdata($post); ?>
+
+            <?php the_title(); ?>
+
+<?php endforeach;
+    wp_reset_postdata();
+    endif; ?>
                 <ul data-aos="zoom-in" class="news-posts">
                     <li class="news-posts__item">
                         <div class="news-posts__header">

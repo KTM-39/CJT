@@ -9,12 +9,10 @@
                     <li class="sub-nav__item"><a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">プライバシーポリシー</a></li>
                 </ul>
                 <!-- ./sub-nav -->
-                <ul class="sns-nav">
-                    <li class="twitter"><a href="https://twitter.com/b_cosmos2/"></a></li>
-                    <li class="facebook"><a href=""></a></li>
-                    <li class="instagram"><a href=""></a></li>
-                </ul>
-                <!-- ./sns-nav -->
+                <?php if ( is_active_sidebar( 'sidebar-2' ) ): ?>
+                    <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                <?php endif; ?>
+                <!-- ./ -->
             </div>
             <small class="copy-right">&copy;copyright Cosmos</small>
         </footer>
