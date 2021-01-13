@@ -53,6 +53,12 @@ $keepscreens: (
         @content;
     }
 }
+@mixin glassmorphism {
+    background: rgba( 85, 185, 243, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
 @mixin formbox {
     margin-bottom: 22px;
     padding-right: 22px;
@@ -876,9 +882,7 @@ body {
         &__title {
             text-decoration: none;
             font-size: 14px;
-            &:focus, &:hover {
-                text-decoration: underline;
-            }
+            color: white;
             @include mq() {
                 font-size: 16px;
             }
@@ -977,6 +981,7 @@ body {
 .faq {
     padding: 0 50px 40px;
     background: var(--basecolor4);
+    // @include glassmorphism();
     margin: 0 auto;
     @include mq() {
         max-width: 700px;
@@ -1123,6 +1128,7 @@ body {
         height: 100%;
         padding: 0 0 40px;
         background: var(--basecolor4);
+        // @include glassmorphism();
         @include mq() {
             max-width: 600px;
             margin: 0 auto;
@@ -1363,7 +1369,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 20px;
+                margin: 20px 0;
             }
         }
         .content-layout {

@@ -373,43 +373,31 @@
 
             <section class="news" id="news">
                 <h2 class="chapter-title">ニュース</h2>
+
                 <?php $news = get_posts( array(
-    'posts_per_page' => '3',
-    'orderby' => 'rand',
-    'tag' => 'pickup'
-    )); ?>
-<?php if($news):
-    foreach($news as $post):
-    setup_postdata($post); ?>
+                'posts_per_page' => '3',
+                'post_type' => 'news',
+                'orderby' => 'modified'
+                )); ?>
+                <?php if($news):
+                    foreach($news as $post):
+                    setup_postdata($post); ?>
+                        <ul data-aos="zoom-in" class="news-posts">
+                            <li class="news-posts__item">
+                                <div class="news-posts__header">
+                                    <time class="news-posts__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
+                                        <?php echo esc_html( get_the_date() ); ?>
+                                    </time>
+                                </div>
+                                <p class="news-posts__title">
+                                    <?php the_title(); ?>
+                                </p>
+                            </li>
+                        </ul>
+                <?php endforeach;
+                    wp_reset_postdata();
+                    endif; ?>
 
-            <?php the_title(); ?>
-
-<?php endforeach;
-    wp_reset_postdata();
-    endif; ?>
-                <ul data-aos="zoom-in" class="news-posts">
-                    <li class="news-posts__item">
-                        <div class="news-posts__header">
-                            <time class="news-posts__date" datetime="2019-03-29">2019/03/29</time>
-                        </div>
-                        <!-- /.news-posts__header -->
-                        <a class="news-posts__title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="news-posts__item">
-                        <div class="news-posts__header">
-                            <time class="news-posts__date" datetime="2019-03-28">2019/03/28</time>
-                        </div>
-                        <!-- /.news-posts__header -->
-                        <a class="news-posts__title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="news-posts__item">
-                        <div class="news-posts__header">
-                            <time class="news-posts__date" datetime="2019-03-27">2019/03/27</time>
-                        </div>
-                        <!-- /.news-posts__header -->
-                        <a class="news-posts__title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                    </li>
-                </ul>
             </section>
             <div class="center-wrapper">
                 <section data-aos="fade-down" class="cosmos-blog" id="cosmos-blog">
