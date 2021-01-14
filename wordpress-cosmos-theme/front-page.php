@@ -541,55 +541,11 @@
                 </video>
             </div>
 
-            <div>
-                <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせへのリンク</a>
-            </div>
-
             <section data-aos="fade-down" class="contact" id="contact">
                 <h2 class="chapter-title">お問い合わせ</h2>
-                <form action="" method="post" class="form" id="form">
-                    <div class="form__name">
-                        <label for="name">お名前</label><span class="required">必須</span><br>
-                        <input type="text" id="name" placeholder="氏名" required>
-                    </div>
-
-
-                    <div class="form__email">
-                        <label for="email">メールアドレス</label><span class="required">必須</span><br>
-                        <input type="email" name="email" id="email" placeholder="メールアドレス" required/>
-                    </div>
-
-
-                    <div class="form__number">
-                        <label for="tel">電話番号</label><span class="required">必須</span><br>
-                        <input type="tel" name="tel" id="tel" placeholder="電話番号" required/>
-                    </div>
-
-
-                    <div class="form__summary">
-                        <label for="summary">お問い合わせ内容</label><span class="required">必須</span><br>
-                        <select name="summary-select" id="summary">
-                            <option value="">選択してください</option>
-                            <option value="example1">コスモスについて知りたい</option>
-                            <option value="example2">コスモスの見学を希望したい</option>
-                            <option value="example3">その他</option>
-                        </select>
-                    </div>
-
-
-                    <div class="form__detail">
-                        <label for="detail">お問い合わせ詳細</label><br>
-                        <textarea name="detail" id="detail" cols="30" rows="4" placeholder="例）下記日程で見学を希望します&#13;&#10;XX月XX日　10:00~&#13;&#10;XX月XX日　13:00~&#13;&#10;XX月XX日　15:00~"></textarea>
-                    </div>
-
-
-                    <div class="submit-btn">
-                        <input type="submit" id="submit" value="送信する" disabled />
-                        <p class="thanks-message">お問い合せありがとうございます</p>
-                    </div>
-
-
-                </form>
+                <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                    <?php the_content(); ?>
+                <?php endwhile;endif; ?>
             </section>
             <!-- /.contact -->
         </div>

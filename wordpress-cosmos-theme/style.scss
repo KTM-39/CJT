@@ -71,7 +71,6 @@ $keepscreens: (
         line-height: 35px;
     }
     input {
-        width: 100%;
         padding: 10px 10px;
         border-radius: 10px;
         border: 1px solid gray;
@@ -1133,20 +1132,27 @@ body {
             max-width: 600px;
             margin: 0 auto;
         }
-        .form {
+        form {
             width: 90%;
             max-width: 450px;
             margin: 0 auto;
-            &__name {
+            .form__name {
+                @include formbox;
+                input {
+                    width: 100%;
+                }
+            }
+            .form__email {
+                @include formbox;
+                input {
+                    width: 100%;
+                }
+
+            }
+            .form__number {
                 @include formbox;
             }
-            &__email {
-                @include formbox;
-            }
-            &__number {
-                @include formbox;
-            }
-            &__summary {
+            .form__summary {
                 margin-bottom: 22px;
                 padding-right: 22px;
                 @include mq(xl) {
@@ -1164,7 +1170,7 @@ body {
                     color: #333;
                 }
             }
-            &__detail {
+            .form__detail {
                 margin-bottom: 22px;
                 padding-right: 22px;
                 @include mq() {
