@@ -3,6 +3,9 @@
 <main>
     <article>
         <div class="switching-video-wrapper">
+            <!-- <div id="loadingWrap">
+                <div class="spinner"></div>
+            </div> -->
             <section class="top">
                 <div class="top__visual">
                     <video src="<?php echo get_template_directory_uri(); ?>/video/Space-start.mp4"  playinline loop muted autoplay class="video1"></video>
@@ -28,19 +31,19 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, aliquam doloribus perferendis consequatur. Dolorum accusantium minima eum cum architecto neque.</p>
                         </div>
                     </article>
-                    <div data-aos="flip-up" data-aos-duration="500" class="cosmos-image"></div>
+                    <div data-aos="flip-up" data-aos-anchor-placement="top-center" data-aos-duration="500" class="cosmos-image"></div>
                     <!-- /.cosmos-image -->
                 </section>
                 <!-- /.about__cosmos -->
 
                 <section class="about__works" id="about__works">
-                    <div class="works-center-line">
+                    <div class="sub-title__wrapper">
                         <h3 class="sub-title">就労支援</h3>
                     </div>
-                    <!-- /.works-center-line -->
+                    <!-- /.sub-title__wrapper -->
                     <div class="flexbox-work">
 
-                        <a data-aos="fade-right" class="work" href="!<?php echo esc_url(home_url('/appliance')); ?>">
+                        <a data-aos="fade-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -57,13 +60,13 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-left" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
+                        <a data-aos="fade-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
-                                    アクセサリー制作
+                                    アクセサリー
                                 </h4>
                                 <div class="work__right">
                                     <p class="work__view-more">詳しく見る</p>
@@ -74,7 +77,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-right" class="work" href="<?php echo esc_url(home_url('office')); ?>">
+                        <a data-aos="fade-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('office')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -91,7 +94,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-left" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
+                        <a data-aos="fade-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -108,7 +111,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-right" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
+                        <a data-aos="fade-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -125,7 +128,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-left" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
+                        <a data-aos="fade-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -148,7 +151,7 @@
 
                 <section class="about__daily-schedule" id="about__daily-schedule">
                     <h3 class="sub-title">一日の流れ</h3>
-                    <section data-aos="zoom-in" class="schedule">
+                    <section data-aos="zoom-in" data-aos-anchor-placement="top-center" class="schedule">
                         <ul class="schedule-list">
                             <li class="schedule-list__item">
                                 午前<br>09:30
@@ -204,7 +207,7 @@
 
                 <section class="about__wage" id="about__wage">
                     <h3 class="sub-title">工賃規定</h3>
-                    <div data-aos="fade-up" class="wage-table">
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-center" class="wage-table">
                         <table class="wage-table__inner">
                             <thead class="wage-table__headers">
                                 <tr class="wage-table__header-row">
@@ -248,8 +251,8 @@
                 </section>
 
             </section>
-            <div class="center-wrapper">
-                <section data-aos="fade-down" class="employment" id="employment">
+            <div class="odd-wrapper">
+                <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="employment" id="employment">
                     <h2 class="chapter-title">就労継続支援B型について</h2>
 
                     <section class="employment__type-b" id="employment__type-b">
@@ -369,20 +372,20 @@
 
                 </section>
             </div>
-            <!-- /.center-wrapper -->
+            <!-- /.odd-wrapper -->
 
             <section class="news" id="news">
                 <h2 class="chapter-title">ニュース</h2>
 
                 <?php $news = get_posts( array(
-                'posts_per_page' => '3',
-                'post_type' => 'news',
-                'orderby' => 'modified'
+                    'posts_per_page' => '3',
+                    'post_type' => 'news',
+                    'orderby' => 'modified'
                 )); ?>
                 <?php if($news):
                     foreach($news as $post):
                     setup_postdata($post); ?>
-                        <ul data-aos="zoom-in" class="news-posts">
+                        <ul data-aos="zoom-in" data-aos-anchor-placement="top-center" class="news-posts">
                             <li class="news-posts__item">
                                 <div class="news-posts__header">
                                     <time class="news-posts__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
@@ -397,10 +400,9 @@
                 <?php endforeach;
                     wp_reset_postdata();
                     endif; ?>
-
             </section>
-            <div class="center-wrapper">
-                <section data-aos="fade-down" class="cosmos-blog" id="cosmos-blog">
+            <div class="odd-wrapper">
+                <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="cosmos-blog" id="cosmos-blog">
                     <div class="flexbox-blog">
                         <div class="blog-description">
                             <h3 class="chapter-title">ブログ</h3>
@@ -417,11 +419,11 @@
                     <!-- /.flexbox-blog -->
                 </section>
             </div>
-            <!-- /.center-wrapper -->
+            <!-- /.odd-wrapper -->
 
             <section class="recruitment" id="recruitment">
                 <h2 class="chapter-title">利用者募集</h2>
-                <div data-aos="zoom-in">
+                <div data-aos="zoom-in" data-aos-anchor-placement="top-center">
                     <div class="recruitment-table">
                         <table class="recruitment-table__inner">
                             <tbody>
@@ -465,8 +467,8 @@
                 </div>
             </section>
             <!-- /.recruitment -->
-            <div class="center-wrapper">
-                <section data-aos="fade-down" class="faq" id="faq">
+            <div class="odd-wrapper">
+                <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="faq" id="faq">
                     <h2 class="chapter-title">Q&amp;A</h2>
                     <dl class="accordion">
                         <div class="accordion__wrapper">
@@ -522,7 +524,7 @@
         <!-- /.switching-video-wrapper -->
         <section class="access" id="access">
             <h2 class="chapter-title">アクセス</h2>
-            <div data-aos="zoom-in">
+            <div data-aos="zoom-in" data-aos-anchor-placement="top-center">
                 <div class="address">
                     <span>所　在　地</span>
                     <p class="location">〒090-0037 北海道北見市山下町3丁目2-22</p>
@@ -541,13 +543,22 @@
                 </video>
             </div>
 
-            <section data-aos="fade-down" class="contact" id="contact">
+            <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="contact" id="contact">
                 <h2 class="chapter-title">お問い合わせ</h2>
                 <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <?php the_content(); ?>
                 <?php endwhile;endif; ?>
+                <div id="modalSubmit" class="modalSubmit">
+                    <div id="modalBg" class="modalBg"></div>
+                    <div class="modalWrapper">
+                        <div class="modalContents">
+                            <p class="submit-message">送信ありがとうございました。</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- /.contact -->
+
         </div>
         <!-- /.end -->
         <div id="scroll-top"></div>

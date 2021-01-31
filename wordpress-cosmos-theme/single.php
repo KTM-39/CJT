@@ -33,7 +33,7 @@
                 'tag' => 'pickup',
                 'orderby' => 'rand'
             )); ?>
-            <?php if( $pickup):
+            <?php if( $pickup ):
                 foreach( $pickup as $post ):
                 setup_postdata( $post );?>
                 <div class="pickup-wrapper">

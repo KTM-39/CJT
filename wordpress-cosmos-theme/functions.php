@@ -115,7 +115,8 @@ function theme_widgets() {
 
 add_action( 'widgets_init', 'theme_widgets' );
 
-function theme_costom_post_type() {
+function theme_costom() {
+    // カスタム投稿システム登録
     register_post_type('news', [
         'label' => 'ニュース',
         'public' => true,
@@ -126,4 +127,4 @@ function theme_costom_post_type() {
     ]);
 }
 
-add_action( 'init', 'theme_costom_post_type' );
+add_action( 'init', 'theme_costom' );

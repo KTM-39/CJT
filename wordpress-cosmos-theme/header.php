@@ -29,7 +29,7 @@
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
         <header class="header <?php if( !is_front_page() ): ?>
-            header-underlayer
+            header-bg
             <?php endif; ?>">
             <div class="header__inner">
                 <div class="header__logo">
