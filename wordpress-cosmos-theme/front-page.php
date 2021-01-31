@@ -548,14 +548,40 @@
                 <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <?php the_content(); ?>
                 <?php endwhile;endif; ?>
-                <div id="modalSubmit" class="modalSubmit">
+
+                <!-- <button class="confirm-btn">確認画面へ</button> -->
+
+                <!-- <section id="modalConfirm" class="modalConfirm">
+                <div id="modalBg" class="modalBg"></div>
+                <div class="modalWrapper">
+                <h3>以下の内容で送信します</h3>
+                <div class="modalContents">
+                <p class="confirm-name"></p>
+                <p class="confirm-email"></p>
+                <div class="number-wrapper">
+                <p class="confirm-number1"></p>
+                <p class="confirm-number2"></p>
+                <p class="confirm-number3"></p>
+                </div>
+                <p class="confirm-summary"></p>
+                <p class="confirm-detail"></p>
+                </div>
+                <div id="closeModal" class="closeModal">
+                ×
+                </div>
+                <div class="submit-btn">
+                [mwform_submit name="submit" value="送信する"]
+                </div>
+                </div>
+                </section> -->
+                <!-- <div id="modalSubmit" class="modalSubmit">
                     <div id="modalBg" class="modalBg"></div>
                     <div class="modalWrapper">
                         <div class="modalContents">
                             <p class="submit-message">送信ありがとうございました。</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
             <!-- /.contact -->
 
