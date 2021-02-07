@@ -228,7 +228,7 @@ body {
 .header {
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 10;
     width: 100%;
     height: 80px;
     &__inner {
@@ -342,7 +342,7 @@ body {
             }
             &__bars--active {
                 .bar--top {
-                    transform: translateY(5px) rotate(-220deg);
+                    transform: translateY(5px) rotate(-40deg);
                     transition: transform 0.3s ease-in-out;
                 }
                 .bar--mid1 {
@@ -356,7 +356,7 @@ body {
                     transition: all 0.3s ease-in-out;
                 }
                 .bar--bot {
-                    transform: translateY(-5px) rotate(220deg);
+                    transform: translateY(-5px) rotate(40deg);
                     transition: transform 0.3s ease-in-out;
                 }
             }
@@ -588,11 +588,6 @@ body {
                 &:not(:last-child) {
                     margin-bottom: 50px;
                 }
-                @include mq() {
-                    &:nth-child(n+5) {
-                    margin-bottom: 0;
-                    }
-                }
                 &:hover {
                     .work__view-more {
                         visibility: visible;
@@ -770,8 +765,8 @@ body {
 }
 .employment {
     padding: 0 50px 40px;
-    background: var(--basecolor4);
-    // @include glassmorphism();
+    // background: var(--basecolor4);
+    @include glassmorphism();
     @include mq(lg) {
         max-width: 592px;
         margin: 0 auto;
@@ -897,8 +892,8 @@ body {
 }
 .cosmos-blog {
     padding: 40px 50px;
-    background: var(--basecolor4);
-    // @include glassmorphism();
+    // background: var(--basecolor4);
+    @include glassmorphism();
     .flexbox-blog {
         @include mq(lg) {
             display: flex;
@@ -986,12 +981,14 @@ body {
     }
 }
 .faq {
-    padding: 0 50px 40px;
-    background: var(--basecolor4);
-    // @include glassmorphism();
+    padding: 0 20px 40px;
+    // background: var(--basecolor4);
+    @include glassmorphism();
     margin: 0 auto;
     @include mq() {
         max-width: 700px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     .accordion {
         &__wrapper {
@@ -1023,6 +1020,7 @@ body {
                 height: 2px;
                 background-color: currentColor;
                 transform: translateY(-50%);
+                transition: 0.5s;
             }
             &::after {
                 content: '';
@@ -1034,6 +1032,7 @@ body {
                 height: 20px;
                 background-color: currentColor;
                 transform: translateY(-50%);
+                transition: 0.5s;
             }
             &:focus {
                 outline: none;
@@ -1041,12 +1040,17 @@ body {
             &--active {
                 border-radius: 1.5rem 1.5rem 0 0;
             }
-            &--active::after {
-                content: none;
+            &--active::before {
+                transform: translateY(-50%) rotate(-180deg);
                 transition: 0.5s;
-                }
+            }
+            &--active::after {
+                transform: translateY(-50%) rotate(-90deg);
+                transition: 0.5s;
+            }
         }
         &__body {
+            transform: translateY(-2px);
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 0 0 1.5rem 1.5rem;
@@ -1134,8 +1138,8 @@ body {
         width: 100%;
         height: 100%;
         padding: 0 0 80px;
-        background: var(--basecolor4);
-        // @include glassmorphism();
+        // background: var(--basecolor4);
+        @include glassmorphism();
         @include mq() {
             max-width: 600px;
             margin: 0 auto;
@@ -1153,7 +1157,7 @@ body {
             .form__number {
                 @include formbox;
                 input {
-                    width: auto;
+                    width: 25%;
                 }
             }
             .form__summary {
@@ -1169,6 +1173,7 @@ body {
                 }
                 select {
                     width: 100%;
+                    height: 50px;
                     padding: 10px 10px;
                     border-radius: 10px;
                     color: #333;
@@ -1177,6 +1182,8 @@ body {
             .form__detail {
                 margin-bottom: 22px;
                 padding-right: 22px;
+                position: relative;
+                height: 180px;
                 @include mq() {
                     margin-bottom: 26px;
                 }
@@ -1190,6 +1197,13 @@ body {
                     padding: 7px 10px;
                     border-radius: 10px;
                 }
+                .placeholder-text {
+                    position: absolute;
+                    top: 43px;
+                    left: 11px;
+                    opacity: .7;
+                    pointer-events: none;
+                }
             }
             .confirm-btn {
                 @include btn-custom;
@@ -1198,6 +1212,7 @@ body {
                 left: 0;
                 right: 0;
                 margin: 0 auto;
+                width: 160px;
                 &:disabled {
                     background: gray;
                 }
@@ -1944,7 +1959,7 @@ body {
         font-size: var(--f5);
     }
     a {
-        // color: var(--basecolor4);
+        color: var(--basecolor4);
     }
     h1 {
         font-size: var(--f1);
@@ -1973,9 +1988,6 @@ body {
         padding-left: 30px;
     }
 }
-
-// コンタクトフォームpage-contact.php
-
 
 
 // アーカイブページarchive.php
@@ -2096,40 +2108,250 @@ body {
         margin: 0 auto;
     }
 }
-/* ローディング画面 */
-#loadingWrap {
+/* ローディングブルースピナー */
+// #loadingWrap {
+//     width: 100vw;
+//     height: 100vh;
+//     transition: all 1s;
+//     background-color: #0bd;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 9999;
+// }
+// .spinner {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     width: 100px;
+//     height: 100px;
+//     margin: auto;
+//     background-color: #fff;
+//     border-radius: 100%;
+//     animation: sk-scaleout 1.0s infinite ease-in-out;
+// }
+// /* ローディングアニメーション */
+// @keyframes sk-scaleout {
+//     0% {
+//         transform: scale(0);
+//     }
+//     100% {
+//         transform: scale(1.0);
+//         opacity: 0;
+//     }
+// }
+
+
+
+// ローディングパルスウェイト
+$f-title:'Roboto', sans-serif;
+$f-body:'Open Sans', sans-serif;
+
+@mixin centre($axis: "both") {
+    position: absolute;
+    @if $axis == "y" {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @if $axis == "x" {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @if $axis == "both" {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-51%, -50%);
+        -moz-transform: translate(-51%, -50%);
+        -ms-transform: translate(-51%, -50%);
+        -o-transform: translate(-51%, -50%);
+        transform: translate(-51%, -50%);
+    }
+}
+@mixin font-size($sizeValue: 1.6, $lineHeight: 2.4) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+    line-height: ($lineHeight * 10) + px;
+}
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@include keyframes(outerRotate1) {
+    0%   {transform:translate(-50%, -50%) rotate(0)}
+    100% {transform:translate(-50%, -50%) rotate(360deg)}
+}
+@include keyframes(outerRotate2) {
+    0%   {transform:translate(-50%, -50%) rotate(0)}
+    100% {transform:translate(-50%, -50%) rotate(-360deg)}
+}
+
+@include keyframes(textColour) {
+    0%   {color:#fff;}
+    100% {color:#3BB2D0;}
+}
+
+.e-loadholder{
+    @include centre();
+    width:240px;
+    height:240px;
+    border:5px solid #1B5F70;
+    border-radius:120px;
+    box-sizing:border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 15;
+
+    &:after{
+        @include centre;
+        content:" ";
+        display:block;
+        background:#222;
+        transform-origin:center;
+        z-index: 0;
+    }
+
+    &:after{
+        width:100px;
+        height:200%;
+        @include animation('outerRotate2 30s infinite linear');
+    }
+
+    .m-loader{
+        @include centre();
+        width:200px;
+        height:200px;
+        color:#888;
+        text-align:center;
+        border:5px solid lighten(#1B5F70, 15%);
+        border-radius:100px;
+        box-sizing:border-box;
+        z-index:20;
+        text-transform:uppercase;
+
+        &:after{
+            @include centre;
+            content:" ";
+            display:block;
+            background:#222;
+            transform-origin:center;
+            z-index: -1;
+        }
+
+        &:after{
+            width:100px;
+            height:106%;
+            @include animation('outerRotate1 15s infinite linear');
+        }
+
+        .e-text{
+            @include font-size(1.4, 13);
+            @include centre();
+            @include animation('textColour 1s alternate linear infinite');
+            display:block;
+            width:140px;
+            height:140px;
+            text-align:center;
+            border:5px solid lighten(#1B5F70, 25%);
+            border-radius:70px;
+            box-sizing:border-box;
+            font-size: 95%;
+            z-index: 20;
+
+            &:before, &:after{
+                @include centre;
+                content:" ";
+                display:block;
+                background:#222;
+                transform-origin:center;
+                z-index: -1;
+            }
+
+            &:before{
+                width:110%;
+                height:40px;
+                @include animation('outerRotate2 3.5s infinite linear');
+            }
+            &:after{
+                width:40px;
+                height:110%;
+                @include animation('outerRotate1 8s infinite linear');
+            }
+        }
+    }
+}
+
+#particleCanvas-White{
+    @include centre();
+    width:100%;
+    height:100%;
+    opacity:0.1;
+    z-index: 15;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: all 1s;
+}
+
+#particleCanvas-Blue{
+    @include centre();
+    width: 80%;
+    height: 80%;
+    z-index: 16;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: all 1s;
+}
+
+.loadingBg {
     width: 100vw;
     height: 100vh;
-    transition: all 1s;
-    background-color: #0bd;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    background: #222;
+    z-index: 10;
+    transition: all 1s;
 }
-.spinner {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 100%;
-    animation: sk-scaleout 1.0s infinite ease-in-out;
-}
-/* ローディングアニメーション */
-@keyframes sk-scaleout {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1.0);
-        opacity: 0;
-    }
-}
+
 .loadingNone {
     opacity: 0;
     visibility: hidden;

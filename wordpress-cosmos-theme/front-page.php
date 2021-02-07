@@ -3,16 +3,26 @@
 <main>
     <article>
         <div class="switching-video-wrapper">
-            <!-- <div id="loadingWrap">
-                <div class="spinner"></div>
-            </div> -->
+
+            <!-- <div class="e-loadholder">
+                <div class="m-loader">
+                    <span class="e-text">Loading</span>
+                </div>
+            </div>
+            <div id="particleCanvas-Blue"></div>
+            <div id="particleCanvas-White"></div>
+            <div class="loadingBg"></div> -->
+
+            <!-- <div id="loadingWrap"> -->
+            <!-- <div class="spinner"></div> -->
+            <!-- </div> -->
             <section class="top">
                 <div class="top__visual">
-                    <video src="<?php echo get_template_directory_uri(); ?>/video/Space-start.mp4"  playinline loop muted autoplay class="video1"></video>
+                    <video src="<?php echo get_template_directory_uri(); ?>/video/Space-start.mp4"  playsinline loop muted autoplay class="video1"></video>
                 </div>
                 <!-- /.top__visual -->
                 <div class="copy">
-                    <h1 class="copy__main">夢と希望の想像へ<br>
+                    <h1 data-aos="fade-left" data-aos-delay="5" class="copy__main">夢と希望の想像へ<br>
                         〜 地域社会に調和と秩序と平等を 〜<br><br>
                         <span><?php bloginfo('name'); ?></span>
                     </h1>
@@ -26,12 +36,12 @@
 
                 <section class="about__cosmos" id="about__cosmos">
                     <article class="concept">
-                        <div class="concept__inner">
+                        <div data-aos="fade-down-right" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="concept__inner">
                             <h3 class="sub-title">コスモスとは</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, aliquam doloribus perferendis consequatur. Dolorum accusantium minima eum cum architecto neque.</p>
                         </div>
                     </article>
-                    <div data-aos="flip-up" data-aos-anchor-placement="top-center" data-aos-duration="500" class="cosmos-image"></div>
+                    <div data-aos="fade-up-right" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="cosmos-image"></div>
                     <!-- /.cosmos-image -->
                 </section>
                 <!-- /.about__cosmos -->
@@ -41,9 +51,15 @@
                         <h3 class="sub-title">就労支援</h3>
                     </div>
                     <!-- /.sub-title__wrapper -->
+                    <?php $cosmos_appliance = get_post_meta(get_the_ID(), '家電清掃', true); ?>
+                    <?php $cosmos_accessory = get_post_meta(get_the_ID(), 'アクセサリー', true); ?>
+                    <?php $cosmos_office = get_post_meta(get_the_ID(), '事務作業', true); ?>
+                    <?php $cosmos_pc = get_post_meta(get_the_ID(), 'PC作業', true); ?>
+                    <?php $cosmos_restaurant = get_post_meta(get_the_ID(), 'レストラン', true); ?>
+                    <?php $cosmos_outside_the_facility = get_post_meta(get_the_ID(), '施設外就労', true); ?>
                     <div class="flexbox-work">
 
-                        <a data-aos="fade-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
+                        <a style="display: <?php echo $cosmos_appliance; ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -60,7 +76,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
+                        <a style="display: <?php echo $cosmos_accessory; ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -77,7 +93,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('office')); ?>">
+                        <a style="display: <?php echo $cosmos_office; ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('office')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -94,7 +110,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
+                        <a style="display: <?php echo $cosmos_pc; ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -111,7 +127,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
+                        <a style="display: <?php echo $cosmos_restaurant; ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -128,7 +144,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a data-aos="fade-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
+                        <a style="display: <?php echo $cosmos_outside_the_facility; ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -205,9 +221,10 @@
 
                 </section>
 
+                <?php $wage_appliance = get_post_meta(get_the_ID(), '家電工賃', false); ?>
                 <section class="about__wage" id="about__wage">
                     <h3 class="sub-title">工賃規定</h3>
-                    <div data-aos="fade-up" data-aos-anchor-placement="top-center" class="wage-table">
+                    <div data-aos="zoom-in-up" data-aos-anchor-placement="top-center" class="wage-table">
                         <table class="wage-table__inner">
                             <thead class="wage-table__headers">
                                 <tr class="wage-table__header-row">
@@ -221,15 +238,7 @@
                             </thead>
                             <tbody class="wage-table__body">
                                 <tr class="wage-table__body-row">
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                </tr>
-                                <tr class="wage-table__body-row">
-                                    <td class="wage-table__text">テキスト</td>
+                                    <td class="wage-table__text"><?php echo $wage_appliance[0]; ?></td>
                                     <td class="wage-table__text">テキスト</td>
                                     <td class="wage-table__text">テキスト</td>
                                     <td class="wage-table__text">テキスト</td>
@@ -237,7 +246,15 @@
                                     <td class="wage-table__text">テキスト</td>
                                 </tr>
                                 <tr class="wage-table__body-row">
+                                    <td class="wage-table__text"><?php echo $wage_appliance[1]; ?></td>
                                     <td class="wage-table__text">テキスト</td>
+                                    <td class="wage-table__text">テキスト</td>
+                                    <td class="wage-table__text">テキスト</td>
+                                    <td class="wage-table__text">テキスト</td>
+                                    <td class="wage-table__text">テキスト</td>
+                                </tr>
+                                <tr class="wage-table__body-row">
+                                    <td class="wage-table__text"><?php echo $wage_appliance[2]; ?></td>
                                     <td class="wage-table__text">テキスト</td>
                                     <td class="wage-table__text">テキスト</td>
                                     <td class="wage-table__text">テキスト</td>
@@ -252,7 +269,7 @@
 
             </section>
             <div class="odd-wrapper">
-                <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="employment" id="employment">
+                <section data-aos="fade-up" data-aos-anchor-placement="top-center" class="employment" id="employment">
                     <h2 class="chapter-title">就労継続支援B型について</h2>
 
                     <section class="employment__type-b" id="employment__type-b">
@@ -402,7 +419,7 @@
                     endif; ?>
             </section>
             <div class="odd-wrapper">
-                <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="cosmos-blog" id="cosmos-blog">
+                <section data-aos="fade-up" data-aos-anchor-placement="top-center" class="cosmos-blog" id="cosmos-blog">
                     <div class="flexbox-blog">
                         <div class="blog-description">
                             <h3 class="chapter-title">ブログ</h3>
@@ -468,7 +485,7 @@
             </section>
             <!-- /.recruitment -->
             <div class="odd-wrapper">
-                <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="faq" id="faq">
+                <section data-aos="fade-up" data-aos-anchor-placement="top-center" class="faq" id="faq">
                     <h2 class="chapter-title">Q&amp;A</h2>
                     <dl class="accordion">
                         <div class="accordion__wrapper">
@@ -539,49 +556,21 @@
         <!-- /.access -->
         <div class="end">
             <div class="end__visual">
-                <video src="<?php echo get_template_directory_uri(); ?>/video/Space-end.mp4" autoplay playinline loop muted class="video2">
+                <video src="<?php echo get_template_directory_uri(); ?>/video/Space-end.mp4" playsinline loop muted autoplay class="video2">
                 </video>
             </div>
 
-            <section data-aos="fade-down" data-aos-anchor-placement="top-center" class="contact" id="contact">
+            <section data-aos="fade-up" data-aos-anchor-placement="top-center" class="contact" id="contact">
                 <h2 class="chapter-title">お問い合わせ</h2>
-                <?php if(have_posts()): while(have_posts()): the_post(); ?>
-                    <?php the_content(); ?>
-                <?php endwhile;endif; ?>
-
-                <!-- <button class="confirm-btn">確認画面へ</button> -->
-
-                <!-- <section id="modalConfirm" class="modalConfirm">
-                <div id="modalBg" class="modalBg"></div>
-                <div class="modalWrapper">
-                <h3>以下の内容で送信します</h3>
-                <div class="modalContents">
-                <p class="confirm-name"></p>
-                <p class="confirm-email"></p>
-                <div class="number-wrapper">
-                <p class="confirm-number1"></p>
-                <p class="confirm-number2"></p>
-                <p class="confirm-number3"></p>
-                </div>
-                <p class="confirm-summary"></p>
-                <p class="confirm-detail"></p>
-                </div>
-                <div id="closeModal" class="closeModal">
-                ×
-                </div>
-                <div class="submit-btn">
-                [mwform_submit name="submit" value="送信する"]
-                </div>
-                </div>
-                </section> -->
-                <!-- <div id="modalSubmit" class="modalSubmit">
+                <?php echo do_shortcode('[mwform_formkey key="437"]'); ?>
+                <div id="modalSubmit" class="modalSubmit">
                     <div id="modalBg" class="modalBg"></div>
                     <div class="modalWrapper">
                         <div class="modalContents">
                             <p class="submit-message">送信ありがとうございました。</p>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </section>
             <!-- /.contact -->
 

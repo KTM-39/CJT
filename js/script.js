@@ -13,6 +13,8 @@ $(function() {
     const $switchingVideo = $('.end__visual');
     const $video1 = $('.video1');
     const $video2 = $('.video2');
+    const $test = $('.test-btn');
+
 
 //    スムーススクロール
     $burgerMenu.css('display', 'none');
@@ -88,7 +90,8 @@ $(function() {
 
 //    送信挙動
     $submitAction.submit(function(){
-        $('.thanks-message').slideToggle().delay(3000).slideToggle();
+        window.confirm("test");
+        window.location.href = "single.html";
         return false;
     });
 

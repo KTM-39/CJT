@@ -91,6 +91,24 @@ function theme_enqueue() {
         '2.1.1',
         true
     );
+
+    // particles.js読み込み
+    wp_enqueue_script(
+        'particles.js',
+        '//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js',
+        array(),
+        '2.0.0',
+        true
+    );
+
+    // b5bg1bd49e.js読み込み
+    wp_enqueue_script(
+        'b5bg1bd49e.js',
+        '//use.fontawesome.com/b5bf1bd49e.js',
+        array(),
+        '1.0.0',
+        true
+    );
 }
 
 add_action('wp_enqueue_scripts', 'theme_enqueue');
