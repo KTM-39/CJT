@@ -77,6 +77,14 @@ jQuery(function($) {
         }
     });
 
+    // スクロールヒント
+    new ScrollHint('.js-scrollable', {
+        suggestiveShadow: true,
+        i18n: {
+            scrollable: 'スクロールできます'
+        }
+    });
+
     // アコーディオン
     $('dt button:not(.accordion__btn--active)').parent().next().css('display', 'none');
     $accordionBtn.click(function() {
@@ -119,7 +127,7 @@ jQuery(function($) {
     });
 
     // 送信確認
-    $submitConfirm.on('click', function (){
+    $submitConfirm.on('click', function (event){
         event.preventDefault();
         let $nameValue = $('#name').val();
         let $emailValue = $('#email').val();
@@ -145,7 +153,7 @@ jQuery(function($) {
     });
 
     // 送信遷移
-    $submitAction.on('submit', function () {
+    $submitAction.on('submit', function (event) {
         event.preventDefault();
         $('#modalConfirm').toggleClass('is-show');
         $('#modalSubmit').toggleClass('is-show');
@@ -189,7 +197,10 @@ jQuery(function($) {
     });
 
     // スクロールアニメーション
-    AOS.init();
+    AOS.init({
+        easing: 'ease-in-out',
+        once: true,
+    });
 
     // particles.js
     particlesJS("particleCanvas-Blue", {

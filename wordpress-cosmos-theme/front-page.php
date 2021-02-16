@@ -4,14 +4,14 @@
     <article>
         <div class="switching-video-wrapper">
 
-            <!-- <div class="e-loadholder">
+            <div class="e-loadholder">
                 <div class="m-loader">
                     <span class="e-text">Loading</span>
                 </div>
             </div>
             <div id="particleCanvas-Blue"></div>
             <div id="particleCanvas-White"></div>
-            <div class="loadingBg"></div> -->
+            <div class="loadingBg"></div>
 
             <!-- <div id="loadingWrap"> -->
             <!-- <div class="spinner"></div> -->
@@ -53,12 +53,6 @@
                         <h3 class="sub-title">就労支援</h3>
                     </div>
                     <!-- /.sub-title__wrapper -->
-                    <!-- <?php $cosmos_appliance = get_post_meta(get_the_ID(), '家電清掃', true); ?>
-                    <?php $cosmos_accessory = get_post_meta(get_the_ID(), 'アクセサリー', true); ?>
-                    <?php $cosmos_office = get_post_meta(get_the_ID(), '事務作業', true); ?>
-                    <?php $cosmos_pc = get_post_meta(get_the_ID(), 'PC作業', true); ?>
-                    <?php $cosmos_bistro = get_post_meta(get_the_ID(), 'レストラン', true); ?>
-                    <?php $cosmos_outside_the_facility = get_post_meta(get_the_ID(), '施設外就労', true); ?> -->
                     <div class="flexbox-work">
 
                         <a style="display: <?php the_field('display-appliance'); ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
