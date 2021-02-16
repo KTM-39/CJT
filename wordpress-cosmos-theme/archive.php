@@ -13,14 +13,19 @@
 			the_post(); ?>
 
 			<article <?php post_class("archive"); ?>>
-				<a href="<?php the_permalink(); ?>">
+				<a class="archive" href="<?php the_permalink(); ?>">
 					<?php if( has_post_thumbnail() ): ?>
-					<figure>
-						<?php the_post_thumbnail(); ?>
-					</figure>
+						<figure class="archive__img-wrapper">
+							<?php the_post_thumbnail(); ?>
+						</figure>
+						<div class="archive__body">
+							<time class="archive__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
+								<?php echo esc_html( get_the_date() ); ?>
+							</time>
+							<h4 class="archive__title"><?php the_title(); ?></h4>
+							<p class="archive__text"><?php echo wp_strip_all_tags(get_the_content(), true); ?></p>
+						</div>
 					<?php endif; ?>
-
-					<h2><?php the_title(); ?></h2>
 				</a>
 			</article>
 

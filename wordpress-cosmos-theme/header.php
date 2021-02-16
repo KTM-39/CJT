@@ -5,25 +5,8 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <?php wp_head(); ?>
+
         <meta name="description" content="<?php bloginfo("description"); ?>" />
-
-        <?php if( is_single() ): ?>
-        <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
-        <meta property="og:locale" content="ja-jp">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="<?php the_title(); ?>">
-        <meta property="og:url" content="<?php the_permalink(); ?>">
-        <meta property="og:description" content="<?php echo esc_attr( wp_strip_all_tags( get_the_excerpt() ) ); ?>">
-
-        <?php if( has_post_thumbnail() ): ?>
-        <?php $myimg= get_post_thumbnail_id(); ?>
-        <meta property="og:image" content="<?php echo esc_url( wp_get_attachment_url( $myimg ) ); ?>">
-        <meta property="og:image:width" content="<?php echo esc_attr( wp_get_attachment_metadata( $myimg )['width'] ); ?>">
-        <meta property="og:image:height" content="<?php echo esc_attr( wp_get_attachment_metadata( $myimg )['height'] ); ?>">
-        <?php endif; ?>
-
-        <meta name="twitter:card" content="summary_large_image">
-        <?php endif; ?>
     </head>
 
     <body <?php body_class(); ?>>
@@ -32,9 +15,9 @@
             header-bg
             <?php endif; ?>">
             <div class="header__inner">
-                <div class="header__logo">
+                <h1 class="header__logo">
                     <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" class="logo"></a>
-                </div>
+                </h1>
                 <div class="header__nav">
                     <nav class="main-nav">
                         <ul class="main-nav__inner">

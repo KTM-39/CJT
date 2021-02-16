@@ -465,20 +465,21 @@ body {
     }
     .copy {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100%;
         text-align: center;
         color: white;
-        &__main {
-            font-size: 21px;
-            span {
-                color: var(--basecolor3);
-                font-size: 28px;
-            }
+        &__name {
+            color: var(--basecolor3);
+            font-size: 28px;
             @include mq() {
-                font-size: 30px;
+                font-size: 34px;
             }
+        }
+        &__description {
+            font-size: 20px;
         }
     }
 }
@@ -728,10 +729,9 @@ body {
                 display: none;
             }
             &__inner {
-                width: auto;
                 min-width: 100%;
                 border-collapse: separate;
-                border-spacing: 15px 0px;
+                border-spacing: 10px 0px;
                 border-radius: 1.5rem;
             }
             &__header {
@@ -748,7 +748,7 @@ body {
             }
             &__text {
                 text-align: center;
-                padding: 15px 110px;
+                padding: 15px 80px;
                 border-bottom: 1px solid #ddd;
                 background: var(--basecolor8);
                 vertical-align: middle;
@@ -802,12 +802,11 @@ body {
                     }
                 }
                 &__img-wrapper {
-                    margin: 0px;
+                    margin: 0 15px 0 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
-                    margin-right: 15px;
                     @include mq() {
                         margin-right: 20px;
                     }
@@ -1305,7 +1304,8 @@ body {
             background-color: #fff;
             .modalContents {
                 padding: 20px 0;
-                p {
+                .thanks-message {
+                    text-align: center;
                     margin: 10px 0;
                 }
             }
@@ -1652,27 +1652,52 @@ body {
                 font-size: var(--f4);
             }
         }
-        .related-list {
+        .related-wrapper {
+            position: relative;
+            padding: 0 20px;
+            margin: 0 auto;
+            @include mq() {
+                max-width: 600px;
+            }
+            @include mq(xl) {
+                max-width: 900px;
+            }
             .related {
-                margin-bottom: 20px;
-                a {
-                    color: #000;
-                    figure {
-                        margin: 0;
-                        img {
-                            height: 120px;
-                            max-width: 100%;
-                            object-fit: cover;
-                            @include mq() {
-                                height: 180px;
-                            }
-                        }
+                display: flex;
+                align-items: center;
+                color: var(--fontcolor);
+                padding-bottom: 30px;
+                &__img-wrapper {
+                    flex: 0 1 27.58333%;
+                    margin: 0 3.33333% 0 0;
+                }
+                &__body {
+                    flex: 1;
+                }
+                &__date {
+                    font-size: var(--f6);
+                }
+                &__title {
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    color: var(--basecolor3);
+                    font-size: var(--f5);
+                    @include mq() {
+                        font-size: var(--f4);
                     }
-                    h3 {
-                        margin: 0;
-                        padding: 0;
-                        border: none;
-                        font-size: var(--f6);
+                }
+                &__text {
+                    font-size: var(--f6);
+                    line-height: 25px;
+                    height: 48px;
+                    word-break: break-all;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    @include mq() {
+                        font-size: var(--f5);
+                        letter-spacing: -0.9px;
                     }
                 }
             }
@@ -2027,34 +2052,50 @@ body {
         }
     }
     .archive-list {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
         @include mq() {
             max-width: 720px;
             margin: 40px auto;
         }
         .archive {
+            display: flex;
+            align-items: center;
+            color: var(--fontcolor);
             &:not(:last-child) {
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
-            a {
-                color: #000;
-                figure {
-                    margin: 0;
-                    img {
-                        height: 120px;
-                        max-width: 100%;
-                        object-fit: cover;
-                        @include mq() {
-                            height: 180px;
-                        }
-                    }
+            &__img-wrapper {
+                flex: 0 1 27.58333%;
+                margin: 0 3.33333% 0 0;
+            }
+            &__body {
+                flex: 1;
+            }
+            &__date {
+                font-size: var(--f6);
+            }
+            &__title {
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--basecolor3);
+                font-size: var(--f5);
+                @include mq() {
+                    font-size: var(--f4);
                 }
-                h2 {
-                    margin: 0;
-                    padding: 0;
-                    border: none;
-                    font-size: var(--f6);
+            }
+            &__text {
+                font-size: var(--f6);
+                line-height: 25px;
+                height: 48px;
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                @include mq() {
+                    font-size: var(--f5);
+                    letter-spacing: -0.9px;
                 }
             }
         }
@@ -2108,6 +2149,7 @@ body {
         margin: 0 auto;
     }
 }
+
 /* ローディングブルースピナー */
 // #loadingWrap {
 //     width: 100vw;
@@ -2145,7 +2187,7 @@ body {
 
 
 
-// ローディングパルスウェイト
+// ローディングパーティクルパルス
 $f-title:'Roboto', sans-serif;
 $f-body:'Open Sans', sans-serif;
 

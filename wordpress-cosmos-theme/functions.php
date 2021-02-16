@@ -75,6 +75,15 @@ function theme_enqueue() {
         null
     );
 
+    // scroll-hint.css読み込み
+    wp_enqueue_style(
+        'scroll-hint.css',
+        '//unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css',
+        array(),
+        '1.1.10',
+        null
+    );
+
     // スクリプトJS読み込み
     wp_enqueue_script(
         'javascript',
@@ -89,6 +98,15 @@ function theme_enqueue() {
         '//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js',
         array(),
         '2.1.1',
+        true
+    );
+
+    // scroll-hint.js読み込み
+    wp_enqueue_script(
+        'scroll-hint.js',
+        '//unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js',
+        array(),
+        '1.1.10',
         true
     );
 

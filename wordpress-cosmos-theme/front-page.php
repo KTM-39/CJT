@@ -22,10 +22,12 @@
                 </div>
                 <!-- /.top__visual -->
                 <div class="copy">
-                    <h1 data-aos="fade-left" data-aos-delay="5" class="copy__main">夢と希望の想像へ<br>
-                        〜 地域社会に調和と秩序と平等を 〜<br><br>
-                        <span><?php bloginfo('name'); ?></span>
-                    </h1>
+                    <p class="copy__name">
+                        <?php bloginfo('name'); ?>
+                    </p>
+                    <p class="copy__description">
+                        <?php bloginfo('description'); ?>
+                    </p>
                 </div>
                 <!-- /.copy -->
             </section>
@@ -36,12 +38,12 @@
 
                 <section class="about__cosmos" id="about__cosmos">
                     <article class="concept">
-                        <div data-aos="fade-down-right" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="concept__inner">
+                        <div data-aos="fade-down-right" data-aos-anchor-placement="top-center" class="concept__inner">
                             <h3 class="sub-title">コスモスとは</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, aliquam doloribus perferendis consequatur. Dolorum accusantium minima eum cum architecto neque.</p>
                         </div>
                     </article>
-                    <div data-aos="fade-up-right" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="cosmos-image"></div>
+                    <div data-aos="fade-up-right" data-aos-anchor-placement="top-center" class="cosmos-image"></div>
                     <!-- /.cosmos-image -->
                 </section>
                 <!-- /.about__cosmos -->
@@ -51,21 +53,21 @@
                         <h3 class="sub-title">就労支援</h3>
                     </div>
                     <!-- /.sub-title__wrapper -->
-                    <?php $cosmos_appliance = get_post_meta(get_the_ID(), '家電清掃', true); ?>
+                    <!-- <?php $cosmos_appliance = get_post_meta(get_the_ID(), '家電清掃', true); ?>
                     <?php $cosmos_accessory = get_post_meta(get_the_ID(), 'アクセサリー', true); ?>
                     <?php $cosmos_office = get_post_meta(get_the_ID(), '事務作業', true); ?>
                     <?php $cosmos_pc = get_post_meta(get_the_ID(), 'PC作業', true); ?>
-                    <?php $cosmos_restaurant = get_post_meta(get_the_ID(), 'レストラン', true); ?>
-                    <?php $cosmos_outside_the_facility = get_post_meta(get_the_ID(), '施設外就労', true); ?>
+                    <?php $cosmos_bistro = get_post_meta(get_the_ID(), 'レストラン', true); ?>
+                    <?php $cosmos_outside_the_facility = get_post_meta(get_the_ID(), '施設外就労', true); ?> -->
                     <div class="flexbox-work">
 
-                        <a style="display: <?php echo $cosmos_appliance; ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
+                        <a style="display: <?php the_field('display-appliance'); ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/appliance')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
-                                    家電清掃
+                                    家電
                                 </h4>
                                 <div class="work__right">
                                     <p class="work__view-more">詳しく見る</p>
@@ -76,24 +78,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a style="display: <?php echo $cosmos_accessory; ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/accessory')); ?>">
-                            <figure class="work__img-wrapper">
-                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
-                            </figure>
-                            <div class="work__body">
-                                <h4 class="work__left">
-                                    アクセサリー
-                                </h4>
-                                <div class="work__right">
-                                    <p class="work__view-more">詳しく見る</p>
-                                    <div class="work__arrow-right"></div>
-                                </div>
-                                <span class="work__border"></span>
-                            </div>
-                            <!-- /.work__body -->
-                        </a>
-
-                        <a style="display: <?php echo $cosmos_office; ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('office')); ?>">
+                        <a style="display: <?php the_field('display-office'); ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('/office')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -110,7 +95,7 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a style="display: <?php echo $cosmos_pc; ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
+                        <a style="display: <?php the_field('display-pc'); ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('pc')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
@@ -127,13 +112,13 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a style="display: <?php echo $cosmos_restaurant; ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('restaurant')); ?>">
+                        <a style="display: <?php the_field('display-outside-the-facility'); ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
-                                    レストラン
+                                    施設外
                                 </h4>
                                 <div class="work__right">
                                     <p class="work__view-more">詳しく見る</p>
@@ -144,13 +129,47 @@
                             <!-- /.work__body -->
                         </a>
 
-                        <a style="display: <?php echo $cosmos_outside_the_facility; ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('outside-the-facility')); ?>">
+                        <a style="display: <?php the_field('display-bistro'); ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('bistro')); ?>">
                             <figure class="work__img-wrapper">
                                 <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
                             </figure>
                             <div class="work__body">
                                 <h4 class="work__left">
-                                    施設外就労
+                                    ビストロ
+                                </h4>
+                                <div class="work__right">
+                                    <p class="work__view-more">詳しく見る</p>
+                                    <div class="work__arrow-right"></div>
+                                </div>
+                                <span class="work__border"></span>
+                            </div>
+                            <!-- /.work__body -->
+                        </a>
+
+                        <a style="display: <?php the_field('display-pc-learning'); ?>" data-aos="zoom-in-left" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('pc-learning')); ?>">
+                            <figure class="work__img-wrapper">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                            </figure>
+                            <div class="work__body">
+                                <h4 class="work__left">
+                                    ＰＣ学習
+                                </h4>
+                                <div class="work__right">
+                                    <p class="work__view-more">詳しく見る</p>
+                                    <div class="work__arrow-right"></div>
+                                </div>
+                                <span class="work__border"></span>
+                            </div>
+                            <!-- /.work__body -->
+                        </a>
+
+                        <a style="display: <?php the_field('display-accessory'); ?>" data-aos="zoom-in-right" data-aos-anchor-placement="top-center" class="work" href="<?php echo esc_url(home_url('accessory')); ?>">
+                            <figure class="work__img-wrapper">
+                                <img class="work__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/jon-tyson-Y1TAEMoWUb4-unsplash.jpg">
+                            </figure>
+                            <div class="work__body">
+                                <h4 class="work__left">
+                                    アクセサリー
                                 </h4>
                                 <div class="work__right">
                                     <p class="work__view-more">詳しく見る</p>
@@ -221,49 +240,34 @@
 
                 </section>
 
-                <?php $wage_appliance = get_post_meta(get_the_ID(), '家電工賃', false); ?>
                 <section class="about__wage" id="about__wage">
-                    <h3 class="sub-title">工賃規定</h3>
-                    <div data-aos="zoom-in-up" data-aos-anchor-placement="top-center" class="wage-table">
-                        <table class="wage-table__inner">
-                            <thead class="wage-table__headers">
-                                <tr class="wage-table__header-row">
-                                    <th class="wage-table__header">家電清掃</th>
-                                    <th class="wage-table__header">アクセサリー制作</th>
-                                    <th class="wage-table__header">事務作業</th>
-                                    <th class="wage-table__header">ＰＣ作業</th>
-                                    <th class="wage-table__header">レストラン</th>
-                                    <th class="wage-table__header">施設外就労</th>
-                                </tr>
-                            </thead>
-                            <tbody class="wage-table__body">
-                                <tr class="wage-table__body-row">
-                                    <td class="wage-table__text"><?php echo $wage_appliance[0]; ?></td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                </tr>
-                                <tr class="wage-table__body-row">
-                                    <td class="wage-table__text"><?php echo $wage_appliance[1]; ?></td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                </tr>
-                                <tr class="wage-table__body-row">
-                                    <td class="wage-table__text"><?php echo $wage_appliance[2]; ?></td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                    <td class="wage-table__text">テキスト</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h3 class="sub-title">標準工賃規定</h3>
+                        <div data-aos="zoom-in-up" data-aos-anchor-placement="top-center" class="wage-table js-scrollable">
+                            <table class="wage-table__inner">
+                                <thead class="wage-table__headers">
+                                    <tr class="wage-table__header-row">
+                                        <th class="wage-table__header">家電</th>
+                                        <th class="wage-table__header">事務作業</th>
+                                        <th class="wage-table__header">ＰＣ作業</th>
+                                        <th class="wage-table__header">施設外</th>
+                                        <th class="wage-table__header">ビストロ</th>
+                                        <th class="wage-table__header">ＰＣ学習</th>
+                                        <th style="display: <?php the_field('wage-display-accessory'); ?>" class="wage-table__header">アクセサリー</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="wage-table__body">
+                                    <tr class="wage-table__body-row">
+                                        <td class="wage-table__text"><?php the_field('wage-appliance'); ?></td>
+                                        <td class="wage-table__text"><?php the_field('wage-office'); ?></td>
+                                        <td class="wage-table__text"><?php the_field('wage-pc'); ?></td>
+                                        <td class="wage-table__text"><?php the_field('wage-outside-the-facility'); ?></td>
+                                        <td class="wage-table__text"><?php the_field('wage-bistro'); ?></td>
+                                        <td class="wage-table__text"><?php the_field('wage-pc-learning'); ?></td>
+                                        <td style="display: <?php the_field('wage-display-accessory'); ?>" class="wage-table__text"><?php the_field('wage-accessory'); ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     <!-- /.wage-table -->
                 </section>
 
@@ -281,7 +285,7 @@
                         </article>
                     </section>
 
-                    <section class="employment__flow-of-use"id="employment__flow-of-use">
+                    <section class="employment__flow-of-use" id="employment__flow-of-use">
                         <h3 class="sub-title">利用までの流れ</h3>
                         <div class="flow-wrapper">
 
@@ -290,7 +294,7 @@
                                     <div class="icon-round">
                                         <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/phone.png">
                                     </div>
-                                    <img src="./img/step-next.png" alt="" class="step__next">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/step-next.png" alt="" class="step__next">
                                 </figure>
                                 <div class="step__body">
                                     <p class="step__stage">STEP1</p>
@@ -310,7 +314,7 @@
                                     <div class="icon-round">
                                         <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Consultation.png">
                                     </div>
-                                    <img src="./img/step-next.png" alt="" class="step__next">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/step-next.png" alt="" class="step__next">
                                 </figure>
                                 <div class="step__body">
                                     <p class="step__stage">STEP2</p>
@@ -330,7 +334,7 @@
                                     <div class="icon-round">
                                         <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/building.png">
                                     </div>
-                                    <img src="./img/step-next.png" alt="" class="step__next">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/step-next.png" alt="" class="step__next">
                                 </figure>
                                 <div class="step__body">
                                     <p class="step__stage">STEP3</p>
@@ -350,7 +354,7 @@
                                     <div class="icon-round">
                                         <img class="step__icon" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Contract.png">
                                     </div>
-                                    <img src="./img/step-next.png" alt="" class="step__next">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/step-next.png" alt="" class="step__next">
                                 </figure>
                                 <div class="step__body">
                                     <p class="step__stage">STEP4</p>
@@ -556,18 +560,21 @@
         <!-- /.access -->
         <div class="end">
             <div class="end__visual">
-                <video src="<?php echo get_template_directory_uri(); ?>/video/Space-end.mp4" playsinline loop muted autoplay class="video2">
-                </video>
+                <video src="<?php echo get_template_directory_uri(); ?>/video/Space-end.mp4" playsinline loop muted autoplay class="video2"></video>
             </div>
 
             <section data-aos="fade-up" data-aos-anchor-placement="top-center" class="contact" id="contact">
                 <h2 class="chapter-title">お問い合わせ</h2>
-                <?php echo do_shortcode('[mwform_formkey key="437"]'); ?>
+                <?php echo do_shortcode('[mwform_formkey key="44"]'); ?>
                 <div id="modalSubmit" class="modalSubmit">
                     <div id="modalBg" class="modalBg"></div>
                     <div class="modalWrapper">
                         <div class="modalContents">
-                            <p class="submit-message">送信ありがとうございました。</p>
+                            <p class="thanks-message">
+                                お問い合わせいただきありがとうございました。<br><br>
+                                お送りいただきました内容を確認の上、<br>
+                                担当者より折り返しご連絡させていただきます。
+                            </p>
                         </div>
                     </div>
                 </div>

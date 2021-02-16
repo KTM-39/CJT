@@ -62,7 +62,7 @@
         <aside class="sub-content">
             <h2 class="related-title">RELATED</h2>
 
-            <div class="related-list">
+            <div>
                 <?php $related = get_posts( array(
                     'posts_per_page' => '3',
                     'post__not_in' => array( get_the_id() ),
@@ -72,18 +72,24 @@
                 <?php if($related):
                     foreach($related as $post):
                     setup_postdata($post); ?>
-
-                <?php if( has_post_thumbnail() ): ?>
-                    <article class="related">
-                        <a class="" href="<?php the_permalink(); ?>">
-                            <figure>
-                                <?php the_post_thumbnail(); ?>
-                            </figure>
-                            <h5><?php the_title(); ?></h5>
-                        </a>
-                    </article>
-                <?php endif; ?>
-
+                    <div class="related-wrapper">
+                        <article>
+                            <a class="related" href="<?php the_permalink(); ?>">
+                                <?php if(has_post_thumbnail()): ?>
+                                    <figure class="related__img-wrapper">
+                                        <?php the_post_thumbnail(); ?>
+                                    </figure>
+                                    <div class="related__body">
+                                        <time class="related__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
+                                            <?php echo esc_html( get_the_date() ); ?>
+                                        </time>
+                                        <h4 class="related__title"><?php the_title(); ?></h4>
+                                        <p class="related__text"><?php echo wp_strip_all_tags(get_the_content(), true); ?></p>
+                                    </div>
+                                <?php endif; ?>
+                            </a>
+                        </article>
+                    </div>
                 <?php endforeach;
                     wp_reset_postdata();
                     endif; ?>
