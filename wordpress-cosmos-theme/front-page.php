@@ -21,14 +21,14 @@
                     <video src="<?php echo get_template_directory_uri(); ?>/video/Space-start.mp4"  playsinline loop muted autoplay class="video1"></video>
                 </div>
                 <!-- /.top__visual -->
-                <div class="copy">
+                <h1 class="copy">
                     <p class="copy__name">
                         <?php bloginfo('name'); ?>
                     </p>
                     <p class="copy__description">
                         <?php bloginfo('description'); ?>
                     </p>
-                </div>
+                </h1>
                 <!-- /.copy -->
             </section>
             <!-- /.top -->

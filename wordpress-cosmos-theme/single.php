@@ -26,7 +26,7 @@
             <?php the_post_navigation(); ?>
 
 
-            <h3 class="pickup-title">PICK UP</h3>
+            <p class="pickup-title">PICK UP</p>
             <?php $pickup= get_posts( array(
                 'posts_per_page' => '3',
                 'post__not_in' => array( get_the_id() ),
@@ -47,7 +47,7 @@
                                     <time class="pickup__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
                                         <?php echo esc_html( get_the_date() ); ?>
                                     </time>
-                                    <h4 class="pickup__title"><?php the_title(); ?></h4>
+                                    <p class="pickup__title"><?php the_title(); ?></p>
                                     <p class="pickup__text"><?php echo wp_strip_all_tags(get_the_content(), true); ?></p>
                                 </div>
                             <?php endif; ?>
@@ -60,8 +60,7 @@
         </main>
 
         <aside class="sub-content">
-            <h2 class="related-title">RELATED</h2>
-
+            <p class="related-title">RELATED</p>
             <div>
                 <?php $related = get_posts( array(
                     'posts_per_page' => '3',
@@ -83,7 +82,7 @@
                                         <time class="related__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
                                             <?php echo esc_html( get_the_date() ); ?>
                                         </time>
-                                        <h4 class="related__title"><?php the_title(); ?></h4>
+                                        <p class="related__title"><?php the_title(); ?></p>
                                         <p class="related__text"><?php echo wp_strip_all_tags(get_the_content(), true); ?></p>
                                     </div>
                                 <?php endif; ?>
