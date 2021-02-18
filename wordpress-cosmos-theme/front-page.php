@@ -4,26 +4,29 @@
     <article>
         <div class="switching-video-wrapper">
 
-            <div class="e-loadholder">
+            <!-- <div class="e-loadholder">
                 <div class="m-loader">
                     <span class="e-text">Loading</span>
                 </div>
             </div>
             <div id="particleCanvas-Blue"></div>
             <div id="particleCanvas-White"></div>
-            <div class="loadingBg"></div>
+            <div class="loadingBg"></div> -->
 
             <!-- <div id="loadingWrap"> -->
             <!-- <div class="spinner"></div> -->
             <!-- </div> -->
             <section class="top">
                 <div class="top__visual">
-                    <video src="<?php echo get_template_directory_uri(); ?>/video/Space-start.mp4"  playsinline loop muted autoplay class="video1"></video>
+                    <video src="<?php echo get_template_directory_uri(); ?>/video/Space-start.mp4" playsinline loop muted autoplay class="video1"></video>
                 </div>
                 <!-- /.top__visual -->
                 <h1 class="copy">
                     <p class="copy__name">
-                        <?php bloginfo('name'); ?>
+                        指定就労継続支援Ｂ型事業所<br>
+                        職業訓練システム<br>
+                        コスモス
+                        <!-- <?php bloginfo('name'); ?> -->
                     </p>
                     <p class="copy__description">
                         <?php bloginfo('description'); ?>
@@ -236,32 +239,32 @@
 
                 <section class="about__wage" id="about__wage">
                     <h3 class="sub-title">標準工賃規定</h3>
-                        <div data-aos="zoom-in-up" data-aos-anchor-placement="top-center" class="wage-table js-scrollable">
-                            <table class="wage-table__inner">
-                                <thead class="wage-table__headers">
-                                    <tr class="wage-table__header-row">
-                                        <th class="wage-table__header">家電</th>
-                                        <th class="wage-table__header">事務作業</th>
-                                        <th class="wage-table__header">ＰＣ作業</th>
-                                        <th class="wage-table__header">施設外</th>
-                                        <th class="wage-table__header">ビストロ</th>
-                                        <th class="wage-table__header">ＰＣ学習</th>
-                                        <th style="display: <?php the_field('wage-display-accessory'); ?>" class="wage-table__header">アクセサリー</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="wage-table__body">
-                                    <tr class="wage-table__body-row">
-                                        <td class="wage-table__text"><?php the_field('wage-appliance'); ?></td>
-                                        <td class="wage-table__text"><?php the_field('wage-office'); ?></td>
-                                        <td class="wage-table__text"><?php the_field('wage-pc'); ?></td>
-                                        <td class="wage-table__text"><?php the_field('wage-outside-the-facility'); ?></td>
-                                        <td class="wage-table__text"><?php the_field('wage-bistro'); ?></td>
-                                        <td class="wage-table__text"><?php the_field('wage-pc-learning'); ?></td>
-                                        <td style="display: <?php the_field('wage-display-accessory'); ?>" class="wage-table__text"><?php the_field('wage-accessory'); ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div data-aos="zoom-in-up" data-aos-anchor-placement="top-center" class="wage-table js-scrollable">
+                        <table class="wage-table__inner">
+                            <thead class="wage-table__headers">
+                                <tr class="wage-table__header-row">
+                                    <th class="wage-table__header">家電</th>
+                                    <th class="wage-table__header">事務作業</th>
+                                    <th class="wage-table__header">ＰＣ作業</th>
+                                    <th class="wage-table__header">施設外</th>
+                                    <th class="wage-table__header">ビストロ</th>
+                                    <th class="wage-table__header">ＰＣ学習</th>
+                                    <th style="display: <?php the_field('wage-display-accessory'); ?>" class="wage-table__header">アクセサリー</th>
+                                </tr>
+                            </thead>
+                            <tbody class="wage-table__body">
+                                <tr class="wage-table__body-row">
+                                    <td class="wage-table__text"><?php the_field('wage-appliance'); ?></td>
+                                    <td class="wage-table__text"><?php the_field('wage-office'); ?></td>
+                                    <td class="wage-table__text"><?php the_field('wage-pc'); ?></td>
+                                    <td class="wage-table__text"><?php the_field('wage-outside-the-facility'); ?></td>
+                                    <td class="wage-table__text"><?php the_field('wage-bistro'); ?></td>
+                                    <td class="wage-table__text"><?php the_field('wage-pc-learning'); ?></td>
+                                    <td style="display: <?php the_field('wage-display-accessory'); ?>" class="wage-table__text"><?php the_field('wage-accessory'); ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <!-- /.wage-table -->
                 </section>
 
@@ -392,19 +395,19 @@
             <section class="news" id="news">
                 <h2 class="chapter-title">ニュース</h2>
 
-                <?php $news = get_posts( array(
+                <?php $news = get_posts(array(
                     'posts_per_page' => '3',
                     'post_type' => 'news',
                     'orderby' => 'modified'
                 )); ?>
-                <?php if($news):
-                    foreach($news as $post):
-                    setup_postdata($post); ?>
+                <?php if ($news) :
+                    foreach ($news as $post) :
+                        setup_postdata($post); ?>
                         <ul data-aos="zoom-in" data-aos-anchor-placement="top-center" class="news-posts">
                             <li class="news-posts__item">
                                 <div class="news-posts__header">
-                                    <time class="news-posts__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
-                                        <?php echo esc_html( get_the_date() ); ?>
+                                    <time class="news-posts__date" datetime="<?php echo esc_attr(get_the_date(DATE_W3C)); ?>">
+                                        <?php echo esc_html(get_the_date()); ?>
                                     </time>
                                 </div>
                                 <p class="news-posts__title">
@@ -414,7 +417,7 @@
                         </ul>
                 <?php endforeach;
                     wp_reset_postdata();
-                    endif; ?>
+                endif; ?>
             </section>
             <div class="odd-wrapper">
                 <section data-aos="fade-up" data-aos-anchor-placement="top-center" class="cosmos-blog" id="cosmos-blog">
@@ -546,7 +549,7 @@
                 </div>
                 <!-- /.address-->
                 <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.457698349733!2d143.88620150000006!3d43.804864800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f6d5788622c5b71%3A0x398a6769ac0235d5!2z5oyH5a6a5bCx5Yq057aZ57aa5pSv5o-077yi5Z6L5LqL5qWt5omAIOiBt-alreiok-e3tOOCt-OCueODhuODoCDjgrPjgrnjg6Ljgrk!5e0!3m2!1sja!2sjp!4v1609812846061!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.457698349733!2d143.88620150000006!3d43.804864800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f6d5788622c5b71%3A0x398a6769ac0235d5!2z5oyH5a6a5bCx5Yq057aZ57aa5pSv5o-077yi5Z6L5LqL5qWt5omAIOiBt-alreiok-e3tOOCt-OCueODhuODoCDjgrPjgrnjg6Ljgrk!5e0!3m2!1sja!2sjp!4v1609812846061!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <!-- /.google-map -->
             </div>

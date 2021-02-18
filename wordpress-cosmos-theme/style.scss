@@ -1749,8 +1749,8 @@ body {
     }
 }
 
-// 就労支援ページ page-slug.php
-.Employment-support {
+// 就労支援ページ works-single.php
+.works-single {
     padding-top: 124px;
     .jumbotron {
         background: url(img/appliance.jpg) no-repeat center / cover;
@@ -1759,7 +1759,7 @@ body {
         @include mq() {
             padding-top: 42%;
         }
-        .Employment-support-title {
+        .works-single-title {
             color: white;
             font-size: var(--f2);
             position: absolute;
@@ -1785,9 +1785,12 @@ body {
     &-description {
         text-align: center;
         padding: 40px 0;
-        font-size: var(--f3);
+        font-size: var(--f5);
+        width: 300px;
+        margin: 0 auto;
         @include mq() {
             padding: 80px 0;
+            width: 500px;
         }
     }
     &-wrapper {
